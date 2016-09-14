@@ -1,0 +1,307 @@
+﻿namespace RakeBack.Content.RakeBackMgr
+{
+    partial class RakeBackTotal
+    {
+        /// <summary>
+        /// 必需的设计器变量。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// 清理所有正在使用的资源。
+        /// </summary>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows 窗体设计器生成的代码
+
+        /// <summary>
+        /// 设计器支持所需的方法 - 不要修改
+        /// 使用代码编辑器修改此方法的内容。
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.panel = new XiaoCai.WinformUI.Panels.PanelW();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelW5 = new XiaoCai.WinformUI.LabelW();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePickerW2 = new XiaoCai.WinformUI.DateTimePickerW(this.components);
+            this.dateTimePickerW1 = new XiaoCai.WinformUI.DateTimePickerW(this.components);
+            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
+            this.labelW6 = new XiaoCai.WinformUI.LabelW();
+            this.panel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel
+            // 
+            this.panel.AssociatedSplitter = null;
+            this.panel.BackColor = System.Drawing.Color.Transparent;
+            this.panel.CaptionFont = new System.Drawing.Font("微软雅黑", 11.75F, System.Drawing.FontStyle.Bold);
+            this.panel.CaptionHeight = 27;
+            this.panel.Controls.Add(this.panel3);
+            this.panel.Controls.Add(this.panel2);
+            this.panel.Controls.Add(this.panel1);
+            this.panel.CustomColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.panel.CustomColors.CaptionCloseIcon = System.Drawing.SystemColors.ControlText;
+            this.panel.CustomColors.CaptionExpandIcon = System.Drawing.SystemColors.ControlText;
+            this.panel.CustomColors.CaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.panel.CustomColors.CaptionGradientEnd = System.Drawing.SystemColors.ButtonFace;
+            this.panel.CustomColors.CaptionGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.panel.CustomColors.CaptionSelectedGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel.CustomColors.CaptionSelectedGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel.CustomColors.CaptionText = System.Drawing.SystemColors.ControlText;
+            this.panel.CustomColors.CollapsedCaptionText = System.Drawing.SystemColors.ControlText;
+            this.panel.CustomColors.ContentGradientBegin = System.Drawing.SystemColors.ButtonFace;
+            this.panel.CustomColors.ContentGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.panel.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel.Image = null;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.MinimumSize = new System.Drawing.Size(27, 27);
+            this.panel.Name = "panel";
+            this.panel.PanelStyle = XiaoCai.WinformUI.Panels.PanelStyle.Office2007;
+            this.panel.ShowCaptionbar = false;
+            this.panel.ShowCaptionbarBorder = false;
+            this.panel.ShowTransparentBackground = false;
+            this.panel.Size = new System.Drawing.Size(1281, 453);
+            this.panel.TabIndex = 10;
+            this.panel.Text = "panelW4";
+            this.panel.ToolTipTextCloseIcon = null;
+            this.panel.ToolTipTextExpandIconPanelCollapsed = null;
+            this.panel.ToolTipTextExpandIconPanelExpanded = null;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridViewW1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 49);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1281, 344);
+            this.panel3.TabIndex = 2;
+            // 
+            // dataGridViewW1
+            // 
+            this.dataGridViewW1.AllowUserToResizeRows = false;
+            this.dataGridViewW1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(247)))), ((int)(((byte)(254)))));
+            this.dataGridViewW1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewW1.ColumnHeaderDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.dataGridViewW1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewW1.ColumnHeadersHeight = 31;
+            this.dataGridViewW1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewW1.ColumnHeaderUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.dataGridViewW1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column10,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dataGridViewW1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewW1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.dataGridViewW1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewW1.Name = "dataGridViewW1";
+            this.dataGridViewW1.PrimaryRowcolor1 = System.Drawing.Color.White;
+            this.dataGridViewW1.PrimaryRowcolor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(232)))));
+            this.dataGridViewW1.RowHeadersVisible = false;
+            this.dataGridViewW1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Transparent;
+            this.dataGridViewW1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewW1.RowTemplate.Height = 23;
+            this.dataGridViewW1.SecondaryLength = 1;
+            this.dataGridViewW1.SecondaryRowColor1 = System.Drawing.Color.White;
+            this.dataGridViewW1.SecondaryRowColor2 = System.Drawing.Color.Black;
+            this.dataGridViewW1.SelectedRowColor1 = System.Drawing.Color.White;
+            this.dataGridViewW1.SelectedRowColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(237)))), ((int)(((byte)(206)))));
+            this.dataGridViewW1.ShowColumnHeaderCheckBox = false;
+            this.dataGridViewW1.ShowEportContextMenu = false;
+            this.dataGridViewW1.Size = new System.Drawing.Size(1281, 344);
+            this.dataGridViewW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.dataGridViewW1.TabIndex = 0;
+            this.dataGridViewW1.ToPrintCols = null;
+            this.dataGridViewW1.ToPrintRows = null;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "全部";
+            this.Column10.Name = "Column10";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "新单";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "已审核";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "会员已浏览";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "银行处理中";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "银行已返回成功";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "银行已返回失败";
+            this.Column6.Name = "Column6";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.labelW5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 393);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1281, 60);
+            this.panel2.TabIndex = 1;
+            // 
+            // labelW5
+            // 
+            this.labelW5.AutoSize = true;
+            this.labelW5.BackColor = System.Drawing.Color.Transparent;
+            this.labelW5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW5.Location = new System.Drawing.Point(50, 22);
+            this.labelW5.Name = "labelW5";
+            this.labelW5.Size = new System.Drawing.Size(329, 12);
+            this.labelW5.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW5.TabIndex = 0;
+            this.labelW5.Text = "查询时间范围为：2011-09-01至2016-09-13的返佣资金统计表";
+            this.labelW5.UseStyle = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dateTimePickerW2);
+            this.panel1.Controls.Add(this.dateTimePickerW1);
+            this.panel1.Controls.Add(this.buttonW1);
+            this.panel1.Controls.Add(this.labelW6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1281, 49);
+            this.panel1.TabIndex = 0;
+            // 
+            // dateTimePickerW2
+            // 
+            this.dateTimePickerW2.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerW2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerW2.Location = new System.Drawing.Point(275, 14);
+            this.dateTimePickerW2.Name = "dateTimePickerW2";
+            this.dateTimePickerW2.ShowUpDown = true;
+            this.dateTimePickerW2.Size = new System.Drawing.Size(100, 21);
+            this.dateTimePickerW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.dateTimePickerW2.TabIndex = 3;
+            // 
+            // dateTimePickerW1
+            // 
+            this.dateTimePickerW1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerW1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerW1.Location = new System.Drawing.Point(96, 16);
+            this.dateTimePickerW1.Name = "dateTimePickerW1";
+            this.dateTimePickerW1.ShowUpDown = true;
+            this.dateTimePickerW1.Size = new System.Drawing.Size(100, 21);
+            this.dateTimePickerW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.dateTimePickerW1.TabIndex = 3;
+            // 
+            // buttonW1
+            // 
+            this.buttonW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
+            this.buttonW1.ForeColor = System.Drawing.Color.Black;
+            this.buttonW1.IsSilver = false;
+            this.buttonW1.Location = new System.Drawing.Point(408, 14);
+            this.buttonW1.MaxImageSize = new System.Drawing.Point(0, 0);
+            this.buttonW1.MenuPos = new System.Drawing.Point(0, 0);
+            this.buttonW1.Name = "buttonW1";
+            this.buttonW1.Size = new System.Drawing.Size(75, 23);
+            this.buttonW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.buttonW1.TabIndex = 2;
+            this.buttonW1.Text = "查询";
+            this.buttonW1.ToFocused = false;
+            this.buttonW1.UseVisualStyleBackColor = true;
+            // 
+            // labelW6
+            // 
+            this.labelW6.AutoSize = true;
+            this.labelW6.BackColor = System.Drawing.Color.Transparent;
+            this.labelW6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW6.Location = new System.Drawing.Point(215, 20);
+            this.labelW6.Name = "labelW6";
+            this.labelW6.Size = new System.Drawing.Size(65, 12);
+            this.labelW6.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW6.TabIndex = 0;
+            this.labelW6.Text = "截止时间：";
+            this.labelW6.UseStyle = false;
+            // 
+            // RakeBackTotal
+            // 
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1281, 453);
+            this.Controls.Add(this.panel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HideOnClose = true;
+            this.Name = "RakeBackTotal";
+            this.ShowIcon = false;
+            this.TabText = "返佣统计";
+            this.Text = "返佣统计";
+            this.panel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private XiaoCai.WinformUI.Panels.PanelW panel;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private XiaoCai.WinformUI.DataGridViewW dataGridViewW1;
+        private XiaoCai.WinformUI.ButtonW buttonW1;
+        private XiaoCai.WinformUI.LabelW labelW6;
+        private XiaoCai.WinformUI.LabelW labelW5;
+        private XiaoCai.WinformUI.DateTimePickerW dateTimePickerW1;
+        private XiaoCai.WinformUI.DateTimePickerW dateTimePickerW2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+    }
+}
