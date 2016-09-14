@@ -31,16 +31,6 @@
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pager1 = new RakeBack.Control.PagerControl();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cbx_OrderStatus = new System.Windows.Forms.ComboBox();
-            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
-            this.labelW4 = new XiaoCai.WinformUI.LabelW();
-            this.txtLogin = new XiaoCai.WinformUI.TextBoxW();
-            this.txtCustomer = new XiaoCai.WinformUI.TextBoxW();
-            this.labelW2 = new XiaoCai.WinformUI.LabelW();
-            this.labelW3 = new XiaoCai.WinformUI.LabelW();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +43,16 @@
             this.logCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.editCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.delCol = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pager1 = new RakeBack.Control.PagerControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbx_Role = new System.Windows.Forms.ComboBox();
+            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
+            this.labelW4 = new XiaoCai.WinformUI.LabelW();
+            this.txtLogin = new XiaoCai.WinformUI.TextBoxW();
+            this.txtCustomer = new XiaoCai.WinformUI.TextBoxW();
+            this.labelW2 = new XiaoCai.WinformUI.LabelW();
+            this.labelW3 = new XiaoCai.WinformUI.LabelW();
             this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).BeginInit();
@@ -155,123 +155,6 @@
             this.dataGridViewW1.ToPrintRows = null;
             this.dataGridViewW1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewW1_CellContentClick);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pager1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 393);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1281, 60);
-            this.panel2.TabIndex = 1;
-            // 
-            // pager1
-            // 
-            this.pager1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
-            this.pager1.JumpText = "Go";
-            this.pager1.Location = new System.Drawing.Point(137, 17);
-            this.pager1.Name = "pager1";
-            this.pager1.PageIndex = 1;
-            this.pager1.PageSize = 20;
-            this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(601, 29);
-            this.pager1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.cbx_OrderStatus);
-            this.panel1.Controls.Add(this.buttonW1);
-            this.panel1.Controls.Add(this.labelW4);
-            this.panel1.Controls.Add(this.txtLogin);
-            this.panel1.Controls.Add(this.txtCustomer);
-            this.panel1.Controls.Add(this.labelW2);
-            this.panel1.Controls.Add(this.labelW3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1281, 49);
-            this.panel1.TabIndex = 0;
-            // 
-            // cbx_OrderStatus
-            // 
-            this.cbx_OrderStatus.FormattingEnabled = true;
-            this.cbx_OrderStatus.Location = new System.Drawing.Point(432, 15);
-            this.cbx_OrderStatus.Name = "cbx_OrderStatus";
-            this.cbx_OrderStatus.Size = new System.Drawing.Size(121, 20);
-            this.cbx_OrderStatus.TabIndex = 3;
-            // 
-            // buttonW1
-            // 
-            this.buttonW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.buttonW1.ForeColor = System.Drawing.Color.Black;
-            this.buttonW1.IsSilver = false;
-            this.buttonW1.Location = new System.Drawing.Point(602, 14);
-            this.buttonW1.MaxImageSize = new System.Drawing.Point(0, 0);
-            this.buttonW1.MenuPos = new System.Drawing.Point(0, 0);
-            this.buttonW1.Name = "buttonW1";
-            this.buttonW1.Size = new System.Drawing.Size(75, 23);
-            this.buttonW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.buttonW1.TabIndex = 2;
-            this.buttonW1.Text = "查询";
-            this.buttonW1.ToFocused = false;
-            this.buttonW1.UseVisualStyleBackColor = true;
-            this.buttonW1.Click += new System.EventHandler(this.buttonW1_Click);
-            // 
-            // labelW4
-            // 
-            this.labelW4.AutoSize = true;
-            this.labelW4.BackColor = System.Drawing.Color.Transparent;
-            this.labelW4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW4.Location = new System.Drawing.Point(370, 18);
-            this.labelW4.Name = "labelW4";
-            this.labelW4.Size = new System.Drawing.Size(65, 12);
-            this.labelW4.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW4.TabIndex = 0;
-            this.labelW4.Text = "用户角色：";
-            this.labelW4.UseStyle = false;
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.Location = new System.Drawing.Point(87, 15);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(100, 21);
-            this.txtLogin.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtLogin.TabIndex = 1;
-            // 
-            // txtCustomer
-            // 
-            this.txtCustomer.Location = new System.Drawing.Point(254, 15);
-            this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(100, 21);
-            this.txtCustomer.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtCustomer.TabIndex = 1;
-            // 
-            // labelW2
-            // 
-            this.labelW2.AutoSize = true;
-            this.labelW2.BackColor = System.Drawing.Color.Transparent;
-            this.labelW2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW2.Location = new System.Drawing.Point(27, 18);
-            this.labelW2.Name = "labelW2";
-            this.labelW2.Size = new System.Drawing.Size(65, 12);
-            this.labelW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW2.TabIndex = 0;
-            this.labelW2.Text = "登陆账号：";
-            this.labelW2.UseStyle = false;
-            // 
-            // labelW3
-            // 
-            this.labelW3.AutoSize = true;
-            this.labelW3.BackColor = System.Drawing.Color.Transparent;
-            this.labelW3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW3.Location = new System.Drawing.Point(197, 18);
-            this.labelW3.Name = "labelW3";
-            this.labelW3.Size = new System.Drawing.Size(65, 12);
-            this.labelW3.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW3.TabIndex = 0;
-            this.labelW3.Text = "会员姓名：";
-            this.labelW3.UseStyle = false;
-            // 
             // Column10
             // 
             this.Column10.DataPropertyName = "UserId";
@@ -349,6 +232,123 @@
             this.delCol.Text = "删除";
             this.delCol.UseColumnTextForLinkValue = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pager1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 393);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1281, 60);
+            this.panel2.TabIndex = 1;
+            // 
+            // pager1
+            // 
+            this.pager1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
+            this.pager1.JumpText = "Go";
+            this.pager1.Location = new System.Drawing.Point(137, 17);
+            this.pager1.Name = "pager1";
+            this.pager1.PageIndex = 1;
+            this.pager1.PageSize = 20;
+            this.pager1.RecordCount = 0;
+            this.pager1.Size = new System.Drawing.Size(601, 29);
+            this.pager1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cbx_Role);
+            this.panel1.Controls.Add(this.buttonW1);
+            this.panel1.Controls.Add(this.labelW4);
+            this.panel1.Controls.Add(this.txtLogin);
+            this.panel1.Controls.Add(this.txtCustomer);
+            this.panel1.Controls.Add(this.labelW2);
+            this.panel1.Controls.Add(this.labelW3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1281, 49);
+            this.panel1.TabIndex = 0;
+            // 
+            // cbx_Role
+            // 
+            this.cbx_Role.FormattingEnabled = true;
+            this.cbx_Role.Location = new System.Drawing.Point(432, 15);
+            this.cbx_Role.Name = "cbx_Role";
+            this.cbx_Role.Size = new System.Drawing.Size(121, 20);
+            this.cbx_Role.TabIndex = 3;
+            // 
+            // buttonW1
+            // 
+            this.buttonW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
+            this.buttonW1.ForeColor = System.Drawing.Color.Black;
+            this.buttonW1.IsSilver = false;
+            this.buttonW1.Location = new System.Drawing.Point(602, 14);
+            this.buttonW1.MaxImageSize = new System.Drawing.Point(0, 0);
+            this.buttonW1.MenuPos = new System.Drawing.Point(0, 0);
+            this.buttonW1.Name = "buttonW1";
+            this.buttonW1.Size = new System.Drawing.Size(75, 23);
+            this.buttonW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.buttonW1.TabIndex = 2;
+            this.buttonW1.Text = "查询";
+            this.buttonW1.ToFocused = false;
+            this.buttonW1.UseVisualStyleBackColor = true;
+            this.buttonW1.Click += new System.EventHandler(this.buttonW1_Click);
+            // 
+            // labelW4
+            // 
+            this.labelW4.AutoSize = true;
+            this.labelW4.BackColor = System.Drawing.Color.Transparent;
+            this.labelW4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW4.Location = new System.Drawing.Point(370, 18);
+            this.labelW4.Name = "labelW4";
+            this.labelW4.Size = new System.Drawing.Size(65, 12);
+            this.labelW4.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW4.TabIndex = 0;
+            this.labelW4.Text = "用户角色：";
+            this.labelW4.UseStyle = false;
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.Location = new System.Drawing.Point(87, 15);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(100, 21);
+            this.txtLogin.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.txtLogin.TabIndex = 1;
+            // 
+            // txtCustomer
+            // 
+            this.txtCustomer.Location = new System.Drawing.Point(254, 15);
+            this.txtCustomer.Name = "txtCustomer";
+            this.txtCustomer.Size = new System.Drawing.Size(100, 21);
+            this.txtCustomer.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.txtCustomer.TabIndex = 1;
+            // 
+            // labelW2
+            // 
+            this.labelW2.AutoSize = true;
+            this.labelW2.BackColor = System.Drawing.Color.Transparent;
+            this.labelW2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW2.Location = new System.Drawing.Point(27, 18);
+            this.labelW2.Name = "labelW2";
+            this.labelW2.Size = new System.Drawing.Size(65, 12);
+            this.labelW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW2.TabIndex = 0;
+            this.labelW2.Text = "登陆账号：";
+            this.labelW2.UseStyle = false;
+            // 
+            // labelW3
+            // 
+            this.labelW3.AutoSize = true;
+            this.labelW3.BackColor = System.Drawing.Color.Transparent;
+            this.labelW3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW3.Location = new System.Drawing.Point(197, 18);
+            this.labelW3.Name = "labelW3";
+            this.labelW3.Size = new System.Drawing.Size(65, 12);
+            this.labelW3.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW3.TabIndex = 0;
+            this.labelW3.Text = "会员姓名：";
+            this.labelW3.UseStyle = false;
+            // 
             // MemberMgr
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -384,7 +384,7 @@
         private XiaoCai.WinformUI.TextBoxW txtCustomer;
         private XiaoCai.WinformUI.LabelW labelW3;
         private Control.PagerControl pager1;
-        private System.Windows.Forms.ComboBox cbx_OrderStatus;
+        private System.Windows.Forms.ComboBox cbx_Role;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

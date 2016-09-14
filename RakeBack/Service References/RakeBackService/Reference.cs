@@ -1377,6 +1377,12 @@ namespace RakeBack.RakeBackService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/GetUserInfoResponse")]
         System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr> GetUserInfoAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/AddUserInfoResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr AddUserInfo(RakeBack.RakeBackService.UserInfo info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/AddUserInfoResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> AddUserInfoAsync(RakeBack.RakeBackService.UserInfo info);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserInfoResponse")]
         RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr UpdateUserInfo(RakeBack.RakeBackService.UserInfo info);
         
@@ -1384,10 +1390,10 @@ namespace RakeBack.RakeBackService {
         System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> UpdateUserInfoAsync(RakeBack.RakeBackService.UserInfo info);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelUserInfoResponse")]
-        RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(RakeBack.RakeBackService.UserInfo info);
+        RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelUserInfoResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelUserInfoAsync(RakeBack.RakeBackService.UserInfo info);
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelUserInfoAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1449,6 +1455,14 @@ namespace RakeBack.RakeBackService {
             return base.Channel.GetUserInfoAsync(pageSize, pageIndex, conditions);
         }
         
+        public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr AddUserInfo(RakeBack.RakeBackService.UserInfo info) {
+            return base.Channel.AddUserInfo(info);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> AddUserInfoAsync(RakeBack.RakeBackService.UserInfo info) {
+            return base.Channel.AddUserInfoAsync(info);
+        }
+        
         public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr UpdateUserInfo(RakeBack.RakeBackService.UserInfo info) {
             return base.Channel.UpdateUserInfo(info);
         }
@@ -1457,12 +1471,12 @@ namespace RakeBack.RakeBackService {
             return base.Channel.UpdateUserInfoAsync(info);
         }
         
-        public RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(RakeBack.RakeBackService.UserInfo info) {
-            return base.Channel.DelUserInfo(info);
+        public RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(int id) {
+            return base.Channel.DelUserInfo(id);
         }
         
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelUserInfoAsync(RakeBack.RakeBackService.UserInfo info) {
-            return base.Channel.DelUserInfoAsync(info);
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelUserInfoAsync(int id) {
+            return base.Channel.DelUserInfoAsync(id);
         }
     }
 }

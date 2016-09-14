@@ -25,7 +25,7 @@ namespace RakeBack.Content.SystemSet
 
         private void Pager1_OnPageChanged(object sender, EventArgs e)
         {
-            Search(_code, _name,_roleId, pager1.PageIndex);
+            Search(_code, _name, _roleId, pager1.PageIndex);
         }
 
         private void InitCombox()
@@ -67,10 +67,10 @@ namespace RakeBack.Content.SystemSet
                                 }
 
                                 BindingSource bs = new BindingSource();
-                                cbx_OrderStatus.DisplayMember = "Value";
-                                cbx_OrderStatus.ValueMember = "Key";
+                                cbx_Role.DisplayMember = "Value";
+                                cbx_Role.ValueMember = "Key";
                                 bs.DataSource = dic;
-                                cbx_OrderStatus.DataSource = bs;
+                                cbx_Role.DataSource = bs;
 
                             }
                             else
@@ -97,14 +97,50 @@ namespace RakeBack.Content.SystemSet
         {
             if ("editCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
-                var dilog = new MemberMgrDialog();
+                var dilog = new UpdateMember() { OldInfo = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as RakeBackService.UserInfo };
                 dilog.ShowDialog();
             }
             else if ("delCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
                 if (MessageBox.Show("确认删除？", "确认对话框", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    MessageBox.Show("删除成功");
+                    var mod = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as RakeBackService.UserInfo;
+                    if (mod == null)
+                        return;
+                    ThreadHelper.StartNew(() =>
+                    {
+                        try
+                        {
+                            var client = CommunicationHelper.GetClient();
+                            if (client != null)
+                            {
+                                var result = client.DelUserInfo(mod.UserId);
+
+                                base.EndWait();
+                                this.Invoke(new Action(() =>
+                                {
+                                    if (result != null && result.IsSuccess)
+                                    {
+                                        MessageBox.Show("删除成功");
+                                    }
+                                    else if (result == null)
+                                    {
+                                        MessageBox.Show("删除失败:"+result.ErrorMsg);
+                                    }
+                                }));
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            this.Invoke(new Action(() =>
+                            {
+                                base.EndWait();
+                                MessageBox.Show("删除失败:" + ex.Message);
+                            }
+                            ));
+                        }
+                    }, _outTime);
+                    
                 }
             }
             else if ("logCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
@@ -117,10 +153,10 @@ namespace RakeBack.Content.SystemSet
         private void buttonW1_Click(object sender, EventArgs e)
         {
             int roleId = 0;
-            if (cbx_OrderStatus.SelectedItem != null)
-                roleId = (int)cbx_OrderStatus.SelectedValue;
+            if (cbx_Role.SelectedItem != null)
+                roleId = (int)cbx_Role.SelectedValue;
             //每次查询需要从第一页开始
-            Search(txtLogin.Text.Trim(), txtCustomer.Text.Trim(),roleId, 1);
+            Search(txtLogin.Text.Trim(), txtCustomer.Text.Trim(), roleId, 1);
         }
 
         private string _code;
@@ -168,7 +204,7 @@ namespace RakeBack.Content.SystemSet
             return conditions;
         }
 
-        private void Search(string code, string name,int roleId, int pageIndex)
+        private void Search(string code, string name, int roleId, int pageIndex)
         {
             var dic = MakeConditions(code, name, roleId);
             base.StartWait();

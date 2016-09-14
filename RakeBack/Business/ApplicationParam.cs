@@ -16,6 +16,7 @@ namespace RakeBack.Business
         static ApplicationParam()
         {
             UserInfo = new RakeBackService.UserInfo();
+            UserInfo.LoginId = "123";
         }
     }
 }

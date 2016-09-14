@@ -62,31 +62,45 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateUserInfo">
+  <xs:element name="AddUserInfo">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q8:UserInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateUserInfoResponse">
+  <xs:element name="AddUserInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="UpdateUserInfoResult" nillable="true" type="q9:ResponseBaseOfUserInfoYgFqSxnr" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="AddUserInfoResult" nillable="true" type="q9:ResponseBaseOfUserInfoYgFqSxnr" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="DelUserInfo">
+  <xs:element name="UpdateUserInfo">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q10:UserInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="UpdateUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="UpdateUserInfoResult" nillable="true" type="q11:ResponseBaseOfUserInfoYgFqSxnr" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="DelUserInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="DelUserInfoResult" nillable="true" type="q11:ResponseBaseOfboolean" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="DelUserInfoResult" nillable="true" type="q12:ResponseBaseOfboolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

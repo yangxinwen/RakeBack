@@ -89,11 +89,17 @@
     <Compile Include="Content\SystemSet\MemberMgr.designer.cs">
       <DependentUpon>MemberMgr.cs</DependentUpon>
     </Compile>
-    <Compile Include="Content\SystemSet\MemberMgrDialog.cs">
+    <Compile Include="Content\SystemSet\AddMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Content\SystemSet\MemberMgrDialog.designer.cs">
-      <DependentUpon>MemberMgrDialog.cs</DependentUpon>
+    <Compile Include="Content\SystemSet\AddMember.designer.cs">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SystemSet\UpdateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\SystemSet\UpdateMember.Designer.cs">
+      <DependentUpon>UpdateMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Content\TakenRecord\RakeBackTaken.cs">
       <SubType>Form</SubType>
@@ -138,6 +144,8 @@
       <DependentUpon>PagerControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\CommunicationHelper.cs" />
+    <Compile Include="Helper\DesSecurityCommon.cs" />
+    <Compile Include="Helper\HelpCommon.cs" />
     <Compile Include="Helper\MenuItemHelper.cs" />
     <Compile Include="Helper\ThreadHelper.cs" />
     <Compile Include="MainForm.cs">
@@ -182,8 +190,11 @@
     <EmbeddedResource Include="Content\SystemSet\MemberMgr.resx">
       <DependentUpon>MemberMgr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Content\SystemSet\MemberMgrDialog.resx">
-      <DependentUpon>MemberMgrDialog.cs</DependentUpon>
+    <EmbeddedResource Include="Content\SystemSet\AddMember.resx">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\SystemSet\UpdateMember.resx">
+      <DependentUpon>UpdateMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Content\TakenRecord\RakeBackTaken.resx">
       <DependentUpon>RakeBackTaken.cs</DependentUpon>

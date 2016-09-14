@@ -96,6 +96,12 @@ namespace RakeBack
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "返佣提取", Path = "TakenRecord.RakeBackTaken", IsEnable = true });
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "信息管理", Path = "TakenRecord.MemberMgr", IsEnable = true });
             list.Add(menuItem);
+
+            menuItem = new MenuItemModel() { Name = "系统设置", Path = null, IsEnable = true };
+            menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "添加用户", Path = "SystemSet.AddMember", IsEnable = true });
+            menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "系统用户", Path = "SystemSet.MemberMgr", IsEnable = true });
+            list.Add(menuItem);
+
             var menuList = MenuItemHelper.MakeMenuItem(list);
             mainMenu.Items.Clear();
             mainMenu.Items.AddRange(menuList.ToArray());

@@ -32,6 +32,12 @@
   <wsdl:message name="IRakeBackService_GetUserInfo_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
   </wsdl:message>
+  <wsdl:message name="IRakeBackService_AddUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_AddUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserInfoResponse" />
+  </wsdl:message>
   <wsdl:message name="IRakeBackService_UpdateUserInfo_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateUserInfo" />
   </wsdl:message>
@@ -60,6 +66,10 @@
     <wsdl:operation name="GetUserInfo">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetUserInfo" message="tns:IRakeBackService_GetUserInfo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetUserInfoResponse" message="tns:IRakeBackService_GetUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/AddUserInfo" message="tns:IRakeBackService_AddUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/AddUserInfoResponse" message="tns:IRakeBackService_AddUserInfo_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateUserInfo">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/UpdateUserInfo" message="tns:IRakeBackService_UpdateUserInfo_InputMessage" />
@@ -101,6 +111,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetUserInfo">
       <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserInfo">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/AddUserInfo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
