@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace RakeBack.Content.TakenRecord
+namespace RakeBack.Content.SystemSet
 {
     /// <summary>
     /// 会员信息管理

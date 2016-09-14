@@ -1,4 +1,4 @@
-﻿namespace RakeBack.Content.TakenRecord
+﻿namespace RakeBack.Content.SystemSet
 {
     partial class MemberMgrDialog
     {

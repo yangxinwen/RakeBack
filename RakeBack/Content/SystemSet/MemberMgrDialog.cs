@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace RakeBack.Content.TakenRecord
+namespace RakeBack.Content.SystemSet
 {
     public partial class MemberMgrDialog : RakeBack.BaseDialog
     {

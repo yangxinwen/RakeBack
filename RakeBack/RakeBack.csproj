@@ -83,17 +83,17 @@
     <Compile Include="Content\Common\PassordModify.Designer.cs">
       <DependentUpon>PassordModify.cs</DependentUpon>
     </Compile>
-    <Compile Include="Content\TakenRecord\MemberMgrDialog.cs">
+    <Compile Include="Content\SystemSet\MemberMgr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Content\TakenRecord\MemberMgrDialog.Designer.cs">
-      <DependentUpon>MemberMgrDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Content\TakenRecord\MemberMgr.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Content\TakenRecord\MemberMgr.Designer.cs">
+    <Compile Include="Content\SystemSet\MemberMgr.designer.cs">
       <DependentUpon>MemberMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SystemSet\MemberMgrDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\SystemSet\MemberMgrDialog.designer.cs">
+      <DependentUpon>MemberMgrDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Content\TakenRecord\RakeBackTaken.cs">
       <SubType>Form</SubType>
@@ -179,11 +179,11 @@
     <EmbeddedResource Include="Content\Common\PassordModify.resx">
       <DependentUpon>PassordModify.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Content\TakenRecord\MemberMgrDialog.resx">
-      <DependentUpon>MemberMgrDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Content\TakenRecord\MemberMgr.resx">
+    <EmbeddedResource Include="Content\SystemSet\MemberMgr.resx">
       <DependentUpon>MemberMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\SystemSet\MemberMgrDialog.resx">
+      <DependentUpon>MemberMgrDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Content\TakenRecord\RakeBackTaken.resx">
       <DependentUpon>RakeBackTaken.cs</DependentUpon>
@@ -320,6 +320,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
