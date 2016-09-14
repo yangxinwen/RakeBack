@@ -31,6 +31,16 @@
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pager1 = new RakeBack.Control.PagerControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbx_OrderStatus = new System.Windows.Forms.ComboBox();
+            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
+            this.labelW4 = new XiaoCai.WinformUI.LabelW();
+            this.txtLogin = new XiaoCai.WinformUI.TextBoxW();
+            this.txtCustomer = new XiaoCai.WinformUI.TextBoxW();
+            this.labelW2 = new XiaoCai.WinformUI.LabelW();
+            this.labelW3 = new XiaoCai.WinformUI.LabelW();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,16 +53,6 @@
             this.logCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.editCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.delCol = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pager1 = new XiaoCai.WinformUI.Pager();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cbx_OrderStatus = new XiaoCai.WinformUI.ComboBoxW();
-            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
-            this.labelW4 = new XiaoCai.WinformUI.LabelW();
-            this.textBoxW2 = new XiaoCai.WinformUI.TextBoxW();
-            this.textBoxW3 = new XiaoCai.WinformUI.TextBoxW();
-            this.labelW2 = new XiaoCai.WinformUI.LabelW();
-            this.labelW3 = new XiaoCai.WinformUI.LabelW();
             this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).BeginInit();
@@ -155,74 +155,6 @@
             this.dataGridViewW1.ToPrintRows = null;
             this.dataGridViewW1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewW1_CellContentClick);
             // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "系统编号";
-            this.Column10.Name = "Column10";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "登陆账号";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "会员姓名";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "手机号码";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "用户角色";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "开户银行\t";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "开户银行分行";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "开户银行支行";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "银行卡号";
-            this.Column8.Name = "Column8";
-            // 
-            // logCol
-            // 
-            this.logCol.HeaderText = "查看操作流水";
-            this.logCol.Name = "logCol";
-            this.logCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.logCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.logCol.Text = "操作流水";
-            this.logCol.UseColumnTextForLinkValue = true;
-            // 
-            // editCol
-            // 
-            this.editCol.HeaderText = "";
-            this.editCol.Name = "editCol";
-            this.editCol.Text = "编辑";
-            this.editCol.UseColumnTextForLinkValue = true;
-            // 
-            // delCol
-            // 
-            this.delCol.HeaderText = "";
-            this.delCol.Name = "delCol";
-            this.delCol.Text = "删除";
-            this.delCol.UseColumnTextForLinkValue = true;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pager1);
@@ -234,16 +166,15 @@
             // 
             // pager1
             // 
-            this.pager1.CurrentPage = 1;
-            this.pager1.ForeColor = System.Drawing.Color.Black;
-            this.pager1.GroupSize = 0;
-            this.pager1.IsShowGroup = true;
-            this.pager1.Location = new System.Drawing.Point(31, 18);
+            this.pager1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
+            this.pager1.JumpText = "Go";
+            this.pager1.Location = new System.Drawing.Point(137, 17);
             this.pager1.Name = "pager1";
-            this.pager1.PageSize = 0;
+            this.pager1.PageIndex = 1;
+            this.pager1.PageSize = 20;
             this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(525, 30);
-            this.pager1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.pager1.Size = new System.Drawing.Size(601, 29);
             this.pager1.TabIndex = 0;
             // 
             // panel1
@@ -251,8 +182,8 @@
             this.panel1.Controls.Add(this.cbx_OrderStatus);
             this.panel1.Controls.Add(this.buttonW1);
             this.panel1.Controls.Add(this.labelW4);
-            this.panel1.Controls.Add(this.textBoxW2);
-            this.panel1.Controls.Add(this.textBoxW3);
+            this.panel1.Controls.Add(this.txtLogin);
+            this.panel1.Controls.Add(this.txtCustomer);
             this.panel1.Controls.Add(this.labelW2);
             this.panel1.Controls.Add(this.labelW3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -263,24 +194,11 @@
             // 
             // cbx_OrderStatus
             // 
-            this.cbx_OrderStatus.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.cbx_OrderStatus.AutoComplete = false;
-            this.cbx_OrderStatus.AutoDropdown = false;
-            this.cbx_OrderStatus.BackColorEven = System.Drawing.Color.White;
-            this.cbx_OrderStatus.BackColorOdd = System.Drawing.Color.White;
-            this.cbx_OrderStatus.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.cbx_OrderStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.cbx_OrderStatus.ColumnNames = "";
-            this.cbx_OrderStatus.ColumnWidthDefault = 75;
-            this.cbx_OrderStatus.ColumnWidths = "";
-            this.cbx_OrderStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.cbx_OrderStatus.FormattingEnabled = true;
-            this.cbx_OrderStatus.LinkedColumnIndex = 0;
-            this.cbx_OrderStatus.LinkedTextBox = null;
-            this.cbx_OrderStatus.Location = new System.Drawing.Point(431, 14);
+            this.cbx_OrderStatus.Location = new System.Drawing.Point(432, 15);
             this.cbx_OrderStatus.Name = "cbx_OrderStatus";
-            this.cbx_OrderStatus.Size = new System.Drawing.Size(121, 22);
-            this.cbx_OrderStatus.TabIndex = 4;
+            this.cbx_OrderStatus.Size = new System.Drawing.Size(121, 20);
+            this.cbx_OrderStatus.TabIndex = 3;
             // 
             // buttonW1
             // 
@@ -297,6 +215,7 @@
             this.buttonW1.Text = "查询";
             this.buttonW1.ToFocused = false;
             this.buttonW1.UseVisualStyleBackColor = true;
+            this.buttonW1.Click += new System.EventHandler(this.buttonW1_Click);
             // 
             // labelW4
             // 
@@ -311,21 +230,21 @@
             this.labelW4.Text = "用户角色：";
             this.labelW4.UseStyle = false;
             // 
-            // textBoxW2
+            // txtLogin
             // 
-            this.textBoxW2.Location = new System.Drawing.Point(87, 15);
-            this.textBoxW2.Name = "textBoxW2";
-            this.textBoxW2.Size = new System.Drawing.Size(100, 21);
-            this.textBoxW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.textBoxW2.TabIndex = 1;
+            this.txtLogin.Location = new System.Drawing.Point(87, 15);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(100, 21);
+            this.txtLogin.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.txtLogin.TabIndex = 1;
             // 
-            // textBoxW3
+            // txtCustomer
             // 
-            this.textBoxW3.Location = new System.Drawing.Point(254, 15);
-            this.textBoxW3.Name = "textBoxW3";
-            this.textBoxW3.Size = new System.Drawing.Size(100, 21);
-            this.textBoxW3.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.textBoxW3.TabIndex = 1;
+            this.txtCustomer.Location = new System.Drawing.Point(254, 15);
+            this.txtCustomer.Name = "txtCustomer";
+            this.txtCustomer.Size = new System.Drawing.Size(100, 21);
+            this.txtCustomer.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.txtCustomer.TabIndex = 1;
             // 
             // labelW2
             // 
@@ -353,6 +272,83 @@
             this.labelW3.Text = "会员姓名：";
             this.labelW3.UseStyle = false;
             // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "UserId";
+            this.Column10.HeaderText = "系统编号";
+            this.Column10.Name = "Column10";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "LoginId";
+            this.Column1.HeaderText = "登陆账号";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "UserName";
+            this.Column2.HeaderText = "会员姓名";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "UserPhone";
+            this.Column3.HeaderText = "手机号码";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "RoleId";
+            this.Column4.HeaderText = "用户角色";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "CreateBank";
+            this.Column5.HeaderText = "开户银行\t";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "BranchBank";
+            this.Column6.HeaderText = "开户银行分行";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "BranchBankZH";
+            this.Column7.HeaderText = "开户银行支行";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "BankNumber";
+            this.Column8.HeaderText = "银行卡号";
+            this.Column8.Name = "Column8";
+            // 
+            // logCol
+            // 
+            this.logCol.HeaderText = "查看操作流水";
+            this.logCol.Name = "logCol";
+            this.logCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.logCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.logCol.Text = "操作流水";
+            this.logCol.UseColumnTextForLinkValue = true;
+            // 
+            // editCol
+            // 
+            this.editCol.HeaderText = "";
+            this.editCol.Name = "editCol";
+            this.editCol.Text = "编辑";
+            this.editCol.UseColumnTextForLinkValue = true;
+            // 
+            // delCol
+            // 
+            this.delCol.HeaderText = "";
+            this.delCol.Name = "delCol";
+            this.delCol.Text = "删除";
+            this.delCol.UseColumnTextForLinkValue = true;
+            // 
             // MemberMgr
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -379,16 +375,16 @@
         private XiaoCai.WinformUI.Panels.PanelW panel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private XiaoCai.WinformUI.Pager pager1;
         private System.Windows.Forms.Panel panel1;
         private XiaoCai.WinformUI.DataGridViewW dataGridViewW1;
         private XiaoCai.WinformUI.ButtonW buttonW1;
-        private XiaoCai.WinformUI.TextBoxW textBoxW2;
+        private XiaoCai.WinformUI.TextBoxW txtLogin;
         private XiaoCai.WinformUI.LabelW labelW2;
         private XiaoCai.WinformUI.LabelW labelW4;
-        private XiaoCai.WinformUI.TextBoxW textBoxW3;
+        private XiaoCai.WinformUI.TextBoxW txtCustomer;
         private XiaoCai.WinformUI.LabelW labelW3;
-        private XiaoCai.WinformUI.ComboBoxW cbx_OrderStatus;
+        private Control.PagerControl pager1;
+        private System.Windows.Forms.ComboBox cbx_OrderStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

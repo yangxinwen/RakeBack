@@ -14,20 +14,60 @@
   <wsdl:message name="IRakeBackService_GetNewRakeBack_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetNewRakeBackResponse" />
   </wsdl:message>
-  <wsdl:message name="IRakeBackService_sdfsdf_InputMessage">
-    <wsdl:part name="parameters" element="tns:sdfsdf" />
+  <wsdl:message name="IRakeBackService_GetRakeBack_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRakeBack" />
   </wsdl:message>
-  <wsdl:message name="IRakeBackService_sdfsdf_OutputMessage">
-    <wsdl:part name="parameters" element="tns:sdfsdfResponse" />
+  <wsdl:message name="IRakeBackService_GetRakeBack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRakeBackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetRoleInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleInfo" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetRoleInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_UpdateUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_UpdateUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_DelUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_DelUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelUserInfoResponse" />
   </wsdl:message>
   <wsdl:portType name="IRakeBackService">
     <wsdl:operation name="GetNewRakeBack">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetNewRakeBack" message="tns:IRakeBackService_GetNewRakeBack_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetNewRakeBackResponse" message="tns:IRakeBackService_GetNewRakeBack_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="sdfsdf">
-      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/sdfsdf" message="tns:IRakeBackService_sdfsdf_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/sdfsdfResponse" message="tns:IRakeBackService_sdfsdf_OutputMessage" />
+    <wsdl:operation name="GetRakeBack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetRakeBack" message="tns:IRakeBackService_GetRakeBack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetRakeBackResponse" message="tns:IRakeBackService_GetRakeBack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetRoleInfo" message="tns:IRakeBackService_GetRoleInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetRoleInfoResponse" message="tns:IRakeBackService_GetRoleInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetUserInfo" message="tns:IRakeBackService_GetUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetUserInfoResponse" message="tns:IRakeBackService_GetUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/UpdateUserInfo" message="tns:IRakeBackService_UpdateUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/UpdateUserInfoResponse" message="tns:IRakeBackService_UpdateUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/DelUserInfo" message="tns:IRakeBackService_DelUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/DelUserInfoResponse" message="tns:IRakeBackService_DelUserInfo_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRakeBackService" type="tns:IRakeBackService">
@@ -41,8 +81,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="sdfsdf">
-      <soap:operation soapAction="http://tempuri.org/IRakeBackService/sdfsdf" style="document" />
+    <wsdl:operation name="GetRakeBack">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetRakeBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleInfo">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetRoleInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/UpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelUserInfo">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/DelUserInfo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

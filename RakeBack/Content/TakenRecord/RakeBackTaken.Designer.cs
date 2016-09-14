@@ -32,6 +32,16 @@
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pager1 = new RakeBack.Control.PagerControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbx_OrderStatus = new System.Windows.Forms.ComboBox();
+            this.dtEnd = new XiaoCai.WinformUI.DateTimePickerW(this.components);
+            this.dtStart = new XiaoCai.WinformUI.DateTimePickerW(this.components);
+            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
+            this.labelW1 = new XiaoCai.WinformUI.LabelW();
+            this.labelW6 = new XiaoCai.WinformUI.LabelW();
+            this.labelW5 = new XiaoCai.WinformUI.LabelW();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,16 +54,6 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pager1 = new XiaoCai.WinformUI.Pager();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBoxW1 = new XiaoCai.WinformUI.ComboBoxW();
-            this.dateTimePickerW2 = new XiaoCai.WinformUI.DateTimePickerW(this.components);
-            this.dateTimePickerW1 = new XiaoCai.WinformUI.DateTimePickerW(this.components);
-            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
-            this.labelW1 = new XiaoCai.WinformUI.LabelW();
-            this.labelW6 = new XiaoCai.WinformUI.LabelW();
-            this.labelW5 = new XiaoCai.WinformUI.LabelW();
             this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).BeginInit();
@@ -156,68 +156,6 @@
             this.dataGridViewW1.ToPrintRows = null;
             this.dataGridViewW1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewW1_CellContentClick);
             // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "系统编号";
-            this.Column10.Name = "Column10";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "登陆账号";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "会员姓名";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "返佣金额";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "银行账号";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "开户银行\t";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "银行网点信息";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "订单状态";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "创建时间";
-            this.Column8.Name = "Column8";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "备注";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "查看日志流水";
-            this.Column12.Name = "Column12";
-            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "操作";
-            this.Column13.Name = "Column13";
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pager1);
@@ -229,23 +167,22 @@
             // 
             // pager1
             // 
-            this.pager1.CurrentPage = 1;
-            this.pager1.ForeColor = System.Drawing.Color.Black;
-            this.pager1.GroupSize = 0;
-            this.pager1.IsShowGroup = true;
-            this.pager1.Location = new System.Drawing.Point(31, 18);
+            this.pager1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
+            this.pager1.JumpText = "Go";
+            this.pager1.Location = new System.Drawing.Point(89, 19);
             this.pager1.Name = "pager1";
-            this.pager1.PageSize = 0;
+            this.pager1.PageIndex = 1;
+            this.pager1.PageSize = 20;
             this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(525, 30);
-            this.pager1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.pager1.Size = new System.Drawing.Size(601, 29);
             this.pager1.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBoxW1);
-            this.panel1.Controls.Add(this.dateTimePickerW2);
-            this.panel1.Controls.Add(this.dateTimePickerW1);
+            this.panel1.Controls.Add(this.cbx_OrderStatus);
+            this.panel1.Controls.Add(this.dtEnd);
+            this.panel1.Controls.Add(this.dtStart);
             this.panel1.Controls.Add(this.buttonW1);
             this.panel1.Controls.Add(this.labelW1);
             this.panel1.Controls.Add(this.labelW6);
@@ -256,48 +193,35 @@
             this.panel1.Size = new System.Drawing.Size(1281, 49);
             this.panel1.TabIndex = 0;
             // 
-            // comboBoxW1
+            // cbx_OrderStatus
             // 
-            this.comboBoxW1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.comboBoxW1.AutoComplete = false;
-            this.comboBoxW1.AutoDropdown = false;
-            this.comboBoxW1.BackColorEven = System.Drawing.Color.White;
-            this.comboBoxW1.BackColorOdd = System.Drawing.Color.White;
-            this.comboBoxW1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.comboBoxW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.comboBoxW1.ColumnNames = "";
-            this.comboBoxW1.ColumnWidthDefault = 75;
-            this.comboBoxW1.ColumnWidths = "";
-            this.comboBoxW1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxW1.FormattingEnabled = true;
-            this.comboBoxW1.LinkedColumnIndex = 0;
-            this.comboBoxW1.LinkedTextBox = null;
-            this.comboBoxW1.Location = new System.Drawing.Point(463, 13);
-            this.comboBoxW1.Name = "comboBoxW1";
-            this.comboBoxW1.Size = new System.Drawing.Size(121, 22);
-            this.comboBoxW1.TabIndex = 4;
+            this.cbx_OrderStatus.FormattingEnabled = true;
+            this.cbx_OrderStatus.Location = new System.Drawing.Point(450, 14);
+            this.cbx_OrderStatus.Name = "cbx_OrderStatus";
+            this.cbx_OrderStatus.Size = new System.Drawing.Size(121, 20);
+            this.cbx_OrderStatus.TabIndex = 4;
             // 
-            // dateTimePickerW2
+            // dtEnd
             // 
-            this.dateTimePickerW2.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerW2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerW2.Location = new System.Drawing.Point(268, 13);
-            this.dateTimePickerW2.Name = "dateTimePickerW2";
-            this.dateTimePickerW2.ShowUpDown = true;
-            this.dateTimePickerW2.Size = new System.Drawing.Size(100, 21);
-            this.dateTimePickerW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dateTimePickerW2.TabIndex = 3;
+            this.dtEnd.CustomFormat = "yyyy-MM-dd";
+            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEnd.Location = new System.Drawing.Point(268, 13);
+            this.dtEnd.Name = "dtEnd";
+            this.dtEnd.ShowUpDown = true;
+            this.dtEnd.Size = new System.Drawing.Size(100, 21);
+            this.dtEnd.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.dtEnd.TabIndex = 3;
             // 
-            // dateTimePickerW1
+            // dtStart
             // 
-            this.dateTimePickerW1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerW1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerW1.Location = new System.Drawing.Point(89, 15);
-            this.dateTimePickerW1.Name = "dateTimePickerW1";
-            this.dateTimePickerW1.ShowUpDown = true;
-            this.dateTimePickerW1.Size = new System.Drawing.Size(100, 21);
-            this.dateTimePickerW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dateTimePickerW1.TabIndex = 3;
+            this.dtStart.CustomFormat = "yyyy-MM-dd";
+            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStart.Location = new System.Drawing.Point(89, 15);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.ShowUpDown = true;
+            this.dtStart.Size = new System.Drawing.Size(100, 21);
+            this.dtStart.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.dtStart.TabIndex = 3;
             // 
             // buttonW1
             // 
@@ -314,6 +238,7 @@
             this.buttonW1.Text = "查询";
             this.buttonW1.ToFocused = false;
             this.buttonW1.UseVisualStyleBackColor = true;
+            this.buttonW1.Click += new System.EventHandler(this.buttonW1_Click);
             // 
             // labelW1
             // 
@@ -354,6 +279,78 @@
             this.labelW5.Text = "起始时间：";
             this.labelW5.UseStyle = false;
             // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "Id";
+            this.Column10.HeaderText = "系统编号";
+            this.Column10.Name = "Column10";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "LoginId";
+            this.Column1.HeaderText = "登陆账号";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "UserName";
+            this.Column2.HeaderText = "会员姓名";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Amount";
+            this.Column3.HeaderText = "返佣金额";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "BankNumber";
+            this.Column4.HeaderText = "银行账号";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "CreateBank";
+            this.Column5.HeaderText = "开户银行\t";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "BranchBankZH";
+            this.Column6.HeaderText = "银行网点信息";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "OrderStatus";
+            this.Column7.HeaderText = "订单状态";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "CreateTime";
+            this.Column8.HeaderText = "创建时间";
+            this.Column8.Name = "Column8";
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "Remark";
+            this.Column11.HeaderText = "备注";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "查看日志流水";
+            this.Column12.Name = "Column12";
+            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "操作";
+            this.Column13.Name = "Column13";
+            // 
             // RakeBackTaken
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -380,16 +377,16 @@
         private XiaoCai.WinformUI.Panels.PanelW panel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private XiaoCai.WinformUI.Pager pager1;
         private System.Windows.Forms.Panel panel1;
         private XiaoCai.WinformUI.DataGridViewW dataGridViewW1;
         private XiaoCai.WinformUI.ButtonW buttonW1;
         private XiaoCai.WinformUI.LabelW labelW6;
         private XiaoCai.WinformUI.LabelW labelW5;
-        private XiaoCai.WinformUI.DateTimePickerW dateTimePickerW1;
-        private XiaoCai.WinformUI.DateTimePickerW dateTimePickerW2;
-        private XiaoCai.WinformUI.ComboBoxW comboBoxW1;
+        private XiaoCai.WinformUI.DateTimePickerW dtStart;
+        private XiaoCai.WinformUI.DateTimePickerW dtEnd;
         private XiaoCai.WinformUI.LabelW labelW1;
+        private Control.PagerControl pager1;
+        private System.Windows.Forms.ComboBox cbx_OrderStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

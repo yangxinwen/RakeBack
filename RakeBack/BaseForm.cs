@@ -10,7 +10,7 @@ namespace RakeBack
 {
     public class BaseForm : DockContent
     {
-        protected static int _outTime = 5 * 1000;
+        protected static int _outTime = 20 * 1000;
 
         private Timer _timer = null;
 

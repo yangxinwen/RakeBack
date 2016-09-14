@@ -455,6 +455,900 @@ namespace RakeBack.RakeBackService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfArrayOfOrderInfoYgFqSxnr", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class ResponseBaseOfArrayOfOrderInfoYgFqSxnr : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private RakeBack.RakeBackService.OrderInfo[] ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMsgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public RakeBack.RakeBackService.OrderInfo[] Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMsg {
+            get {
+                return this.ErrorMsgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
+                    this.ErrorMsgField = value;
+                    this.RaisePropertyChanged("ErrorMsg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSuccess {
+            get {
+                return this.IsSuccessField;
+            }
+            set {
+                if ((this.IsSuccessField.Equals(value) != true)) {
+                    this.IsSuccessField = value;
+                    this.RaisePropertyChanged("IsSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderInfo", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class OrderInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ApiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BankNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BatchContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BatchNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BelongToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BranchBankField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BranchBankZHField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CreateBankField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime CreateTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InputPersonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IseableField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LoginIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrderIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrderStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RemarkField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime SubmitTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UidField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime UpdateTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Amount {
+            get {
+                return this.AmountField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AmountField, value) != true)) {
+                    this.AmountField = value;
+                    this.RaisePropertyChanged("Amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Api {
+            get {
+                return this.ApiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ApiField, value) != true)) {
+                    this.ApiField = value;
+                    this.RaisePropertyChanged("Api");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BankNumber {
+            get {
+                return this.BankNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BankNumberField, value) != true)) {
+                    this.BankNumberField = value;
+                    this.RaisePropertyChanged("BankNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BatchContent {
+            get {
+                return this.BatchContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BatchContentField, value) != true)) {
+                    this.BatchContentField = value;
+                    this.RaisePropertyChanged("BatchContent");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BatchNo {
+            get {
+                return this.BatchNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BatchNoField, value) != true)) {
+                    this.BatchNoField = value;
+                    this.RaisePropertyChanged("BatchNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BelongTo {
+            get {
+                return this.BelongToField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BelongToField, value) != true)) {
+                    this.BelongToField = value;
+                    this.RaisePropertyChanged("BelongTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BranchBank {
+            get {
+                return this.BranchBankField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BranchBankField, value) != true)) {
+                    this.BranchBankField = value;
+                    this.RaisePropertyChanged("BranchBank");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BranchBankZH {
+            get {
+                return this.BranchBankZHField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BranchBankZHField, value) != true)) {
+                    this.BranchBankZHField = value;
+                    this.RaisePropertyChanged("BranchBankZH");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CreateBank {
+            get {
+                return this.CreateBankField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CreateBankField, value) != true)) {
+                    this.CreateBankField = value;
+                    this.RaisePropertyChanged("CreateBank");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime CreateTime {
+            get {
+                return this.CreateTimeField;
+            }
+            set {
+                if ((this.CreateTimeField.Equals(value) != true)) {
+                    this.CreateTimeField = value;
+                    this.RaisePropertyChanged("CreateTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string InputPerson {
+            get {
+                return this.InputPersonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InputPersonField, value) != true)) {
+                    this.InputPersonField = value;
+                    this.RaisePropertyChanged("InputPerson");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Iseable {
+            get {
+                return this.IseableField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IseableField, value) != true)) {
+                    this.IseableField = value;
+                    this.RaisePropertyChanged("Iseable");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LoginId {
+            get {
+                return this.LoginIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoginIdField, value) != true)) {
+                    this.LoginIdField = value;
+                    this.RaisePropertyChanged("LoginId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OrderId {
+            get {
+                return this.OrderIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrderIdField, value) != true)) {
+                    this.OrderIdField = value;
+                    this.RaisePropertyChanged("OrderId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OrderStatus {
+            get {
+                return this.OrderStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrderStatusField, value) != true)) {
+                    this.OrderStatusField = value;
+                    this.RaisePropertyChanged("OrderStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Remark {
+            get {
+                return this.RemarkField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RemarkField, value) != true)) {
+                    this.RemarkField = value;
+                    this.RaisePropertyChanged("Remark");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime SubmitTime {
+            get {
+                return this.SubmitTimeField;
+            }
+            set {
+                if ((this.SubmitTimeField.Equals(value) != true)) {
+                    this.SubmitTimeField = value;
+                    this.RaisePropertyChanged("SubmitTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Uid {
+            get {
+                return this.UidField;
+            }
+            set {
+                if ((this.UidField.Equals(value) != true)) {
+                    this.UidField = value;
+                    this.RaisePropertyChanged("Uid");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime UpdateTime {
+            get {
+                return this.UpdateTimeField;
+            }
+            set {
+                if ((this.UpdateTimeField.Equals(value) != true)) {
+                    this.UpdateTimeField = value;
+                    this.RaisePropertyChanged("UpdateTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfArrayOfRoleInfoYgFqSxnr", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class ResponseBaseOfArrayOfRoleInfoYgFqSxnr : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private RakeBack.RakeBackService.RoleInfo[] ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMsgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public RakeBack.RakeBackService.RoleInfo[] Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMsg {
+            get {
+                return this.ErrorMsgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
+                    this.ErrorMsgField = value;
+                    this.RaisePropertyChanged("ErrorMsg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSuccess {
+            get {
+                return this.IsSuccessField;
+            }
+            set {
+                if ((this.IsSuccessField.Equals(value) != true)) {
+                    this.IsSuccessField = value;
+                    this.RaisePropertyChanged("IsSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RoleInfo", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class RoleInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AddUserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IsEnableField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PowerStrField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RemarkField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime RoleDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RoleIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RoleNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AddUser {
+            get {
+                return this.AddUserField;
+            }
+            set {
+                if ((this.AddUserField.Equals(value) != true)) {
+                    this.AddUserField = value;
+                    this.RaisePropertyChanged("AddUser");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IsEnable {
+            get {
+                return this.IsEnableField;
+            }
+            set {
+                if ((this.IsEnableField.Equals(value) != true)) {
+                    this.IsEnableField = value;
+                    this.RaisePropertyChanged("IsEnable");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PowerStr {
+            get {
+                return this.PowerStrField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PowerStrField, value) != true)) {
+                    this.PowerStrField = value;
+                    this.RaisePropertyChanged("PowerStr");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Remark {
+            get {
+                return this.RemarkField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RemarkField, value) != true)) {
+                    this.RemarkField = value;
+                    this.RaisePropertyChanged("Remark");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime RoleDate {
+            get {
+                return this.RoleDateField;
+            }
+            set {
+                if ((this.RoleDateField.Equals(value) != true)) {
+                    this.RoleDateField = value;
+                    this.RaisePropertyChanged("RoleDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int RoleId {
+            get {
+                return this.RoleIdField;
+            }
+            set {
+                if ((this.RoleIdField.Equals(value) != true)) {
+                    this.RoleIdField = value;
+                    this.RaisePropertyChanged("RoleId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RoleName {
+            get {
+                return this.RoleNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RoleNameField, value) != true)) {
+                    this.RoleNameField = value;
+                    this.RaisePropertyChanged("RoleName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfUserInfoYgFqSxnr", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class ResponseBaseOfUserInfoYgFqSxnr : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private RakeBack.RakeBackService.UserInfo ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMsgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public RakeBack.RakeBackService.UserInfo Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMsg {
+            get {
+                return this.ErrorMsgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
+                    this.ErrorMsgField = value;
+                    this.RaisePropertyChanged("ErrorMsg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSuccess {
+            get {
+                return this.IsSuccessField;
+            }
+            set {
+                if ((this.IsSuccessField.Equals(value) != true)) {
+                    this.IsSuccessField = value;
+                    this.RaisePropertyChanged("IsSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfboolean", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class ResponseBaseOfboolean : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMsgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((this.ContentField.Equals(value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMsg {
+            get {
+                return this.ErrorMsgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
+                    this.ErrorMsgField = value;
+                    this.RaisePropertyChanged("ErrorMsg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSuccess {
+            get {
+                return this.IsSuccessField;
+            }
+            set {
+                if ((this.IsSuccessField.Equals(value) != true)) {
+                    this.IsSuccessField = value;
+                    this.RaisePropertyChanged("IsSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RakeBackService.IRakeBackService")]
     public interface IRakeBackService {
@@ -465,11 +1359,35 @@ namespace RakeBack.RakeBackService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetNewRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/GetNewRakeBackResponse")]
         System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr> GetNewRakeBackAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/sdfsdf", ReplyAction="http://tempuri.org/IRakeBackService/sdfsdfResponse")]
-        RakeBack.RakeBackService.UserInfo sdfsdf(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/GetRakeBackResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr GetRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/sdfsdf", ReplyAction="http://tempuri.org/IRakeBackService/sdfsdfResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.UserInfo> sdfsdfAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/GetRakeBackResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr> GetRakeBackAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetRoleInfo", ReplyAction="http://tempuri.org/IRakeBackService/GetRoleInfoResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfArrayOfRoleInfoYgFqSxnr GetRoleInfo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetRoleInfo", ReplyAction="http://tempuri.org/IRakeBackService/GetRoleInfoResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfRoleInfoYgFqSxnr> GetRoleInfoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/GetUserInfoResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr GetUserInfo(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/GetUserInfoResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr> GetUserInfoAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserInfoResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr UpdateUserInfo(RakeBack.RakeBackService.UserInfo info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserInfoResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> UpdateUserInfoAsync(RakeBack.RakeBackService.UserInfo info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelUserInfoResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(RakeBack.RakeBackService.UserInfo info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelUserInfoResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelUserInfoAsync(RakeBack.RakeBackService.UserInfo info);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -507,12 +1425,44 @@ namespace RakeBack.RakeBackService {
             return base.Channel.GetNewRakeBackAsync(pageSize, pageIndex, conditions);
         }
         
-        public RakeBack.RakeBackService.UserInfo sdfsdf(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
-            return base.Channel.sdfsdf(pageSize, pageIndex, conditions);
+        public RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr GetRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
+            return base.Channel.GetRakeBack(pageSize, pageIndex, conditions);
         }
         
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.UserInfo> sdfsdfAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
-            return base.Channel.sdfsdfAsync(pageSize, pageIndex, conditions);
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr> GetRakeBackAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
+            return base.Channel.GetRakeBackAsync(pageSize, pageIndex, conditions);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfArrayOfRoleInfoYgFqSxnr GetRoleInfo() {
+            return base.Channel.GetRoleInfo();
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfRoleInfoYgFqSxnr> GetRoleInfoAsync() {
+            return base.Channel.GetRoleInfoAsync();
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr GetUserInfo(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
+            return base.Channel.GetUserInfo(pageSize, pageIndex, conditions);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr> GetUserInfoAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
+            return base.Channel.GetUserInfoAsync(pageSize, pageIndex, conditions);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr UpdateUserInfo(RakeBack.RakeBackService.UserInfo info) {
+            return base.Channel.UpdateUserInfo(info);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> UpdateUserInfoAsync(RakeBack.RakeBackService.UserInfo info) {
+            return base.Channel.UpdateUserInfoAsync(info);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(RakeBack.RakeBackService.UserInfo info) {
+            return base.Channel.DelUserInfo(info);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelUserInfoAsync(RakeBack.RakeBackService.UserInfo info) {
+            return base.Channel.DelUserInfoAsync(info);
         }
     }
 }

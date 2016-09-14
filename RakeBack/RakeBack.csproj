@@ -147,6 +147,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\MenuItemModel.cs" />
+    <Compile Include="Model\OrderStatus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Content\TestForm.cs">
@@ -241,10 +242,19 @@
     <None Include="Service References\RakeBackService\item3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfArrayOfRoleInfoYgFqSxnr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\RakeBackService\RakeBack.RakeBackService.UserInfo.datasource">
+    <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfboolean.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\RakeBackService\RakeBackService.wsdl" />

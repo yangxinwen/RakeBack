@@ -47,4 +47,119 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="UserInfo" nillable="true" type="tns:UserInfo" />
+  <xs:complexType name="ResponseBaseOfArrayOfOrderInfoYgFqSxnr">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfOrderInfo" Namespace="http://schemas.datacontract.org/2004/07/Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="tns:ArrayOfOrderInfo" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBaseOfArrayOfOrderInfoYgFqSxnr" nillable="true" type="tns:ResponseBaseOfArrayOfOrderInfoYgFqSxnr" />
+  <xs:complexType name="ArrayOfOrderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderInfo" nillable="true" type="tns:OrderInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderInfo" nillable="true" type="tns:ArrayOfOrderInfo" />
+  <xs:complexType name="OrderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Api" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BatchContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BatchNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BelongTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchBank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchBankZH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateBank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="InputPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Iseable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoginId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubmitTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Uid" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderInfo" nillable="true" type="tns:OrderInfo" />
+  <xs:complexType name="ResponseBaseOfArrayOfRoleInfoYgFqSxnr">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfRoleInfo" Namespace="http://schemas.datacontract.org/2004/07/Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="tns:ArrayOfRoleInfo" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBaseOfArrayOfRoleInfoYgFqSxnr" nillable="true" type="tns:ResponseBaseOfArrayOfRoleInfoYgFqSxnr" />
+  <xs:complexType name="ArrayOfRoleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleInfo" nillable="true" type="tns:RoleInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoleInfo" nillable="true" type="tns:ArrayOfRoleInfo" />
+  <xs:complexType name="RoleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddUser" type="xs:int" />
+      <xs:element minOccurs="0" name="IsEnable" type="xs:int" />
+      <xs:element minOccurs="0" name="PowerStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoleInfo" nillable="true" type="tns:RoleInfo" />
+  <xs:complexType name="ResponseBaseOfUserInfoYgFqSxnr">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UserInfo" Namespace="http://schemas.datacontract.org/2004/07/Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="tns:UserInfo" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBaseOfUserInfoYgFqSxnr" nillable="true" type="tns:ResponseBaseOfUserInfoYgFqSxnr" />
+  <xs:complexType name="ResponseBaseOfboolean">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBaseOfboolean" nillable="true" type="tns:ResponseBaseOfboolean" />
 </xs:schema>
