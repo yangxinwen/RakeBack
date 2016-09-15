@@ -1,4 +1,5 @@
-﻿using RakeBack.Helper;
+﻿using RakeBack.Business;
+using RakeBack.Helper;
 using RakeBack.Model;
 using RakeBack.RakeBackService;
 using System;
@@ -99,7 +100,7 @@ namespace RakeBack.Content.RakeBackMgr
                 var client = CommunicationHelper.GetClient();
                 if (client != null)
                 {
-                    var result = client.AddRakeBack(order);
+                    var result = client.AddRakeBack(order, ApplicationParam.UserInfo.LoginId);
 
 
                     if (result != null && result.IsSuccess)

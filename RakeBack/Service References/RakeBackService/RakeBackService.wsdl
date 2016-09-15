@@ -75,6 +75,12 @@
   <wsdl:message name="IRakeBackService_Login_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginResponse" />
   </wsdl:message>
+  <wsdl:message name="IRakeBackService_OutLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:OutLogin" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_OutLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OutLoginResponse" />
+  </wsdl:message>
   <wsdl:message name="IRakeBackService_UpdateUserPassword_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateUserPassword" />
   </wsdl:message>
@@ -143,6 +149,10 @@
     <wsdl:operation name="Login">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/Login" message="tns:IRakeBackService_Login_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/LoginResponse" message="tns:IRakeBackService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OutLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/OutLogin" message="tns:IRakeBackService_OutLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/OutLoginResponse" message="tns:IRakeBackService_OutLogin_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateUserPassword">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/UpdateUserPassword" message="tns:IRakeBackService_UpdateUserPassword_InputMessage" />
@@ -255,6 +265,15 @@
     </wsdl:operation>
     <wsdl:operation name="Login">
       <soap:operation soapAction="http://tempuri.org/IRakeBackService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OutLogin">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/OutLogin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

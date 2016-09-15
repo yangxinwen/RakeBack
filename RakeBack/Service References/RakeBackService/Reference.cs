@@ -1886,7 +1886,7 @@ namespace RakeBack.RakeBackService {
         RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr GetNewRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/AddRakeBackResponse")]
-        RakeBack.RakeBackService.ResponseBaseOfboolean AddRakeBack(RakeBack.RakeBackService.OrderInfo info);
+        RakeBack.RakeBackService.ResponseBaseOfboolean AddRakeBack(RakeBack.RakeBackService.OrderInfo info, string operateLoginId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/GetRakeBackResponse")]
         RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr GetRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
@@ -1898,22 +1898,25 @@ namespace RakeBack.RakeBackService {
         RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr GetUserInfo(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/AddUserInfoResponse")]
-        RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr AddUserInfo(RakeBack.RakeBackService.UserInfo info);
+        RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr AddUserInfo(RakeBack.RakeBackService.UserInfo info, string operateLoginId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserInfoResponse")]
-        RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr UpdateUserInfo(RakeBack.RakeBackService.UserInfo info);
+        RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr UpdateUserInfo(RakeBack.RakeBackService.UserInfo info, string operateLoginId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelUserInfoResponse")]
-        RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(int id);
+        RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(int id, string operateLoginId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateOrderInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateOrderInfoResponse")]
-        RakeBack.RakeBackService.ResponseBaseOfboolean UpdateOrderInfo(RakeBack.RakeBackService.OrderInfo info);
+        RakeBack.RakeBackService.ResponseBaseOfboolean UpdateOrderInfo(RakeBack.RakeBackService.OrderInfo info, string operateLoginId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelOrderInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelOrderInfoResponse")]
-        RakeBack.RakeBackService.ResponseBaseOfboolean DelOrderInfo(RakeBack.RakeBackService.OrderInfo info);
+        RakeBack.RakeBackService.ResponseBaseOfboolean DelOrderInfo(RakeBack.RakeBackService.OrderInfo info, string operateLoginId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/Login", ReplyAction="http://tempuri.org/IRakeBackService/LoginResponse")]
         RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr Login(string loginCode, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/OutLogin", ReplyAction="http://tempuri.org/IRakeBackService/OutLoginResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfboolean OutLogin(int userId, string userName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserPassword", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserPasswordResponse")]
         RakeBack.RakeBackService.ResponseBaseOfboolean UpdateUserPassword(int userId, string oldPwd, string newPwd);
@@ -1959,8 +1962,8 @@ namespace RakeBack.RakeBackService {
             return base.Channel.GetNewRakeBack(pageSize, pageIndex, conditions);
         }
         
-        public RakeBack.RakeBackService.ResponseBaseOfboolean AddRakeBack(RakeBack.RakeBackService.OrderInfo info) {
-            return base.Channel.AddRakeBack(info);
+        public RakeBack.RakeBackService.ResponseBaseOfboolean AddRakeBack(RakeBack.RakeBackService.OrderInfo info, string operateLoginId) {
+            return base.Channel.AddRakeBack(info, operateLoginId);
         }
         
         public RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr GetRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
@@ -1975,28 +1978,32 @@ namespace RakeBack.RakeBackService {
             return base.Channel.GetUserInfo(pageSize, pageIndex, conditions);
         }
         
-        public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr AddUserInfo(RakeBack.RakeBackService.UserInfo info) {
-            return base.Channel.AddUserInfo(info);
+        public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr AddUserInfo(RakeBack.RakeBackService.UserInfo info, string operateLoginId) {
+            return base.Channel.AddUserInfo(info, operateLoginId);
         }
         
-        public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr UpdateUserInfo(RakeBack.RakeBackService.UserInfo info) {
-            return base.Channel.UpdateUserInfo(info);
+        public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr UpdateUserInfo(RakeBack.RakeBackService.UserInfo info, string operateLoginId) {
+            return base.Channel.UpdateUserInfo(info, operateLoginId);
         }
         
-        public RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(int id) {
-            return base.Channel.DelUserInfo(id);
+        public RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(int id, string operateLoginId) {
+            return base.Channel.DelUserInfo(id, operateLoginId);
         }
         
-        public RakeBack.RakeBackService.ResponseBaseOfboolean UpdateOrderInfo(RakeBack.RakeBackService.OrderInfo info) {
-            return base.Channel.UpdateOrderInfo(info);
+        public RakeBack.RakeBackService.ResponseBaseOfboolean UpdateOrderInfo(RakeBack.RakeBackService.OrderInfo info, string operateLoginId) {
+            return base.Channel.UpdateOrderInfo(info, operateLoginId);
         }
         
-        public RakeBack.RakeBackService.ResponseBaseOfboolean DelOrderInfo(RakeBack.RakeBackService.OrderInfo info) {
-            return base.Channel.DelOrderInfo(info);
+        public RakeBack.RakeBackService.ResponseBaseOfboolean DelOrderInfo(RakeBack.RakeBackService.OrderInfo info, string operateLoginId) {
+            return base.Channel.DelOrderInfo(info, operateLoginId);
         }
         
         public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr Login(string loginCode, string password) {
             return base.Channel.Login(loginCode, password);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfboolean OutLogin(int userId, string userName) {
+            return base.Channel.OutLogin(userId, userName);
         }
         
         public RakeBack.RakeBackService.ResponseBaseOfboolean UpdateUserPassword(int userId, string oldPwd, string newPwd) {

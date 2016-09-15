@@ -213,7 +213,7 @@ namespace RakeBack.Content.SystemSet
                     var client = CommunicationHelper.GetClient();
                     if (client != null)
                     {
-                        var result = client.AddUserInfo(user);
+                        var result = client.AddUserInfo(user,ApplicationParam.UserInfo.LoginId);
 
                         base.EndWait();
                         this.Invoke(new Action(() =>

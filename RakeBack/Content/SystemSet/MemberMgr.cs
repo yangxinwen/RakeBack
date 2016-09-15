@@ -114,7 +114,7 @@ namespace RakeBack.Content.SystemSet
                             var client = CommunicationHelper.GetClient();
                             if (client != null)
                             {
-                                var result = client.DelUserInfo(mod.UserId);
+                                var result = client.DelUserInfo(mod.UserId, ApplicationParam.UserInfo.LoginId);
 
                                 base.EndWait();
                                 this.Invoke(new Action(() =>

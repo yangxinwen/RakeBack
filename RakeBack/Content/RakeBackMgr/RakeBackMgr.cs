@@ -165,7 +165,7 @@ namespace RakeBack.Content.RakeBackMgr
                     var client = CommunicationHelper.GetClient();
                     if (client != null)
                     {
-                        var result = client.UpdateOrderInfo(order);
+                        var result = client.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
                         base.EndWait();
                         this.Invoke(new Action(() =>
                         {
@@ -209,7 +209,7 @@ namespace RakeBack.Content.RakeBackMgr
                     var client = CommunicationHelper.GetClient();
                     if (client != null)
                     {
-                        var result = client.DelOrderInfo(order);
+                        var result = client.DelOrderInfo(order, ApplicationParam.UserInfo.LoginId);
                         base.EndWait();
                         this.Invoke(new Action(() =>
                         {
@@ -261,7 +261,7 @@ namespace RakeBack.Content.RakeBackMgr
                     var client = CommunicationHelper.GetClient();
                     if (client != null)
                     {
-                        var result = client.UpdateOrderInfo(order);
+                        var result = client.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
                         base.EndWait();
                         this.Invoke(new Action(() =>
                         {
