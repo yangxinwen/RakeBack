@@ -1885,92 +1885,47 @@ namespace RakeBack.RakeBackService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetNewRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/GetNewRakeBackResponse")]
         RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr GetNewRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetNewRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/GetNewRakeBackResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr> GetNewRakeBackAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/AddRakeBackResponse")]
         RakeBack.RakeBackService.ResponseBaseOfboolean AddRakeBack(RakeBack.RakeBackService.OrderInfo info);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/AddRakeBackResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> AddRakeBackAsync(RakeBack.RakeBackService.OrderInfo info);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/GetRakeBackResponse")]
         RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr GetRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/GetRakeBackResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr> GetRakeBackAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetRoleInfo", ReplyAction="http://tempuri.org/IRakeBackService/GetRoleInfoResponse")]
         RakeBack.RakeBackService.ResponseBaseOfArrayOfRoleInfoYgFqSxnr GetRoleInfo();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetRoleInfo", ReplyAction="http://tempuri.org/IRakeBackService/GetRoleInfoResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfRoleInfoYgFqSxnr> GetRoleInfoAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/GetUserInfoResponse")]
         RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr GetUserInfo(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/GetUserInfoResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr> GetUserInfoAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/AddUserInfoResponse")]
         RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr AddUserInfo(RakeBack.RakeBackService.UserInfo info);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/AddUserInfoResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> AddUserInfoAsync(RakeBack.RakeBackService.UserInfo info);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserInfoResponse")]
         RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr UpdateUserInfo(RakeBack.RakeBackService.UserInfo info);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserInfoResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> UpdateUserInfoAsync(RakeBack.RakeBackService.UserInfo info);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelUserInfoResponse")]
         RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(int id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelUserInfoResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelUserInfoAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateOrderInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateOrderInfoResponse")]
         RakeBack.RakeBackService.ResponseBaseOfboolean UpdateOrderInfo(RakeBack.RakeBackService.OrderInfo info);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateOrderInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateOrderInfoResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> UpdateOrderInfoAsync(RakeBack.RakeBackService.OrderInfo info);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelOrderInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelOrderInfoResponse")]
         RakeBack.RakeBackService.ResponseBaseOfboolean DelOrderInfo(RakeBack.RakeBackService.OrderInfo info);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelOrderInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelOrderInfoResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelOrderInfoAsync(RakeBack.RakeBackService.OrderInfo info);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/Login", ReplyAction="http://tempuri.org/IRakeBackService/LoginResponse")]
         RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr Login(string loginCode, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/Login", ReplyAction="http://tempuri.org/IRakeBackService/LoginResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> LoginAsync(string loginCode, string password);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserPassword", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserPasswordResponse")]
         RakeBack.RakeBackService.ResponseBaseOfboolean UpdateUserPassword(int userId, string oldPwd, string newPwd);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserPassword", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserPasswordResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> UpdateUserPasswordAsync(int userId, string oldPwd, string newPwd);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetAmountStatistics", ReplyAction="http://tempuri.org/IRakeBackService/GetAmountStatisticsResponse")]
         RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg GetAmountStatistics(System.Collections.Generic.Dictionary<string, string> conditions);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetAmountStatistics", ReplyAction="http://tempuri.org/IRakeBackService/GetAmountStatisticsResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg> GetAmountStatisticsAsync(System.Collections.Generic.Dictionary<string, string> conditions);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetOperateLog", ReplyAction="http://tempuri.org/IRakeBackService/GetOperateLogResponse")]
         RakeBack.RakeBackService.ResponseBaseOfArrayOfOperInfoYgFqSxnr GetOperateLog(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetOperateLog", ReplyAction="http://tempuri.org/IRakeBackService/GetOperateLogResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfOperInfoYgFqSxnr> GetOperateLogAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetOrderLog", ReplyAction="http://tempuri.org/IRakeBackService/GetOrderLogResponse")]
         RakeBack.RakeBackService.ResponseBaseOfArrayOfFlowInfoYgFqSxnr GetOrderLog(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetOrderLog", ReplyAction="http://tempuri.org/IRakeBackService/GetOrderLogResponse")]
-        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfFlowInfoYgFqSxnr> GetOrderLogAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2004,120 +1959,60 @@ namespace RakeBack.RakeBackService {
             return base.Channel.GetNewRakeBack(pageSize, pageIndex, conditions);
         }
         
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr> GetNewRakeBackAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
-            return base.Channel.GetNewRakeBackAsync(pageSize, pageIndex, conditions);
-        }
-        
         public RakeBack.RakeBackService.ResponseBaseOfboolean AddRakeBack(RakeBack.RakeBackService.OrderInfo info) {
             return base.Channel.AddRakeBack(info);
-        }
-        
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> AddRakeBackAsync(RakeBack.RakeBackService.OrderInfo info) {
-            return base.Channel.AddRakeBackAsync(info);
         }
         
         public RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr GetRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
             return base.Channel.GetRakeBack(pageSize, pageIndex, conditions);
         }
         
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr> GetRakeBackAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
-            return base.Channel.GetRakeBackAsync(pageSize, pageIndex, conditions);
-        }
-        
         public RakeBack.RakeBackService.ResponseBaseOfArrayOfRoleInfoYgFqSxnr GetRoleInfo() {
             return base.Channel.GetRoleInfo();
-        }
-        
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfRoleInfoYgFqSxnr> GetRoleInfoAsync() {
-            return base.Channel.GetRoleInfoAsync();
         }
         
         public RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr GetUserInfo(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
             return base.Channel.GetUserInfo(pageSize, pageIndex, conditions);
         }
         
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr> GetUserInfoAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
-            return base.Channel.GetUserInfoAsync(pageSize, pageIndex, conditions);
-        }
-        
         public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr AddUserInfo(RakeBack.RakeBackService.UserInfo info) {
             return base.Channel.AddUserInfo(info);
-        }
-        
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> AddUserInfoAsync(RakeBack.RakeBackService.UserInfo info) {
-            return base.Channel.AddUserInfoAsync(info);
         }
         
         public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr UpdateUserInfo(RakeBack.RakeBackService.UserInfo info) {
             return base.Channel.UpdateUserInfo(info);
         }
         
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> UpdateUserInfoAsync(RakeBack.RakeBackService.UserInfo info) {
-            return base.Channel.UpdateUserInfoAsync(info);
-        }
-        
         public RakeBack.RakeBackService.ResponseBaseOfboolean DelUserInfo(int id) {
             return base.Channel.DelUserInfo(id);
-        }
-        
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelUserInfoAsync(int id) {
-            return base.Channel.DelUserInfoAsync(id);
         }
         
         public RakeBack.RakeBackService.ResponseBaseOfboolean UpdateOrderInfo(RakeBack.RakeBackService.OrderInfo info) {
             return base.Channel.UpdateOrderInfo(info);
         }
         
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> UpdateOrderInfoAsync(RakeBack.RakeBackService.OrderInfo info) {
-            return base.Channel.UpdateOrderInfoAsync(info);
-        }
-        
         public RakeBack.RakeBackService.ResponseBaseOfboolean DelOrderInfo(RakeBack.RakeBackService.OrderInfo info) {
             return base.Channel.DelOrderInfo(info);
-        }
-        
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelOrderInfoAsync(RakeBack.RakeBackService.OrderInfo info) {
-            return base.Channel.DelOrderInfoAsync(info);
         }
         
         public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr Login(string loginCode, string password) {
             return base.Channel.Login(loginCode, password);
         }
         
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> LoginAsync(string loginCode, string password) {
-            return base.Channel.LoginAsync(loginCode, password);
-        }
-        
         public RakeBack.RakeBackService.ResponseBaseOfboolean UpdateUserPassword(int userId, string oldPwd, string newPwd) {
             return base.Channel.UpdateUserPassword(userId, oldPwd, newPwd);
-        }
-        
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> UpdateUserPasswordAsync(int userId, string oldPwd, string newPwd) {
-            return base.Channel.UpdateUserPasswordAsync(userId, oldPwd, newPwd);
         }
         
         public RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg GetAmountStatistics(System.Collections.Generic.Dictionary<string, string> conditions) {
             return base.Channel.GetAmountStatistics(conditions);
         }
         
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg> GetAmountStatisticsAsync(System.Collections.Generic.Dictionary<string, string> conditions) {
-            return base.Channel.GetAmountStatisticsAsync(conditions);
-        }
-        
         public RakeBack.RakeBackService.ResponseBaseOfArrayOfOperInfoYgFqSxnr GetOperateLog(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
             return base.Channel.GetOperateLog(pageSize, pageIndex, conditions);
         }
         
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfOperInfoYgFqSxnr> GetOperateLogAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
-            return base.Channel.GetOperateLogAsync(pageSize, pageIndex, conditions);
-        }
-        
         public RakeBack.RakeBackService.ResponseBaseOfArrayOfFlowInfoYgFqSxnr GetOrderLog(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
             return base.Channel.GetOrderLog(pageSize, pageIndex, conditions);
-        }
-        
-        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfFlowInfoYgFqSxnr> GetOrderLogAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
-            return base.Channel.GetOrderLogAsync(pageSize, pageIndex, conditions);
         }
     }
 }
