@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
-            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
-            this.textBoxW3 = new XiaoCai.WinformUI.TextBoxW();
-            this.labelW3 = new XiaoCai.WinformUI.LabelW();
-            this.textBoxW2 = new XiaoCai.WinformUI.TextBoxW();
-            this.labelW2 = new XiaoCai.WinformUI.LabelW();
-            this.textBoxW1 = new XiaoCai.WinformUI.TextBoxW();
-            this.labelW1 = new XiaoCai.WinformUI.LabelW();
             this.buttonW2 = new XiaoCai.WinformUI.ButtonW();
+            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
+            this.txtNewConf = new XiaoCai.WinformUI.TextBoxW();
+            this.labelW3 = new XiaoCai.WinformUI.LabelW();
+            this.txtNew = new XiaoCai.WinformUI.TextBoxW();
+            this.labelW2 = new XiaoCai.WinformUI.LabelW();
+            this.txtOld = new XiaoCai.WinformUI.TextBoxW();
+            this.labelW1 = new XiaoCai.WinformUI.LabelW();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,11 +48,11 @@
             this.panel.CaptionHeight = 27;
             this.panel.Controls.Add(this.buttonW2);
             this.panel.Controls.Add(this.buttonW1);
-            this.panel.Controls.Add(this.textBoxW3);
+            this.panel.Controls.Add(this.txtNewConf);
             this.panel.Controls.Add(this.labelW3);
-            this.panel.Controls.Add(this.textBoxW2);
+            this.panel.Controls.Add(this.txtNew);
             this.panel.Controls.Add(this.labelW2);
-            this.panel.Controls.Add(this.textBoxW1);
+            this.panel.Controls.Add(this.txtOld);
             this.panel.Controls.Add(this.labelW1);
             this.panel.CustomColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.panel.CustomColors.CaptionCloseIcon = System.Drawing.SystemColors.ControlText;
@@ -84,88 +84,6 @@
             this.panel.ToolTipTextExpandIconPanelCollapsed = null;
             this.panel.ToolTipTextExpandIconPanelExpanded = null;
             // 
-            // buttonW1
-            // 
-            this.buttonW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.buttonW1.ForeColor = System.Drawing.Color.Black;
-            this.buttonW1.IsSilver = false;
-            this.buttonW1.Location = new System.Drawing.Point(102, 172);
-            this.buttonW1.MaxImageSize = new System.Drawing.Point(0, 0);
-            this.buttonW1.MenuPos = new System.Drawing.Point(0, 0);
-            this.buttonW1.Name = "buttonW1";
-            this.buttonW1.Size = new System.Drawing.Size(75, 23);
-            this.buttonW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.buttonW1.TabIndex = 2;
-            this.buttonW1.Text = "提交";
-            this.buttonW1.ToFocused = false;
-            this.buttonW1.UseVisualStyleBackColor = true;
-            // 
-            // textBoxW3
-            // 
-            this.textBoxW3.Location = new System.Drawing.Point(186, 115);
-            this.textBoxW3.Name = "textBoxW3";
-            this.textBoxW3.PasswordChar = '*';
-            this.textBoxW3.Size = new System.Drawing.Size(141, 21);
-            this.textBoxW3.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.textBoxW3.TabIndex = 1;
-            // 
-            // labelW3
-            // 
-            this.labelW3.AutoSize = true;
-            this.labelW3.BackColor = System.Drawing.Color.Transparent;
-            this.labelW3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW3.Location = new System.Drawing.Point(100, 118);
-            this.labelW3.Name = "labelW3";
-            this.labelW3.Size = new System.Drawing.Size(89, 12);
-            this.labelW3.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW3.TabIndex = 0;
-            this.labelW3.Text = "请确认新密码：";
-            this.labelW3.UseStyle = false;
-            // 
-            // textBoxW2
-            // 
-            this.textBoxW2.Location = new System.Drawing.Point(186, 74);
-            this.textBoxW2.Name = "textBoxW2";
-            this.textBoxW2.PasswordChar = '*';
-            this.textBoxW2.Size = new System.Drawing.Size(141, 21);
-            this.textBoxW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.textBoxW2.TabIndex = 1;
-            // 
-            // labelW2
-            // 
-            this.labelW2.AutoSize = true;
-            this.labelW2.BackColor = System.Drawing.Color.Transparent;
-            this.labelW2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW2.Location = new System.Drawing.Point(100, 77);
-            this.labelW2.Name = "labelW2";
-            this.labelW2.Size = new System.Drawing.Size(89, 12);
-            this.labelW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW2.TabIndex = 0;
-            this.labelW2.Text = "请输入新密码：";
-            this.labelW2.UseStyle = false;
-            // 
-            // textBoxW1
-            // 
-            this.textBoxW1.Location = new System.Drawing.Point(186, 35);
-            this.textBoxW1.Name = "textBoxW1";
-            this.textBoxW1.PasswordChar = '*';
-            this.textBoxW1.Size = new System.Drawing.Size(141, 21);
-            this.textBoxW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.textBoxW1.TabIndex = 1;
-            // 
-            // labelW1
-            // 
-            this.labelW1.AutoSize = true;
-            this.labelW1.BackColor = System.Drawing.Color.Transparent;
-            this.labelW1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW1.Location = new System.Drawing.Point(100, 38);
-            this.labelW1.Name = "labelW1";
-            this.labelW1.Size = new System.Drawing.Size(89, 12);
-            this.labelW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW1.TabIndex = 0;
-            this.labelW1.Text = "请输入原密码：";
-            this.labelW1.UseStyle = false;
-            // 
             // buttonW2
             // 
             this.buttonW2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
@@ -181,6 +99,90 @@
             this.buttonW2.Text = "清空";
             this.buttonW2.ToFocused = false;
             this.buttonW2.UseVisualStyleBackColor = true;
+            this.buttonW2.Click += new System.EventHandler(this.buttonW2_Click);
+            // 
+            // buttonW1
+            // 
+            this.buttonW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
+            this.buttonW1.ForeColor = System.Drawing.Color.Black;
+            this.buttonW1.IsSilver = false;
+            this.buttonW1.Location = new System.Drawing.Point(102, 172);
+            this.buttonW1.MaxImageSize = new System.Drawing.Point(0, 0);
+            this.buttonW1.MenuPos = new System.Drawing.Point(0, 0);
+            this.buttonW1.Name = "buttonW1";
+            this.buttonW1.Size = new System.Drawing.Size(75, 23);
+            this.buttonW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.buttonW1.TabIndex = 2;
+            this.buttonW1.Text = "提交";
+            this.buttonW1.ToFocused = false;
+            this.buttonW1.UseVisualStyleBackColor = true;
+            this.buttonW1.Click += new System.EventHandler(this.buttonW1_Click);
+            // 
+            // txtNewConf
+            // 
+            this.txtNewConf.Location = new System.Drawing.Point(186, 115);
+            this.txtNewConf.Name = "txtNewConf";
+            this.txtNewConf.PasswordChar = '*';
+            this.txtNewConf.Size = new System.Drawing.Size(141, 21);
+            this.txtNewConf.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.txtNewConf.TabIndex = 1;
+            // 
+            // labelW3
+            // 
+            this.labelW3.AutoSize = true;
+            this.labelW3.BackColor = System.Drawing.Color.Transparent;
+            this.labelW3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW3.Location = new System.Drawing.Point(100, 118);
+            this.labelW3.Name = "labelW3";
+            this.labelW3.Size = new System.Drawing.Size(89, 12);
+            this.labelW3.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW3.TabIndex = 0;
+            this.labelW3.Text = "请确认新密码：";
+            this.labelW3.UseStyle = false;
+            // 
+            // txtNew
+            // 
+            this.txtNew.Location = new System.Drawing.Point(186, 74);
+            this.txtNew.Name = "txtNew";
+            this.txtNew.PasswordChar = '*';
+            this.txtNew.Size = new System.Drawing.Size(141, 21);
+            this.txtNew.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.txtNew.TabIndex = 1;
+            // 
+            // labelW2
+            // 
+            this.labelW2.AutoSize = true;
+            this.labelW2.BackColor = System.Drawing.Color.Transparent;
+            this.labelW2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW2.Location = new System.Drawing.Point(100, 77);
+            this.labelW2.Name = "labelW2";
+            this.labelW2.Size = new System.Drawing.Size(89, 12);
+            this.labelW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW2.TabIndex = 0;
+            this.labelW2.Text = "请输入新密码：";
+            this.labelW2.UseStyle = false;
+            // 
+            // txtOld
+            // 
+            this.txtOld.Location = new System.Drawing.Point(186, 35);
+            this.txtOld.Name = "txtOld";
+            this.txtOld.PasswordChar = '*';
+            this.txtOld.Size = new System.Drawing.Size(141, 21);
+            this.txtOld.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.txtOld.TabIndex = 1;
+            // 
+            // labelW1
+            // 
+            this.labelW1.AutoSize = true;
+            this.labelW1.BackColor = System.Drawing.Color.Transparent;
+            this.labelW1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW1.Location = new System.Drawing.Point(100, 38);
+            this.labelW1.Name = "labelW1";
+            this.labelW1.Size = new System.Drawing.Size(89, 12);
+            this.labelW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW1.TabIndex = 0;
+            this.labelW1.Text = "请输入原密码：";
+            this.labelW1.UseStyle = false;
             // 
             // PassordModify
             // 
@@ -201,11 +203,11 @@
         #endregion
 
         private XiaoCai.WinformUI.Panels.PanelW panel;
-        private XiaoCai.WinformUI.TextBoxW textBoxW1;
+        private XiaoCai.WinformUI.TextBoxW txtOld;
         private XiaoCai.WinformUI.LabelW labelW1;
-        private XiaoCai.WinformUI.TextBoxW textBoxW3;
+        private XiaoCai.WinformUI.TextBoxW txtNewConf;
         private XiaoCai.WinformUI.LabelW labelW3;
-        private XiaoCai.WinformUI.TextBoxW textBoxW2;
+        private XiaoCai.WinformUI.TextBoxW txtNew;
         private XiaoCai.WinformUI.LabelW labelW2;
         private XiaoCai.WinformUI.ButtonW buttonW1;
         private XiaoCai.WinformUI.ButtonW buttonW2;

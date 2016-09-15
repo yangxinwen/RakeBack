@@ -1349,6 +1349,99 @@ namespace RakeBack.RakeBackService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfTupleOfstringstring5F2dSckg", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class ResponseBaseOfTupleOfstringstring5F2dSckg : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Tuple<string, string> ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMsgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Tuple<string, string> Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMsg {
+            get {
+                return this.ErrorMsgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
+                    this.ErrorMsgField = value;
+                    this.RaisePropertyChanged("ErrorMsg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSuccess {
+            get {
+                return this.IsSuccessField;
+            }
+            set {
+                if ((this.IsSuccessField.Equals(value) != true)) {
+                    this.IsSuccessField = value;
+                    this.RaisePropertyChanged("IsSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RakeBackService.IRakeBackService")]
     public interface IRakeBackService {
@@ -1418,6 +1511,18 @@ namespace RakeBack.RakeBackService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/Login", ReplyAction="http://tempuri.org/IRakeBackService/LoginResponse")]
         System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> LoginAsync(string loginCode, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserPassword", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserPasswordResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfboolean UpdateUserPassword(int userId, string oldPwd, string newPwd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateUserPassword", ReplyAction="http://tempuri.org/IRakeBackService/UpdateUserPasswordResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> UpdateUserPasswordAsync(int userId, string oldPwd, string newPwd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetAmountStatistics", ReplyAction="http://tempuri.org/IRakeBackService/GetAmountStatisticsResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg GetAmountStatistics(System.Collections.Generic.Dictionary<string, string> conditions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetAmountStatistics", ReplyAction="http://tempuri.org/IRakeBackService/GetAmountStatisticsResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg> GetAmountStatisticsAsync(System.Collections.Generic.Dictionary<string, string> conditions);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1533,6 +1638,22 @@ namespace RakeBack.RakeBackService {
         
         public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> LoginAsync(string loginCode, string password) {
             return base.Channel.LoginAsync(loginCode, password);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfboolean UpdateUserPassword(int userId, string oldPwd, string newPwd) {
+            return base.Channel.UpdateUserPassword(userId, oldPwd, newPwd);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> UpdateUserPasswordAsync(int userId, string oldPwd, string newPwd) {
+            return base.Channel.UpdateUserPasswordAsync(userId, oldPwd, newPwd);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg GetAmountStatistics(System.Collections.Generic.Dictionary<string, string> conditions) {
+            return base.Channel.GetAmountStatistics(conditions);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg> GetAmountStatisticsAsync(System.Collections.Generic.Dictionary<string, string> conditions) {
+            return base.Channel.GetAmountStatisticsAsync(conditions);
         }
     }
 }

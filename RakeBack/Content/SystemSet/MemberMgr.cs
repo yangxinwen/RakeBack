@@ -123,7 +123,7 @@ namespace RakeBack.Content.SystemSet
                                     {
                                         MessageBox.Show("删除成功");
                                     }
-                                    else if (result == null)
+                                    else if (result != null)
                                     {
                                         MessageBox.Show("删除失败:"+result.ErrorMsg);
                                     }

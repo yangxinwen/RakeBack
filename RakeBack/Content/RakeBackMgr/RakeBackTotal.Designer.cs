@@ -29,9 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbResult = new XiaoCai.WinformUI.LabelW();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dtEnd = new XiaoCai.WinformUI.DateTimePickerW(this.components);
+            this.dtStart = new XiaoCai.WinformUI.DateTimePickerW(this.components);
+            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
+            this.labelW1 = new XiaoCai.WinformUI.LabelW();
+            this.labelW6 = new XiaoCai.WinformUI.LabelW();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,13 +48,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.labelW5 = new XiaoCai.WinformUI.LabelW();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePickerW2 = new XiaoCai.WinformUI.DateTimePickerW(this.components);
-            this.dateTimePickerW1 = new XiaoCai.WinformUI.DateTimePickerW(this.components);
-            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
-            this.labelW6 = new XiaoCai.WinformUI.LabelW();
             this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).BeginInit();
@@ -98,18 +100,26 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 49);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1281, 344);
+            this.panel3.Size = new System.Drawing.Size(1281, 361);
             this.panel3.TabIndex = 2;
             // 
             // dataGridViewW1
             // 
             this.dataGridViewW1.AllowUserToResizeRows = false;
+            this.dataGridViewW1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridViewW1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(247)))), ((int)(((byte)(254)))));
             this.dataGridViewW1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewW1.ColumnHeaderDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
             this.dataGridViewW1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridViewW1.ColumnHeadersHeight = 31;
-            this.dataGridViewW1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewW1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewW1.ColumnHeadersHeight = 24;
             this.dataGridViewW1.ColumnHeaderUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.dataGridViewW1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column10,
@@ -136,74 +146,40 @@
             this.dataGridViewW1.SelectedRowColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(237)))), ((int)(((byte)(206)))));
             this.dataGridViewW1.ShowColumnHeaderCheckBox = false;
             this.dataGridViewW1.ShowEportContextMenu = false;
-            this.dataGridViewW1.Size = new System.Drawing.Size(1281, 344);
+            this.dataGridViewW1.Size = new System.Drawing.Size(1281, 361);
             this.dataGridViewW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.dataGridViewW1.TabIndex = 0;
             this.dataGridViewW1.ToPrintCols = null;
             this.dataGridViewW1.ToPrintRows = null;
             // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "全部";
-            this.Column10.Name = "Column10";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "新单";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "已审核";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "会员已浏览";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "银行处理中";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "银行已返回成功";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "银行已返回失败";
-            this.Column6.Name = "Column6";
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.labelW5);
+            this.panel2.Controls.Add(this.lbResult);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 393);
+            this.panel2.Location = new System.Drawing.Point(0, 410);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1281, 60);
+            this.panel2.Size = new System.Drawing.Size(1281, 43);
             this.panel2.TabIndex = 1;
             // 
-            // labelW5
+            // lbResult
             // 
-            this.labelW5.AutoSize = true;
-            this.labelW5.BackColor = System.Drawing.Color.Transparent;
-            this.labelW5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW5.Location = new System.Drawing.Point(50, 22);
-            this.labelW5.Name = "labelW5";
-            this.labelW5.Size = new System.Drawing.Size(329, 12);
-            this.labelW5.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW5.TabIndex = 0;
-            this.labelW5.Text = "查询时间范围为：2011-09-01至2016-09-13的返佣资金统计表";
-            this.labelW5.UseStyle = false;
+            this.lbResult.AutoSize = true;
+            this.lbResult.BackColor = System.Drawing.Color.Transparent;
+            this.lbResult.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbResult.Location = new System.Drawing.Point(50, 17);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(329, 12);
+            this.lbResult.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.lbResult.TabIndex = 0;
+            this.lbResult.Text = "查询时间范围为：2011-09-01至2016-09-13的返佣资金统计表";
+            this.lbResult.UseStyle = false;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dateTimePickerW2);
-            this.panel1.Controls.Add(this.dateTimePickerW1);
+            this.panel1.Controls.Add(this.dtEnd);
+            this.panel1.Controls.Add(this.dtStart);
             this.panel1.Controls.Add(this.buttonW1);
+            this.panel1.Controls.Add(this.labelW1);
             this.panel1.Controls.Add(this.labelW6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -211,27 +187,27 @@
             this.panel1.Size = new System.Drawing.Size(1281, 49);
             this.panel1.TabIndex = 0;
             // 
-            // dateTimePickerW2
+            // dtEnd
             // 
-            this.dateTimePickerW2.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerW2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerW2.Location = new System.Drawing.Point(275, 14);
-            this.dateTimePickerW2.Name = "dateTimePickerW2";
-            this.dateTimePickerW2.ShowUpDown = true;
-            this.dateTimePickerW2.Size = new System.Drawing.Size(100, 21);
-            this.dateTimePickerW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dateTimePickerW2.TabIndex = 3;
+            this.dtEnd.CustomFormat = "yyyy-MM-dd";
+            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEnd.Location = new System.Drawing.Point(275, 14);
+            this.dtEnd.Name = "dtEnd";
+            this.dtEnd.ShowUpDown = true;
+            this.dtEnd.Size = new System.Drawing.Size(100, 21);
+            this.dtEnd.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.dtEnd.TabIndex = 3;
             // 
-            // dateTimePickerW1
+            // dtStart
             // 
-            this.dateTimePickerW1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerW1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerW1.Location = new System.Drawing.Point(96, 16);
-            this.dateTimePickerW1.Name = "dateTimePickerW1";
-            this.dateTimePickerW1.ShowUpDown = true;
-            this.dateTimePickerW1.Size = new System.Drawing.Size(100, 21);
-            this.dateTimePickerW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dateTimePickerW1.TabIndex = 3;
+            this.dtStart.CustomFormat = "yyyy-MM-dd";
+            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStart.Location = new System.Drawing.Point(96, 16);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.ShowUpDown = true;
+            this.dtStart.Size = new System.Drawing.Size(100, 21);
+            this.dtStart.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.dtStart.TabIndex = 3;
             // 
             // buttonW1
             // 
@@ -248,6 +224,20 @@
             this.buttonW1.Text = "查询";
             this.buttonW1.ToFocused = false;
             this.buttonW1.UseVisualStyleBackColor = true;
+            this.buttonW1.Click += new System.EventHandler(this.buttonW1_Click);
+            // 
+            // labelW1
+            // 
+            this.labelW1.AutoSize = true;
+            this.labelW1.BackColor = System.Drawing.Color.Transparent;
+            this.labelW1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW1.Location = new System.Drawing.Point(28, 20);
+            this.labelW1.Name = "labelW1";
+            this.labelW1.Size = new System.Drawing.Size(65, 12);
+            this.labelW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW1.TabIndex = 0;
+            this.labelW1.Text = "起始时间：";
+            this.labelW1.UseStyle = false;
             // 
             // labelW6
             // 
@@ -261,6 +251,55 @@
             this.labelW6.TabIndex = 0;
             this.labelW6.Text = "截止时间：";
             this.labelW6.UseStyle = false;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "AllText";
+            this.Column10.HeaderText = "全部";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 54;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "NewOrderText";
+            this.Column1.HeaderText = "新单";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 54;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "AuditedText";
+            this.Column2.HeaderText = "已审核";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 66;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "BrowsedText";
+            this.Column3.HeaderText = "会员已浏览";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 90;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "BankDealingText";
+            this.Column4.HeaderText = "银行处理中";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "BankReturnSuccessText";
+            this.Column5.HeaderText = "银行已返回成功";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 114;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "BankReturnFailText";
+            this.Column6.HeaderText = "银行已返回失败";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 114;
             // 
             // RakeBackTotal
             // 
@@ -293,9 +332,10 @@
         private XiaoCai.WinformUI.DataGridViewW dataGridViewW1;
         private XiaoCai.WinformUI.ButtonW buttonW1;
         private XiaoCai.WinformUI.LabelW labelW6;
-        private XiaoCai.WinformUI.LabelW labelW5;
-        private XiaoCai.WinformUI.DateTimePickerW dateTimePickerW1;
-        private XiaoCai.WinformUI.DateTimePickerW dateTimePickerW2;
+        private XiaoCai.WinformUI.LabelW lbResult;
+        private XiaoCai.WinformUI.DateTimePickerW dtStart;
+        private XiaoCai.WinformUI.DateTimePickerW dtEnd;
+        private XiaoCai.WinformUI.LabelW labelW1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

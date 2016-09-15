@@ -29,18 +29,13 @@
         private void InitializeComponent()
         {
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
-            this.cbxCity = new System.Windows.Forms.ComboBox();
             this.cbxOpenBank = new System.Windows.Forms.ComboBox();
-            this.cbxProvince = new System.Windows.Forms.ComboBox();
             this.cbxRole = new System.Windows.Forms.ComboBox();
             this.labelW19 = new XiaoCai.WinformUI.LabelW();
             this.labelW17 = new XiaoCai.WinformUI.LabelW();
-            this.labelW4 = new XiaoCai.WinformUI.LabelW();
             this.labelW12 = new XiaoCai.WinformUI.LabelW();
-            this.labelW2 = new XiaoCai.WinformUI.LabelW();
             this.labelW14 = new XiaoCai.WinformUI.LabelW();
             this.labelW16 = new XiaoCai.WinformUI.LabelW();
-            this.buttonW2 = new XiaoCai.WinformUI.ButtonW();
             this.btnOK = new XiaoCai.WinformUI.ButtonW();
             this.txtRemark = new XiaoCai.WinformUI.TextBoxW();
             this.txtBankNo = new XiaoCai.WinformUI.TextBoxW();
@@ -62,18 +57,13 @@
             this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.CaptionFont = new System.Drawing.Font("微软雅黑", 11.75F, System.Drawing.FontStyle.Bold);
             this.panel.CaptionHeight = 27;
-            this.panel.Controls.Add(this.cbxCity);
             this.panel.Controls.Add(this.cbxOpenBank);
-            this.panel.Controls.Add(this.cbxProvince);
             this.panel.Controls.Add(this.cbxRole);
             this.panel.Controls.Add(this.labelW19);
             this.panel.Controls.Add(this.labelW17);
-            this.panel.Controls.Add(this.labelW4);
             this.panel.Controls.Add(this.labelW12);
-            this.panel.Controls.Add(this.labelW2);
             this.panel.Controls.Add(this.labelW14);
             this.panel.Controls.Add(this.labelW16);
-            this.panel.Controls.Add(this.buttonW2);
             this.panel.Controls.Add(this.btnOK);
             this.panel.Controls.Add(this.txtRemark);
             this.panel.Controls.Add(this.txtBankNo);
@@ -116,14 +106,6 @@
             this.panel.ToolTipTextExpandIconPanelCollapsed = null;
             this.panel.ToolTipTextExpandIconPanelExpanded = null;
             // 
-            // cbxCity
-            // 
-            this.cbxCity.FormattingEnabled = true;
-            this.cbxCity.Location = new System.Drawing.Point(199, 246);
-            this.cbxCity.Name = "cbxCity";
-            this.cbxCity.Size = new System.Drawing.Size(100, 20);
-            this.cbxCity.TabIndex = 33;
-            // 
             // cbxOpenBank
             // 
             this.cbxOpenBank.FormattingEnabled = true;
@@ -131,14 +113,6 @@
             this.cbxOpenBank.Name = "cbxOpenBank";
             this.cbxOpenBank.Size = new System.Drawing.Size(100, 20);
             this.cbxOpenBank.TabIndex = 33;
-            // 
-            // cbxProvince
-            // 
-            this.cbxProvince.FormattingEnabled = true;
-            this.cbxProvince.Location = new System.Drawing.Point(199, 222);
-            this.cbxProvince.Name = "cbxProvince";
-            this.cbxProvince.Size = new System.Drawing.Size(100, 20);
-            this.cbxProvince.TabIndex = 32;
             // 
             // cbxRole
             // 
@@ -153,7 +127,7 @@
             this.labelW19.AutoSize = true;
             this.labelW19.BackColor = System.Drawing.Color.Transparent;
             this.labelW19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW19.Location = new System.Drawing.Point(126, 299);
+            this.labelW19.Location = new System.Drawing.Point(126, 252);
             this.labelW19.Name = "labelW19";
             this.labelW19.Size = new System.Drawing.Size(71, 12);
             this.labelW19.Style = XiaoCai.WinformUI.Style.Office2007Blue;
@@ -166,26 +140,13 @@
             this.labelW17.AutoSize = true;
             this.labelW17.BackColor = System.Drawing.Color.Transparent;
             this.labelW17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW17.Location = new System.Drawing.Point(133, 269);
+            this.labelW17.Location = new System.Drawing.Point(133, 222);
             this.labelW17.Name = "labelW17";
             this.labelW17.Size = new System.Drawing.Size(65, 12);
             this.labelW17.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.labelW17.TabIndex = 27;
             this.labelW17.Text = "银行卡号：";
             this.labelW17.UseStyle = false;
-            // 
-            // labelW4
-            // 
-            this.labelW4.AutoSize = true;
-            this.labelW4.BackColor = System.Drawing.Color.Transparent;
-            this.labelW4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW4.Location = new System.Drawing.Point(144, 246);
-            this.labelW4.Name = "labelW4";
-            this.labelW4.Size = new System.Drawing.Size(53, 12);
-            this.labelW4.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW4.TabIndex = 30;
-            this.labelW4.Text = "开户市：";
-            this.labelW4.UseStyle = false;
             // 
             // labelW12
             // 
@@ -199,19 +160,6 @@
             this.labelW12.TabIndex = 29;
             this.labelW12.Text = "银行网点：";
             this.labelW12.UseStyle = false;
-            // 
-            // labelW2
-            // 
-            this.labelW2.AutoSize = true;
-            this.labelW2.BackColor = System.Drawing.Color.Transparent;
-            this.labelW2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW2.Location = new System.Drawing.Point(144, 224);
-            this.labelW2.Name = "labelW2";
-            this.labelW2.Size = new System.Drawing.Size(53, 12);
-            this.labelW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW2.TabIndex = 31;
-            this.labelW2.Text = "开户省：";
-            this.labelW2.UseStyle = false;
             // 
             // labelW14
             // 
@@ -239,30 +187,13 @@
             this.labelW16.Text = "角色选择：";
             this.labelW16.UseStyle = false;
             // 
-            // buttonW2
-            // 
-            this.buttonW2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.buttonW2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonW2.ForeColor = System.Drawing.Color.Black;
-            this.buttonW2.IsSilver = false;
-            this.buttonW2.Location = new System.Drawing.Point(224, 373);
-            this.buttonW2.MaxImageSize = new System.Drawing.Point(0, 0);
-            this.buttonW2.MenuPos = new System.Drawing.Point(0, 0);
-            this.buttonW2.Name = "buttonW2";
-            this.buttonW2.Size = new System.Drawing.Size(75, 23);
-            this.buttonW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.buttonW2.TabIndex = 24;
-            this.buttonW2.Text = "取消";
-            this.buttonW2.ToFocused = false;
-            this.buttonW2.UseVisualStyleBackColor = true;
-            // 
             // btnOK
             // 
             this.btnOK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.ForeColor = System.Drawing.Color.Black;
             this.btnOK.IsSilver = false;
-            this.btnOK.Location = new System.Drawing.Point(113, 373);
+            this.btnOK.Location = new System.Drawing.Point(224, 388);
             this.btnOK.MaxImageSize = new System.Drawing.Point(0, 0);
             this.btnOK.MenuPos = new System.Drawing.Point(0, 0);
             this.btnOK.Name = "btnOK";
@@ -276,16 +207,16 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(199, 296);
+            this.txtRemark.Location = new System.Drawing.Point(199, 249);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(152, 50);
+            this.txtRemark.Size = new System.Drawing.Size(158, 72);
             this.txtRemark.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.txtRemark.TabIndex = 23;
             // 
             // txtBankNo
             // 
-            this.txtBankNo.Location = new System.Drawing.Point(199, 269);
+            this.txtBankNo.Location = new System.Drawing.Point(199, 222);
             this.txtBankNo.Name = "txtBankNo";
             this.txtBankNo.Size = new System.Drawing.Size(100, 21);
             this.txtBankNo.Style = XiaoCai.WinformUI.Style.Office2007Blue;
@@ -408,7 +339,6 @@
         private XiaoCai.WinformUI.LabelW labelW12;
         private XiaoCai.WinformUI.LabelW labelW14;
         private XiaoCai.WinformUI.LabelW labelW16;
-        private XiaoCai.WinformUI.ButtonW buttonW2;
         private XiaoCai.WinformUI.ButtonW btnOK;
         private XiaoCai.WinformUI.TextBoxW txtRemark;
         private XiaoCai.WinformUI.TextBoxW txtBankNo;
@@ -421,9 +351,5 @@
         private XiaoCai.WinformUI.LabelW labelW5;
         private XiaoCai.WinformUI.LabelW labelW3;
         private XiaoCai.WinformUI.LabelW labelW1;
-        private System.Windows.Forms.ComboBox cbxCity;
-        private System.Windows.Forms.ComboBox cbxProvince;
-        private XiaoCai.WinformUI.LabelW labelW4;
-        private XiaoCai.WinformUI.LabelW labelW2;
     }
 }

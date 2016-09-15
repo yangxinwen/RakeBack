@@ -6,6 +6,7 @@
       <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
       <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Model" />
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IRakeBackService_GetNewRakeBack_InputMessage">
@@ -74,6 +75,18 @@
   <wsdl:message name="IRakeBackService_Login_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginResponse" />
   </wsdl:message>
+  <wsdl:message name="IRakeBackService_UpdateUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_UpdateUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetAmountStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmountStatistics" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetAmountStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmountStatisticsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IRakeBackService">
     <wsdl:operation name="GetNewRakeBack">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetNewRakeBack" message="tns:IRakeBackService_GetNewRakeBack_InputMessage" />
@@ -118,6 +131,14 @@
     <wsdl:operation name="Login">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/Login" message="tns:IRakeBackService_Login_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/LoginResponse" message="tns:IRakeBackService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/UpdateUserPassword" message="tns:IRakeBackService_UpdateUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/UpdateUserPasswordResponse" message="tns:IRakeBackService_UpdateUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmountStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetAmountStatistics" message="tns:IRakeBackService_GetAmountStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetAmountStatisticsResponse" message="tns:IRakeBackService_GetAmountStatistics_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRakeBackService" type="tns:IRakeBackService">
@@ -214,6 +235,24 @@
     </wsdl:operation>
     <wsdl:operation name="Login">
       <soap:operation soapAction="http://tempuri.org/IRakeBackService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPassword">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/UpdateUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmountStatistics">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetAmountStatistics" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

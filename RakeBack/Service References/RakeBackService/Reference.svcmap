@@ -25,6 +25,7 @@
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="a757efc5-3570-4661-8678-451fddf63bc6" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd2" />
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="b7369bd9-9e2b-413b-a7b5-000e4e364c27" SourceId="1" SourceUrl="http://localhost:8080/?disco" />
     <MetadataFile FileName="RakeBackService.wsdl" MetadataType="Wsdl" ID="eb189b64-2b54-4fa8-86ce-aa62c3d134c8" SourceId="1" SourceUrl="http://localhost:8080/?wsdl" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="d8a94add-974b-4a32-a273-254774605567" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd4" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="af824af5-23f8-4248-af67-feb87aab18ad" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd1" />
     <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="88e13b23-7ecd-424a-9412-68c7526a2187" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd3" />
     <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="6858add7-6cd6-4614-993c-ecd266262b95" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd0" />
