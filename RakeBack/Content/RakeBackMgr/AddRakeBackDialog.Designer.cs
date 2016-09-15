@@ -192,10 +192,9 @@
             this.lbMemberRemark.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lbMemberRemark.Location = new System.Drawing.Point(148, 190);
             this.lbMemberRemark.Name = "lbMemberRemark";
-            this.lbMemberRemark.Size = new System.Drawing.Size(29, 12);
+            this.lbMemberRemark.Size = new System.Drawing.Size(0, 12);
             this.lbMemberRemark.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.lbMemberRemark.TabIndex = 3;
-            this.lbMemberRemark.Text = "....";
             this.lbMemberRemark.UseStyle = false;
             // 
             // labelW10

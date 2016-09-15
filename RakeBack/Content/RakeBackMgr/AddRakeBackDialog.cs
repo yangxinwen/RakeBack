@@ -51,14 +51,20 @@ namespace RakeBack.Content.RakeBackMgr
             lbBranchBank.Text = _userInfo.BranchBank;
             lbBankZH.Text = _userInfo.BranchBankZH;
             lbBankNo.Text = _userInfo.BankNumber;
-            //todo:会员备注
-            //lbMemberRemark.Text=_userInfo.r
-
-
+            lbMemberRemark.Text = _userInfo.Remark;
         }
 
         private void Add()
         {
+            double amount = 0;
+            if (double.TryParse(txtAmount.Text, out amount) == false || amount <= 0)
+            {
+                MessageBox.Show("请输入正确的金额");
+                return;
+            }
+            
+
+
             var order = new OrderInfo();
 
             //随机字符用来生成批次号

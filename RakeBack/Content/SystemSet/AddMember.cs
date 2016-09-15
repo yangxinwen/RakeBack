@@ -97,14 +97,6 @@ namespace RakeBack.Content.SystemSet
 
         }
 
-        /// <summary>
-        ///  todo:初始化省市信息
-        /// </summary>
-        private void InitProvinceAndCity()
-        {
-
-        }
-
 
         public bool IsValid()
         {
