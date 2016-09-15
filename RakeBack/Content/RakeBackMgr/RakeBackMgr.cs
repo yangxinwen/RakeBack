@@ -108,9 +108,19 @@ namespace RakeBack.Content.RakeBackMgr
             }
             else if ("logCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
-
+                var mod = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
+                if (mod == null)
+                    return;
+                OpenLog(mod.OrderId);
             }
         }
+
+        private void OpenLog(string id)
+        {
+            var dialog = new OrderLog() { OrderId = id };
+            dialog.ShowDialog();
+        }
+
 
         private bool isVaildOrder(OrderInfo order)
         {

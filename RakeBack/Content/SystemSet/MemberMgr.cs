@@ -125,7 +125,7 @@ namespace RakeBack.Content.SystemSet
                                     }
                                     else if (result != null)
                                     {
-                                        MessageBox.Show("删除失败:"+result.ErrorMsg);
+                                        MessageBox.Show("删除失败:" + result.ErrorMsg);
                                     }
                                 }));
                             }
@@ -140,15 +140,25 @@ namespace RakeBack.Content.SystemSet
                             ));
                         }
                     }, _outTime);
-                    
+
                 }
             }
             else if ("logCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
-
+                var mod = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as RakeBackService.UserInfo;
+                if (mod == null)
+                    return;
+                OpenLog(mod.UserId);
             }
 
         }
+
+        private void OpenLog(int userId)
+        {
+            var dialog = new OperateLog() {  UserId=userId};
+            dialog.ShowDialog();
+        }
+
 
         private void buttonW1_Click(object sender, EventArgs e)
         {

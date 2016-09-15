@@ -1442,6 +1442,442 @@ namespace RakeBack.RakeBackService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfArrayOfOperInfoYgFqSxnr", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class ResponseBaseOfArrayOfOperInfoYgFqSxnr : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private RakeBack.RakeBackService.OperInfo[] ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMsgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public RakeBack.RakeBackService.OperInfo[] Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMsg {
+            get {
+                return this.ErrorMsgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
+                    this.ErrorMsgField = value;
+                    this.RaisePropertyChanged("ErrorMsg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSuccess {
+            get {
+                return this.IsSuccessField;
+            }
+            set {
+                if ((this.IsSuccessField.Equals(value) != true)) {
+                    this.IsSuccessField = value;
+                    this.RaisePropertyChanged("IsSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OperInfo", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class OperInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime CreatetimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InfoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IpField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UserIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Createtime {
+            get {
+                return this.CreatetimeField;
+            }
+            set {
+                if ((this.CreatetimeField.Equals(value) != true)) {
+                    this.CreatetimeField = value;
+                    this.RaisePropertyChanged("Createtime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Info {
+            get {
+                return this.InfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InfoField, value) != true)) {
+                    this.InfoField = value;
+                    this.RaisePropertyChanged("Info");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ip {
+            get {
+                return this.IpField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IpField, value) != true)) {
+                    this.IpField = value;
+                    this.RaisePropertyChanged("Ip");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserId {
+            get {
+                return this.UserIdField;
+            }
+            set {
+                if ((this.UserIdField.Equals(value) != true)) {
+                    this.UserIdField = value;
+                    this.RaisePropertyChanged("UserId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfArrayOfFlowInfoYgFqSxnr", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class ResponseBaseOfArrayOfFlowInfoYgFqSxnr : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private RakeBack.RakeBackService.FlowInfo[] ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMsgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public RakeBack.RakeBackService.FlowInfo[] Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMsg {
+            get {
+                return this.ErrorMsgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
+                    this.ErrorMsgField = value;
+                    this.RaisePropertyChanged("ErrorMsg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSuccess {
+            get {
+                return this.IsSuccessField;
+            }
+            set {
+                if ((this.IsSuccessField.Equals(value) != true)) {
+                    this.IsSuccessField = value;
+                    this.RaisePropertyChanged("IsSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FlowInfo", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class FlowInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime CreatetimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InfoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IpField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OptypesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrderidField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Createtime {
+            get {
+                return this.CreatetimeField;
+            }
+            set {
+                if ((this.CreatetimeField.Equals(value) != true)) {
+                    this.CreatetimeField = value;
+                    this.RaisePropertyChanged("Createtime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Info {
+            get {
+                return this.InfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InfoField, value) != true)) {
+                    this.InfoField = value;
+                    this.RaisePropertyChanged("Info");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ip {
+            get {
+                return this.IpField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IpField, value) != true)) {
+                    this.IpField = value;
+                    this.RaisePropertyChanged("Ip");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Optypes {
+            get {
+                return this.OptypesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OptypesField, value) != true)) {
+                    this.OptypesField = value;
+                    this.RaisePropertyChanged("Optypes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Orderid {
+            get {
+                return this.OrderidField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrderidField, value) != true)) {
+                    this.OrderidField = value;
+                    this.RaisePropertyChanged("Orderid");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RakeBackService.IRakeBackService")]
     public interface IRakeBackService {
@@ -1523,6 +1959,18 @@ namespace RakeBack.RakeBackService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetAmountStatistics", ReplyAction="http://tempuri.org/IRakeBackService/GetAmountStatisticsResponse")]
         System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg> GetAmountStatisticsAsync(System.Collections.Generic.Dictionary<string, string> conditions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetOperateLog", ReplyAction="http://tempuri.org/IRakeBackService/GetOperateLogResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfArrayOfOperInfoYgFqSxnr GetOperateLog(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetOperateLog", ReplyAction="http://tempuri.org/IRakeBackService/GetOperateLogResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfOperInfoYgFqSxnr> GetOperateLogAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetOrderLog", ReplyAction="http://tempuri.org/IRakeBackService/GetOrderLogResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfArrayOfFlowInfoYgFqSxnr GetOrderLog(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetOrderLog", ReplyAction="http://tempuri.org/IRakeBackService/GetOrderLogResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfFlowInfoYgFqSxnr> GetOrderLogAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1654,6 +2102,22 @@ namespace RakeBack.RakeBackService {
         
         public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg> GetAmountStatisticsAsync(System.Collections.Generic.Dictionary<string, string> conditions) {
             return base.Channel.GetAmountStatisticsAsync(conditions);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfArrayOfOperInfoYgFqSxnr GetOperateLog(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
+            return base.Channel.GetOperateLog(pageSize, pageIndex, conditions);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfOperInfoYgFqSxnr> GetOperateLogAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
+            return base.Channel.GetOperateLogAsync(pageSize, pageIndex, conditions);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfArrayOfFlowInfoYgFqSxnr GetOrderLog(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
+            return base.Channel.GetOrderLog(pageSize, pageIndex, conditions);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfFlowInfoYgFqSxnr> GetOrderLogAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
+            return base.Channel.GetOrderLogAsync(pageSize, pageIndex, conditions);
         }
     }
 }

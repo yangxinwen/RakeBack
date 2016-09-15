@@ -191,4 +191,36 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetOperateLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q23:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOperateLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetOperateLogResult" nillable="true" type="q24:ResponseBaseOfArrayOfOperInfoYgFqSxnr" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q25:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetOrderLogResult" nillable="true" type="q26:ResponseBaseOfArrayOfFlowInfoYgFqSxnr" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

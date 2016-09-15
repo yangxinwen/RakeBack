@@ -87,6 +87,18 @@
   <wsdl:message name="IRakeBackService_GetAmountStatistics_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAmountStatisticsResponse" />
   </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetOperateLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperateLog" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetOperateLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperateLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetOrderLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderLog" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetOrderLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderLogResponse" />
+  </wsdl:message>
   <wsdl:portType name="IRakeBackService">
     <wsdl:operation name="GetNewRakeBack">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetNewRakeBack" message="tns:IRakeBackService_GetNewRakeBack_InputMessage" />
@@ -139,6 +151,14 @@
     <wsdl:operation name="GetAmountStatistics">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetAmountStatistics" message="tns:IRakeBackService_GetAmountStatistics_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetAmountStatisticsResponse" message="tns:IRakeBackService_GetAmountStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperateLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetOperateLog" message="tns:IRakeBackService_GetOperateLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetOperateLogResponse" message="tns:IRakeBackService_GetOperateLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetOrderLog" message="tns:IRakeBackService_GetOrderLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetOrderLogResponse" message="tns:IRakeBackService_GetOrderLog_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRakeBackService" type="tns:IRakeBackService">
@@ -253,6 +273,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetAmountStatistics">
       <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetAmountStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperateLog">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetOperateLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderLog">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetOrderLog" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

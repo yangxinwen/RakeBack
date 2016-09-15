@@ -66,7 +66,7 @@
             // 退出XToolStripMenuItem
             // 
             this.退出XToolStripMenuItem.Name = "退出XToolStripMenuItem";
-            this.退出XToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出XToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.退出XToolStripMenuItem.Text = "退出(&X)";
             // 
             // 窗口WToolStripMenuItem
@@ -102,13 +102,13 @@
             // btnAboutSystemItem
             // 
             this.btnAboutSystemItem.Name = "btnAboutSystemItem";
-            this.btnAboutSystemItem.Size = new System.Drawing.Size(152, 22);
+            this.btnAboutSystemItem.Size = new System.Drawing.Size(118, 22);
             this.btnAboutSystemItem.Text = "关于(A&)";
             // 
             // btnHelpItem
             // 
             this.btnHelpItem.Name = "btnHelpItem";
-            this.btnHelpItem.Size = new System.Drawing.Size(152, 22);
+            this.btnHelpItem.Size = new System.Drawing.Size(118, 22);
             this.btnHelpItem.Text = "帮助(&O)";
             // 
             // dockPanel1
@@ -133,7 +133,7 @@
             this.Controls.Add(this.mainMenu);
             this.Name = "MainForm";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();

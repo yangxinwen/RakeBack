@@ -182,4 +182,70 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ResponseBaseOfTupleOfstringstring5F2dSckg" nillable="true" type="tns:ResponseBaseOfTupleOfstringstring5F2dSckg" />
+  <xs:complexType name="ResponseBaseOfArrayOfOperInfoYgFqSxnr">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfOperInfo" Namespace="http://schemas.datacontract.org/2004/07/Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="tns:ArrayOfOperInfo" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBaseOfArrayOfOperInfoYgFqSxnr" nillable="true" type="tns:ResponseBaseOfArrayOfOperInfoYgFqSxnr" />
+  <xs:complexType name="ArrayOfOperInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OperInfo" nillable="true" type="tns:OperInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperInfo" nillable="true" type="tns:ArrayOfOperInfo" />
+  <xs:complexType name="OperInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Createtime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperInfo" nillable="true" type="tns:OperInfo" />
+  <xs:complexType name="ResponseBaseOfArrayOfFlowInfoYgFqSxnr">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfFlowInfo" Namespace="http://schemas.datacontract.org/2004/07/Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="tns:ArrayOfFlowInfo" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBaseOfArrayOfFlowInfoYgFqSxnr" nillable="true" type="tns:ResponseBaseOfArrayOfFlowInfoYgFqSxnr" />
+  <xs:complexType name="ArrayOfFlowInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlowInfo" nillable="true" type="tns:FlowInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlowInfo" nillable="true" type="tns:ArrayOfFlowInfo" />
+  <xs:complexType name="FlowInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Createtime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Optypes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orderid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowInfo" nillable="true" type="tns:FlowInfo" />
 </xs:schema>

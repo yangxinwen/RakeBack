@@ -27,7 +27,7 @@ namespace RakeBack
             _loginType = ConfigurationManager.AppSettings["LoginType"];
             InitMenuItem();
 
-            ShowForm("Common.MainPage");   
+            ShowForm("Common.MainPage");
         }
 
 
@@ -71,11 +71,7 @@ namespace RakeBack
         {
             List<MenuItemModel> list = new List<MenuItemModel>();
 
-
-
-
-
-
+            var roleId = Business.ApplicationParam.UserInfo.RoleId;
 
             var menuItem = new MenuItemModel() { Name = "常用操作", Path = null, IsEnable = true };
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "首页", Path = "Common.MainPage", IsEnable = true });
@@ -83,8 +79,8 @@ namespace RakeBack
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "退出", Path = "Common.Exit", IsEnable = true });
             list.Add(menuItem);
 
-            if (_loginType.Equals("0"))
-            {
+            if (roleId == 0 || roleId == 3)
+            {  //系统管理员和会员管理员
                 menuItem = new MenuItemModel() { Name = "返佣管理", Path = null, IsEnable = true };
                 menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "新建返佣", Path = "RakeBackMgr.NewRakeBack", IsEnable = true });
                 menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "返佣管理", Path = "RakeBackMgr.RakeBackMgr", IsEnable = true });
@@ -92,16 +88,21 @@ namespace RakeBack
                 list.Add(menuItem);
             }
 
-            menuItem = new MenuItemModel() { Name = "提现记录", Path = null, IsEnable = true };
-            menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "返佣提取", Path = "TakenRecord.RakeBackTaken", IsEnable = true });
-            menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "信息管理", Path = "TakenRecord.MemberMgr", IsEnable = true });
-            list.Add(menuItem);
 
-            menuItem = new MenuItemModel() { Name = "系统设置", Path = null, IsEnable = true };
-            menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "添加用户", Path = "SystemSet.AddMember", IsEnable = true });
-            menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "系统用户", Path = "SystemSet.MemberMgr", IsEnable = true });
-            list.Add(menuItem);
+            if (roleId == 0 || roleId == 2)
+            { //系统管理员和会员
+                menuItem = new MenuItemModel() { Name = "提现记录", Path = null, IsEnable = true };
+                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "返佣提取", Path = "TakenRecord.RakeBackTaken", IsEnable = true });
+                list.Add(menuItem);
+            }
 
+            if (roleId == 0 || roleId == 3)
+            {  //系统管理员和会员管理员
+                menuItem = new MenuItemModel() { Name = "系统设置", Path = null, IsEnable = true };
+                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "添加用户", Path = "SystemSet.AddMember", IsEnable = true });
+                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "系统用户", Path = "SystemSet.MemberMgr", IsEnable = true });
+                list.Add(menuItem);
+            }
             var menuList = MenuItemHelper.MakeMenuItem(list);
             mainMenu.Items.Clear();
             mainMenu.Items.AddRange(menuList.ToArray());

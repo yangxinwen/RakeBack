@@ -52,7 +52,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.logCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -130,7 +130,7 @@
             this.Column7,
             this.Column8,
             this.Column11,
-            this.Column12,
+            this.logCol,
             this.Column13});
             this.dataGridViewW1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewW1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
@@ -339,12 +339,14 @@
             this.Column11.HeaderText = "备注";
             this.Column11.Name = "Column11";
             // 
-            // Column12
+            // logCol
             // 
-            this.Column12.HeaderText = "查看日志流水";
-            this.Column12.Name = "Column12";
-            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.logCol.HeaderText = "查看日志流水";
+            this.logCol.Name = "logCol";
+            this.logCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.logCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.logCol.Text = "查看";
+            this.logCol.UseColumnTextForLinkValue = true;
             // 
             // Column13
             // 
@@ -397,7 +399,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewLinkColumn Column12;
+        private System.Windows.Forms.DataGridViewLinkColumn logCol;
         private System.Windows.Forms.DataGridViewLinkColumn Column13;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using RakeBack.Business;
 using RakeBack.Helper;
 using RakeBack.Model;
+using RakeBack.RakeBackService;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,18 @@ namespace RakeBack.Content.TakenRecord
 
         private void dataGridViewW1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if ("logCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
+            {
+                var mod = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
+                if (mod == null)
+                    return;
+                OpenLog(mod.OrderId);
+            }
+        }
+        private void OpenLog(string id)
+        {
+            var dialog = new OrderLog() { OrderId = id };
+            dialog.ShowDialog();
         }
 
         private void buttonW1_Click(object sender, EventArgs e)

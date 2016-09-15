@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RakeBack</RootNamespace>
     <AssemblyName>RakeBack</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aspose.Cells">
@@ -83,6 +86,12 @@
     </Compile>
     <Compile Include="Content\Common\PassordModify.Designer.cs">
       <DependentUpon>PassordModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\OrderLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\OrderLog.Designer.cs">
+      <DependentUpon>OrderLog.cs</DependentUpon>
     </Compile>
     <Compile Include="Content\SystemSet\MemberMgr.cs">
       <SubType>Form</SubType>
@@ -137,6 +146,12 @@
     </Compile>
     <Compile Include="Content\RakeBackMgr\NewRakeBack.Designer.cs">
       <DependentUpon>NewRakeBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\OperateLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\OperateLog.Designer.cs">
+      <DependentUpon>OperateLog.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\PagerControl.cs">
       <SubType>UserControl</SubType>
@@ -193,6 +208,9 @@
     <EmbeddedResource Include="Content\Common\PassordModify.resx">
       <DependentUpon>PassordModify.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Content\OrderLog.resx">
+      <DependentUpon>OrderLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Content\SystemSet\MemberMgr.resx">
       <DependentUpon>MemberMgr.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +238,9 @@
     <EmbeddedResource Include="Content\RakeBackMgr\NewRakeBack.resx">
       <DependentUpon>NewRakeBack.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Content\OperateLog.resx">
+      <DependentUpon>OperateLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\PagerControl.resx">
       <DependentUpon>PagerControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +258,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Content\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
@@ -264,6 +286,12 @@
     </None>
     <None Include="Service References\RakeBackService\item4.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfArrayOfFlowInfoYgFqSxnr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfArrayOfOperInfoYgFqSxnr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
