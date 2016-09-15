@@ -14,6 +14,12 @@
   <wsdl:message name="IRakeBackService_GetNewRakeBack_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetNewRakeBackResponse" />
   </wsdl:message>
+  <wsdl:message name="IRakeBackService_AddRakeBack_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRakeBack" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_AddRakeBack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRakeBackResponse" />
+  </wsdl:message>
   <wsdl:message name="IRakeBackService_GetRakeBack_InputMessage">
     <wsdl:part name="parameters" element="tns:GetRakeBack" />
   </wsdl:message>
@@ -50,10 +56,32 @@
   <wsdl:message name="IRakeBackService_DelUserInfo_OutputMessage">
     <wsdl:part name="parameters" element="tns:DelUserInfoResponse" />
   </wsdl:message>
+  <wsdl:message name="IRakeBackService_UpdateOrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_UpdateOrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_DelOrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_DelOrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
   <wsdl:portType name="IRakeBackService">
     <wsdl:operation name="GetNewRakeBack">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetNewRakeBack" message="tns:IRakeBackService_GetNewRakeBack_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetNewRakeBackResponse" message="tns:IRakeBackService_GetNewRakeBack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRakeBack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/AddRakeBack" message="tns:IRakeBackService_AddRakeBack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/AddRakeBackResponse" message="tns:IRakeBackService_AddRakeBack_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetRakeBack">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetRakeBack" message="tns:IRakeBackService_GetRakeBack_InputMessage" />
@@ -79,11 +107,32 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/DelUserInfo" message="tns:IRakeBackService_DelUserInfo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/DelUserInfoResponse" message="tns:IRakeBackService_DelUserInfo_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="UpdateOrderInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/UpdateOrderInfo" message="tns:IRakeBackService_UpdateOrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/UpdateOrderInfoResponse" message="tns:IRakeBackService_UpdateOrderInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelOrderInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/DelOrderInfo" message="tns:IRakeBackService_DelOrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/DelOrderInfoResponse" message="tns:IRakeBackService_DelOrderInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/Login" message="tns:IRakeBackService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/LoginResponse" message="tns:IRakeBackService_Login_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRakeBackService" type="tns:IRakeBackService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetNewRakeBack">
       <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetNewRakeBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRakeBack">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/AddRakeBack" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -138,6 +187,33 @@
     </wsdl:operation>
     <wsdl:operation name="DelUserInfo">
       <soap:operation soapAction="http://tempuri.org/IRakeBackService/DelUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderInfo">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/UpdateOrderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelOrderInfo">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/DelOrderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/Login" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

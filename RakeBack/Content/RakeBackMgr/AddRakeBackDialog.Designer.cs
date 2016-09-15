@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.labelW1 = new XiaoCai.WinformUI.LabelW();
-            this.textBoxW1 = new XiaoCai.WinformUI.TextBoxW();
+            this.txtAmount = new XiaoCai.WinformUI.TextBoxW();
             this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
-            this.labelW2 = new XiaoCai.WinformUI.LabelW();
+            this.lbLogin = new XiaoCai.WinformUI.LabelW();
             this.labelW3 = new XiaoCai.WinformUI.LabelW();
-            this.labelW4 = new XiaoCai.WinformUI.LabelW();
+            this.lbCustomer = new XiaoCai.WinformUI.LabelW();
             this.labelW5 = new XiaoCai.WinformUI.LabelW();
-            this.labelW6 = new XiaoCai.WinformUI.LabelW();
+            this.lbTelphone = new XiaoCai.WinformUI.LabelW();
             this.labelW7 = new XiaoCai.WinformUI.LabelW();
-            this.labelW8 = new XiaoCai.WinformUI.LabelW();
-            this.labelW9 = new XiaoCai.WinformUI.LabelW();
+            this.lbCreateBank = new XiaoCai.WinformUI.LabelW();
+            this.lbMemberRemark = new XiaoCai.WinformUI.LabelW();
             this.labelW10 = new XiaoCai.WinformUI.LabelW();
-            this.labelW11 = new XiaoCai.WinformUI.LabelW();
+            this.lbBankNo = new XiaoCai.WinformUI.LabelW();
             this.labelW12 = new XiaoCai.WinformUI.LabelW();
-            this.labelW13 = new XiaoCai.WinformUI.LabelW();
+            this.lbBankZH = new XiaoCai.WinformUI.LabelW();
             this.labelW14 = new XiaoCai.WinformUI.LabelW();
-            this.labelW15 = new XiaoCai.WinformUI.LabelW();
+            this.lbBranchBank = new XiaoCai.WinformUI.LabelW();
             this.labelW16 = new XiaoCai.WinformUI.LabelW();
             this.labelW17 = new XiaoCai.WinformUI.LabelW();
-            this.textBoxW2 = new XiaoCai.WinformUI.TextBoxW();
+            this.txtRemark = new XiaoCai.WinformUI.TextBoxW();
             this.labelW18 = new XiaoCai.WinformUI.LabelW();
             this.labelW19 = new XiaoCai.WinformUI.LabelW();
-            this.labelW20 = new XiaoCai.WinformUI.LabelW();
+            this.lbAmountUp = new XiaoCai.WinformUI.LabelW();
             this.labelW21 = new XiaoCai.WinformUI.LabelW();
             this.buttonW2 = new XiaoCai.WinformUI.ButtonW();
             this.SuspendLayout();
@@ -68,18 +68,18 @@
             this.labelW1.Text = "会员账号：";
             this.labelW1.UseStyle = false;
             // 
-            // textBoxW1
+            // txtAmount
             // 
-            this.textBoxW1.Location = new System.Drawing.Point(150, 214);
-            this.textBoxW1.Name = "textBoxW1";
-            this.textBoxW1.Size = new System.Drawing.Size(100, 21);
-            this.textBoxW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.textBoxW1.TabIndex = 1;
+            this.txtAmount.Location = new System.Drawing.Point(150, 214);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(100, 21);
+            this.txtAmount.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.txtAmount.TabIndex = 1;
+            this.txtAmount.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             // 
             // buttonW1
             // 
             this.buttonW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.buttonW1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonW1.ForeColor = System.Drawing.Color.Black;
             this.buttonW1.IsSilver = false;
             this.buttonW1.Location = new System.Drawing.Point(64, 333);
@@ -94,18 +94,18 @@
             this.buttonW1.UseVisualStyleBackColor = true;
             this.buttonW1.Click += new System.EventHandler(this.buttonW1_Click);
             // 
-            // labelW2
+            // lbLogin
             // 
-            this.labelW2.AutoSize = true;
-            this.labelW2.BackColor = System.Drawing.Color.Transparent;
-            this.labelW2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW2.Location = new System.Drawing.Point(148, 24);
-            this.labelW2.Name = "labelW2";
-            this.labelW2.Size = new System.Drawing.Size(23, 12);
-            this.labelW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW2.TabIndex = 0;
-            this.labelW2.Text = "zzx";
-            this.labelW2.UseStyle = false;
+            this.lbLogin.AutoSize = true;
+            this.lbLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lbLogin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbLogin.Location = new System.Drawing.Point(148, 24);
+            this.lbLogin.Name = "lbLogin";
+            this.lbLogin.Size = new System.Drawing.Size(23, 12);
+            this.lbLogin.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.lbLogin.TabIndex = 0;
+            this.lbLogin.Text = "zzx";
+            this.lbLogin.UseStyle = false;
             // 
             // labelW3
             // 
@@ -120,18 +120,18 @@
             this.labelW3.Text = "会员姓名：";
             this.labelW3.UseStyle = false;
             // 
-            // labelW4
+            // lbCustomer
             // 
-            this.labelW4.AutoSize = true;
-            this.labelW4.BackColor = System.Drawing.Color.Transparent;
-            this.labelW4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW4.Location = new System.Drawing.Point(148, 46);
-            this.labelW4.Name = "labelW4";
-            this.labelW4.Size = new System.Drawing.Size(41, 12);
-            this.labelW4.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW4.TabIndex = 0;
-            this.labelW4.Text = "邹志雄";
-            this.labelW4.UseStyle = false;
+            this.lbCustomer.AutoSize = true;
+            this.lbCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.lbCustomer.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbCustomer.Location = new System.Drawing.Point(148, 46);
+            this.lbCustomer.Name = "lbCustomer";
+            this.lbCustomer.Size = new System.Drawing.Size(23, 12);
+            this.lbCustomer.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.lbCustomer.TabIndex = 0;
+            this.lbCustomer.Text = "xxx";
+            this.lbCustomer.UseStyle = false;
             // 
             // labelW5
             // 
@@ -146,18 +146,18 @@
             this.labelW5.Text = "用户手机：";
             this.labelW5.UseStyle = false;
             // 
-            // labelW6
+            // lbTelphone
             // 
-            this.labelW6.AutoSize = true;
-            this.labelW6.BackColor = System.Drawing.Color.Transparent;
-            this.labelW6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW6.Location = new System.Drawing.Point(148, 69);
-            this.labelW6.Name = "labelW6";
-            this.labelW6.Size = new System.Drawing.Size(71, 12);
-            this.labelW6.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW6.TabIndex = 0;
-            this.labelW6.Text = "18022235564";
-            this.labelW6.UseStyle = false;
+            this.lbTelphone.AutoSize = true;
+            this.lbTelphone.BackColor = System.Drawing.Color.Transparent;
+            this.lbTelphone.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbTelphone.Location = new System.Drawing.Point(148, 69);
+            this.lbTelphone.Name = "lbTelphone";
+            this.lbTelphone.Size = new System.Drawing.Size(71, 12);
+            this.lbTelphone.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.lbTelphone.TabIndex = 0;
+            this.lbTelphone.Text = "18022235564";
+            this.lbTelphone.UseStyle = false;
             // 
             // labelW7
             // 
@@ -172,31 +172,31 @@
             this.labelW7.Text = "开户银行：";
             this.labelW7.UseStyle = false;
             // 
-            // labelW8
+            // lbCreateBank
             // 
-            this.labelW8.AutoSize = true;
-            this.labelW8.BackColor = System.Drawing.Color.Transparent;
-            this.labelW8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW8.Location = new System.Drawing.Point(148, 93);
-            this.labelW8.Name = "labelW8";
-            this.labelW8.Size = new System.Drawing.Size(77, 12);
-            this.labelW8.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW8.TabIndex = 0;
-            this.labelW8.Text = "中国建设银行";
-            this.labelW8.UseStyle = false;
+            this.lbCreateBank.AutoSize = true;
+            this.lbCreateBank.BackColor = System.Drawing.Color.Transparent;
+            this.lbCreateBank.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbCreateBank.Location = new System.Drawing.Point(148, 93);
+            this.lbCreateBank.Name = "lbCreateBank";
+            this.lbCreateBank.Size = new System.Drawing.Size(77, 12);
+            this.lbCreateBank.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.lbCreateBank.TabIndex = 0;
+            this.lbCreateBank.Text = "中国建设银行";
+            this.lbCreateBank.UseStyle = false;
             // 
-            // labelW9
+            // lbMemberRemark
             // 
-            this.labelW9.AutoSize = true;
-            this.labelW9.BackColor = System.Drawing.Color.Transparent;
-            this.labelW9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW9.Location = new System.Drawing.Point(148, 190);
-            this.labelW9.Name = "labelW9";
-            this.labelW9.Size = new System.Drawing.Size(29, 12);
-            this.labelW9.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW9.TabIndex = 3;
-            this.labelW9.Text = "....";
-            this.labelW9.UseStyle = false;
+            this.lbMemberRemark.AutoSize = true;
+            this.lbMemberRemark.BackColor = System.Drawing.Color.Transparent;
+            this.lbMemberRemark.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbMemberRemark.Location = new System.Drawing.Point(148, 190);
+            this.lbMemberRemark.Name = "lbMemberRemark";
+            this.lbMemberRemark.Size = new System.Drawing.Size(29, 12);
+            this.lbMemberRemark.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.lbMemberRemark.TabIndex = 3;
+            this.lbMemberRemark.Text = "....";
+            this.lbMemberRemark.UseStyle = false;
             // 
             // labelW10
             // 
@@ -211,18 +211,18 @@
             this.labelW10.Text = "会员备注：";
             this.labelW10.UseStyle = false;
             // 
-            // labelW11
+            // lbBankNo
             // 
-            this.labelW11.AutoSize = true;
-            this.labelW11.BackColor = System.Drawing.Color.Transparent;
-            this.labelW11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW11.Location = new System.Drawing.Point(148, 165);
-            this.labelW11.Name = "labelW11";
-            this.labelW11.Size = new System.Drawing.Size(107, 12);
-            this.labelW11.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW11.TabIndex = 5;
-            this.labelW11.Text = "62222222222222222";
-            this.labelW11.UseStyle = false;
+            this.lbBankNo.AutoSize = true;
+            this.lbBankNo.BackColor = System.Drawing.Color.Transparent;
+            this.lbBankNo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbBankNo.Location = new System.Drawing.Point(148, 165);
+            this.lbBankNo.Name = "lbBankNo";
+            this.lbBankNo.Size = new System.Drawing.Size(107, 12);
+            this.lbBankNo.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.lbBankNo.TabIndex = 5;
+            this.lbBankNo.Text = "62222222222222222";
+            this.lbBankNo.UseStyle = false;
             // 
             // labelW12
             // 
@@ -237,18 +237,18 @@
             this.labelW12.Text = "银行卡号：";
             this.labelW12.UseStyle = false;
             // 
-            // labelW13
+            // lbBankZH
             // 
-            this.labelW13.AutoSize = true;
-            this.labelW13.BackColor = System.Drawing.Color.Transparent;
-            this.labelW13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW13.Location = new System.Drawing.Point(148, 141);
-            this.labelW13.Name = "labelW13";
-            this.labelW13.Size = new System.Drawing.Size(53, 12);
-            this.labelW13.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW13.TabIndex = 7;
-            this.labelW13.Text = "科苑支行";
-            this.labelW13.UseStyle = false;
+            this.lbBankZH.AutoSize = true;
+            this.lbBankZH.BackColor = System.Drawing.Color.Transparent;
+            this.lbBankZH.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbBankZH.Location = new System.Drawing.Point(148, 141);
+            this.lbBankZH.Name = "lbBankZH";
+            this.lbBankZH.Size = new System.Drawing.Size(53, 12);
+            this.lbBankZH.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.lbBankZH.TabIndex = 7;
+            this.lbBankZH.Text = "科苑支行";
+            this.lbBankZH.UseStyle = false;
             // 
             // labelW14
             // 
@@ -263,18 +263,18 @@
             this.labelW14.Text = "开户支行：";
             this.labelW14.UseStyle = false;
             // 
-            // labelW15
+            // lbBranchBank
             // 
-            this.labelW15.AutoSize = true;
-            this.labelW15.BackColor = System.Drawing.Color.Transparent;
-            this.labelW15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW15.Location = new System.Drawing.Point(148, 118);
-            this.labelW15.Name = "labelW15";
-            this.labelW15.Size = new System.Drawing.Size(53, 12);
-            this.labelW15.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW15.TabIndex = 9;
-            this.labelW15.Text = "深圳分行";
-            this.labelW15.UseStyle = false;
+            this.lbBranchBank.AutoSize = true;
+            this.lbBranchBank.BackColor = System.Drawing.Color.Transparent;
+            this.lbBranchBank.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbBranchBank.Location = new System.Drawing.Point(148, 118);
+            this.lbBranchBank.Name = "lbBranchBank";
+            this.lbBranchBank.Size = new System.Drawing.Size(53, 12);
+            this.lbBranchBank.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.lbBranchBank.TabIndex = 9;
+            this.lbBranchBank.Text = "深圳分行";
+            this.lbBranchBank.UseStyle = false;
             // 
             // labelW16
             // 
@@ -302,14 +302,14 @@
             this.labelW17.Text = "返佣金额：";
             this.labelW17.UseStyle = false;
             // 
-            // textBoxW2
+            // txtRemark
             // 
-            this.textBoxW2.Location = new System.Drawing.Point(150, 267);
-            this.textBoxW2.Multiline = true;
-            this.textBoxW2.Name = "textBoxW2";
-            this.textBoxW2.Size = new System.Drawing.Size(152, 50);
-            this.textBoxW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.textBoxW2.TabIndex = 1;
+            this.txtRemark.Location = new System.Drawing.Point(150, 267);
+            this.txtRemark.Multiline = true;
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Size = new System.Drawing.Size(152, 50);
+            this.txtRemark.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.txtRemark.TabIndex = 1;
             // 
             // labelW18
             // 
@@ -337,18 +337,18 @@
             this.labelW19.Text = "录入备注：";
             this.labelW19.UseStyle = false;
             // 
-            // labelW20
+            // lbAmountUp
             // 
-            this.labelW20.AutoSize = true;
-            this.labelW20.BackColor = System.Drawing.Color.Transparent;
-            this.labelW20.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW20.Location = new System.Drawing.Point(148, 243);
-            this.labelW20.Name = "labelW20";
-            this.labelW20.Size = new System.Drawing.Size(29, 12);
-            this.labelW20.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW20.TabIndex = 3;
-            this.labelW20.Text = "....";
-            this.labelW20.UseStyle = false;
+            this.lbAmountUp.AutoSize = true;
+            this.lbAmountUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbAmountUp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbAmountUp.Location = new System.Drawing.Point(148, 243);
+            this.lbAmountUp.Name = "lbAmountUp";
+            this.lbAmountUp.Size = new System.Drawing.Size(29, 12);
+            this.lbAmountUp.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.lbAmountUp.TabIndex = 3;
+            this.lbAmountUp.Text = "....";
+            this.lbAmountUp.UseStyle = false;
             // 
             // labelW21
             // 
@@ -379,37 +379,36 @@
             this.buttonW2.Text = "取消";
             this.buttonW2.ToFocused = false;
             this.buttonW2.UseVisualStyleBackColor = true;
-            this.buttonW2.Click += new System.EventHandler(this.buttonW1_Click);
             // 
             // AddRakeBackDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(348, 394);
-            this.Controls.Add(this.labelW20);
-            this.Controls.Add(this.labelW9);
+            this.Controls.Add(this.lbAmountUp);
+            this.Controls.Add(this.lbMemberRemark);
             this.Controls.Add(this.labelW19);
             this.Controls.Add(this.labelW21);
             this.Controls.Add(this.labelW17);
             this.Controls.Add(this.labelW18);
             this.Controls.Add(this.labelW10);
-            this.Controls.Add(this.labelW11);
+            this.Controls.Add(this.lbBankNo);
             this.Controls.Add(this.labelW12);
-            this.Controls.Add(this.labelW13);
+            this.Controls.Add(this.lbBankZH);
             this.Controls.Add(this.labelW14);
-            this.Controls.Add(this.labelW15);
+            this.Controls.Add(this.lbBranchBank);
             this.Controls.Add(this.labelW16);
             this.Controls.Add(this.buttonW2);
             this.Controls.Add(this.buttonW1);
-            this.Controls.Add(this.textBoxW2);
-            this.Controls.Add(this.textBoxW1);
-            this.Controls.Add(this.labelW8);
+            this.Controls.Add(this.txtRemark);
+            this.Controls.Add(this.txtAmount);
+            this.Controls.Add(this.lbCreateBank);
             this.Controls.Add(this.labelW7);
-            this.Controls.Add(this.labelW6);
+            this.Controls.Add(this.lbTelphone);
             this.Controls.Add(this.labelW5);
-            this.Controls.Add(this.labelW4);
+            this.Controls.Add(this.lbCustomer);
             this.Controls.Add(this.labelW3);
-            this.Controls.Add(this.labelW2);
+            this.Controls.Add(this.lbLogin);
             this.Controls.Add(this.labelW1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "AddRakeBackDialog";
@@ -422,28 +421,28 @@
         #endregion
 
         private XiaoCai.WinformUI.LabelW labelW1;
-        private XiaoCai.WinformUI.TextBoxW textBoxW1;
+        private XiaoCai.WinformUI.TextBoxW txtAmount;
         private XiaoCai.WinformUI.ButtonW buttonW1;
-        private XiaoCai.WinformUI.LabelW labelW2;
+        private XiaoCai.WinformUI.LabelW lbLogin;
         private XiaoCai.WinformUI.LabelW labelW3;
-        private XiaoCai.WinformUI.LabelW labelW4;
+        private XiaoCai.WinformUI.LabelW lbCustomer;
         private XiaoCai.WinformUI.LabelW labelW5;
-        private XiaoCai.WinformUI.LabelW labelW6;
+        private XiaoCai.WinformUI.LabelW lbTelphone;
         private XiaoCai.WinformUI.LabelW labelW7;
-        private XiaoCai.WinformUI.LabelW labelW8;
-        private XiaoCai.WinformUI.LabelW labelW9;
+        private XiaoCai.WinformUI.LabelW lbCreateBank;
+        private XiaoCai.WinformUI.LabelW lbMemberRemark;
         private XiaoCai.WinformUI.LabelW labelW10;
-        private XiaoCai.WinformUI.LabelW labelW11;
+        private XiaoCai.WinformUI.LabelW lbBankNo;
         private XiaoCai.WinformUI.LabelW labelW12;
-        private XiaoCai.WinformUI.LabelW labelW13;
+        private XiaoCai.WinformUI.LabelW lbBankZH;
         private XiaoCai.WinformUI.LabelW labelW14;
-        private XiaoCai.WinformUI.LabelW labelW15;
+        private XiaoCai.WinformUI.LabelW lbBranchBank;
         private XiaoCai.WinformUI.LabelW labelW16;
         private XiaoCai.WinformUI.LabelW labelW17;
-        private XiaoCai.WinformUI.TextBoxW textBoxW2;
+        private XiaoCai.WinformUI.TextBoxW txtRemark;
         private XiaoCai.WinformUI.LabelW labelW18;
         private XiaoCai.WinformUI.LabelW labelW19;
-        private XiaoCai.WinformUI.LabelW labelW20;
+        private XiaoCai.WinformUI.LabelW lbAmountUp;
         private XiaoCai.WinformUI.LabelW labelW21;
         private XiaoCai.WinformUI.ButtonW buttonW2;
     }

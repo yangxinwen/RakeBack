@@ -20,7 +20,14 @@ namespace RakeBack
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             Application.ThreadException += Application_ThreadException;
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-            Application.Run(new MainForm());
+
+            //Application.Run(new MainForm());
+            //return;
+            var login = new LoginForm();
+            if(login.ShowDialog()==DialogResult.OK)
+            {
+                Application.Run(new MainForm());
+            }
         }
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

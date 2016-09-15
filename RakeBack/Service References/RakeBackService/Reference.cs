@@ -457,99 +457,6 @@ namespace RakeBack.RakeBackService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfArrayOfOrderInfoYgFqSxnr", Namespace="http://schemas.datacontract.org/2004/07/Model")]
-    [System.SerializableAttribute()]
-    public partial class ResponseBaseOfArrayOfOrderInfoYgFqSxnr : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private RakeBack.RakeBackService.OrderInfo[] ContentField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CountField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ErrorMsgField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsSuccessField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public RakeBack.RakeBackService.OrderInfo[] Content {
-            get {
-                return this.ContentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
-                    this.ContentField = value;
-                    this.RaisePropertyChanged("Content");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Count {
-            get {
-                return this.CountField;
-            }
-            set {
-                if ((this.CountField.Equals(value) != true)) {
-                    this.CountField = value;
-                    this.RaisePropertyChanged("Count");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ErrorMsg {
-            get {
-                return this.ErrorMsgField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
-                    this.ErrorMsgField = value;
-                    this.RaisePropertyChanged("ErrorMsg");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsSuccess {
-            get {
-                return this.IsSuccessField;
-            }
-            set {
-                if ((this.IsSuccessField.Equals(value) != true)) {
-                    this.IsSuccessField = value;
-                    this.RaisePropertyChanged("IsSuccess");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OrderInfo", Namespace="http://schemas.datacontract.org/2004/07/Model")]
     [System.SerializableAttribute()]
     public partial class OrderInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -931,6 +838,192 @@ namespace RakeBack.RakeBackService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfboolean", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class ResponseBaseOfboolean : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMsgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((this.ContentField.Equals(value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMsg {
+            get {
+                return this.ErrorMsgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
+                    this.ErrorMsgField = value;
+                    this.RaisePropertyChanged("ErrorMsg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSuccess {
+            get {
+                return this.IsSuccessField;
+            }
+            set {
+                if ((this.IsSuccessField.Equals(value) != true)) {
+                    this.IsSuccessField = value;
+                    this.RaisePropertyChanged("IsSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfArrayOfOrderInfoYgFqSxnr", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class ResponseBaseOfArrayOfOrderInfoYgFqSxnr : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private RakeBack.RakeBackService.OrderInfo[] ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMsgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public RakeBack.RakeBackService.OrderInfo[] Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMsg {
+            get {
+                return this.ErrorMsgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
+                    this.ErrorMsgField = value;
+                    this.RaisePropertyChanged("ErrorMsg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSuccess {
+            get {
+                return this.IsSuccessField;
+            }
+            set {
+                if ((this.IsSuccessField.Equals(value) != true)) {
+                    this.IsSuccessField = value;
+                    this.RaisePropertyChanged("IsSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfArrayOfRoleInfoYgFqSxnr", Namespace="http://schemas.datacontract.org/2004/07/Model")]
     [System.SerializableAttribute()]
     public partial class ResponseBaseOfArrayOfRoleInfoYgFqSxnr : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1256,99 +1349,6 @@ namespace RakeBack.RakeBackService {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfboolean", Namespace="http://schemas.datacontract.org/2004/07/Model")]
-    [System.SerializableAttribute()]
-    public partial class ResponseBaseOfboolean : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ContentField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CountField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ErrorMsgField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsSuccessField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Content {
-            get {
-                return this.ContentField;
-            }
-            set {
-                if ((this.ContentField.Equals(value) != true)) {
-                    this.ContentField = value;
-                    this.RaisePropertyChanged("Content");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Count {
-            get {
-                return this.CountField;
-            }
-            set {
-                if ((this.CountField.Equals(value) != true)) {
-                    this.CountField = value;
-                    this.RaisePropertyChanged("Count");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ErrorMsg {
-            get {
-                return this.ErrorMsgField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
-                    this.ErrorMsgField = value;
-                    this.RaisePropertyChanged("ErrorMsg");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsSuccess {
-            get {
-                return this.IsSuccessField;
-            }
-            set {
-                if ((this.IsSuccessField.Equals(value) != true)) {
-                    this.IsSuccessField = value;
-                    this.RaisePropertyChanged("IsSuccess");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RakeBackService.IRakeBackService")]
     public interface IRakeBackService {
@@ -1358,6 +1358,12 @@ namespace RakeBack.RakeBackService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetNewRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/GetNewRakeBackResponse")]
         System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr> GetNewRakeBackAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/AddRakeBackResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfboolean AddRakeBack(RakeBack.RakeBackService.OrderInfo info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/AddRakeBackResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> AddRakeBackAsync(RakeBack.RakeBackService.OrderInfo info);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetRakeBack", ReplyAction="http://tempuri.org/IRakeBackService/GetRakeBackResponse")]
         RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr GetRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions);
@@ -1394,6 +1400,24 @@ namespace RakeBack.RakeBackService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelUserInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelUserInfoResponse")]
         System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelUserInfoAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateOrderInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateOrderInfoResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfboolean UpdateOrderInfo(RakeBack.RakeBackService.OrderInfo info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/UpdateOrderInfo", ReplyAction="http://tempuri.org/IRakeBackService/UpdateOrderInfoResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> UpdateOrderInfoAsync(RakeBack.RakeBackService.OrderInfo info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelOrderInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelOrderInfoResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfboolean DelOrderInfo(RakeBack.RakeBackService.OrderInfo info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/DelOrderInfo", ReplyAction="http://tempuri.org/IRakeBackService/DelOrderInfoResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelOrderInfoAsync(RakeBack.RakeBackService.OrderInfo info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/Login", ReplyAction="http://tempuri.org/IRakeBackService/LoginResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr Login(string loginCode, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/Login", ReplyAction="http://tempuri.org/IRakeBackService/LoginResponse")]
+        System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> LoginAsync(string loginCode, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1429,6 +1453,14 @@ namespace RakeBack.RakeBackService {
         
         public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfArrayOfUserInfoYgFqSxnr> GetNewRakeBackAsync(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
             return base.Channel.GetNewRakeBackAsync(pageSize, pageIndex, conditions);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfboolean AddRakeBack(RakeBack.RakeBackService.OrderInfo info) {
+            return base.Channel.AddRakeBack(info);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> AddRakeBackAsync(RakeBack.RakeBackService.OrderInfo info) {
+            return base.Channel.AddRakeBackAsync(info);
         }
         
         public RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr GetRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions) {
@@ -1477,6 +1509,30 @@ namespace RakeBack.RakeBackService {
         
         public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelUserInfoAsync(int id) {
             return base.Channel.DelUserInfoAsync(id);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfboolean UpdateOrderInfo(RakeBack.RakeBackService.OrderInfo info) {
+            return base.Channel.UpdateOrderInfo(info);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> UpdateOrderInfoAsync(RakeBack.RakeBackService.OrderInfo info) {
+            return base.Channel.UpdateOrderInfoAsync(info);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfboolean DelOrderInfo(RakeBack.RakeBackService.OrderInfo info) {
+            return base.Channel.DelOrderInfo(info);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfboolean> DelOrderInfoAsync(RakeBack.RakeBackService.OrderInfo info) {
+            return base.Channel.DelOrderInfoAsync(info);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr Login(string loginCode, string password) {
+            return base.Channel.Login(loginCode, password);
+        }
+        
+        public System.Threading.Tasks.Task<RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr> LoginAsync(string loginCode, string password) {
+            return base.Channel.LoginAsync(loginCode, password);
         }
     }
 }

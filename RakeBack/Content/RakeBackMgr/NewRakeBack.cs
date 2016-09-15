@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using RakeBack.RakeBackService;
 
 namespace RakeBack.Content.RakeBackMgr
 {
@@ -33,7 +34,8 @@ namespace RakeBack.Content.RakeBackMgr
         {
             if ("newCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
-                var dialog = new AddRakeBackDialog();
+                var mod = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as UserInfo;
+                var dialog = new AddRakeBackDialog() { UserInfo= mod };
                 dialog.ShowDialog();
             }
         }

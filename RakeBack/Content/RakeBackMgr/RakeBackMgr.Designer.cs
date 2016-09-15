@@ -33,19 +33,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pager1 = new RakeBack.Control.PagerControl();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logCol = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.delCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbx_OrderStatus = new System.Windows.Forms.ComboBox();
             this.dtEnd = new XiaoCai.WinformUI.DateTimePickerW(this.components);
             this.dtStart = new XiaoCai.WinformUI.DateTimePickerW(this.components);
             this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
@@ -58,7 +47,21 @@
             this.labelW3 = new XiaoCai.WinformUI.LabelW();
             this.txtOrder = new XiaoCai.WinformUI.TextBoxW();
             this.labelW1 = new XiaoCai.WinformUI.LabelW();
-            this.cbx_OrderStatus = new System.Windows.Forms.ComboBox();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logCol = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.auditCol = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.browseCol = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.delCol = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.useCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).BeginInit();
@@ -149,7 +152,10 @@
             this.Column8,
             this.Column11,
             this.logCol,
-            this.delCol});
+            this.auditCol,
+            this.browseCol,
+            this.delCol,
+            this.useCol});
             this.dataGridViewW1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewW1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
             this.dataGridViewW1.Location = new System.Drawing.Point(0, 0);
@@ -174,82 +180,6 @@
             this.dataGridViewW1.ToPrintRows = null;
             this.dataGridViewW1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewW1_CellContentClick);
             // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "OrderId";
-            this.Column10.HeaderText = "订单号";
-            this.Column10.Name = "Column10";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "LoginId";
-            this.Column1.HeaderText = "登陆账号";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "UserName";
-            this.Column2.HeaderText = "会员姓名";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Amount";
-            this.Column3.HeaderText = "返佣金额";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "BankNumber";
-            this.Column4.HeaderText = "银行账号";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "CreateBank";
-            this.Column5.HeaderText = "开户银行\t";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "BranchBankZH";
-            this.Column6.HeaderText = "银行网点信息";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "OrderStatus";
-            this.Column7.HeaderText = "订单状态";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "CreateTime";
-            this.Column8.HeaderText = "创建时间";
-            this.Column8.Name = "Column8";
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "Remark";
-            this.Column11.HeaderText = "备注";
-            this.Column11.Name = "Column11";
-            // 
-            // logCol
-            // 
-            this.logCol.HeaderText = "查看日志流水";
-            this.logCol.Name = "logCol";
-            this.logCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.logCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.logCol.Text = "查看日志";
-            this.logCol.UseColumnTextForLinkValue = true;
-            // 
-            // delCol
-            // 
-            this.delCol.HeaderText = "操作";
-            this.delCol.Name = "delCol";
-            this.delCol.Text = "删除";
-            this.delCol.UseColumnTextForLinkValue = true;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cbx_OrderStatus);
@@ -270,6 +200,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1281, 49);
             this.panel1.TabIndex = 0;
+            // 
+            // cbx_OrderStatus
+            // 
+            this.cbx_OrderStatus.FormattingEnabled = true;
+            this.cbx_OrderStatus.Location = new System.Drawing.Point(608, 14);
+            this.cbx_OrderStatus.Name = "cbx_OrderStatus";
+            this.cbx_OrderStatus.Size = new System.Drawing.Size(121, 20);
+            this.cbx_OrderStatus.TabIndex = 4;
             // 
             // dtEnd
             // 
@@ -412,13 +350,104 @@
             this.labelW1.Text = "订单号：";
             this.labelW1.UseStyle = false;
             // 
-            // cbx_OrderStatus
+            // Column10
             // 
-            this.cbx_OrderStatus.FormattingEnabled = true;
-            this.cbx_OrderStatus.Location = new System.Drawing.Point(608, 14);
-            this.cbx_OrderStatus.Name = "cbx_OrderStatus";
-            this.cbx_OrderStatus.Size = new System.Drawing.Size(121, 20);
-            this.cbx_OrderStatus.TabIndex = 4;
+            this.Column10.DataPropertyName = "OrderId";
+            this.Column10.HeaderText = "订单号";
+            this.Column10.Name = "Column10";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "LoginId";
+            this.Column1.HeaderText = "登陆账号";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "UserName";
+            this.Column2.HeaderText = "会员姓名";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Amount";
+            this.Column3.HeaderText = "返佣金额";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "BankNumber";
+            this.Column4.HeaderText = "银行账号";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "CreateBank";
+            this.Column5.HeaderText = "开户银行\t";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "BranchBankZH";
+            this.Column6.HeaderText = "银行网点信息";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "OrderStatus";
+            this.Column7.HeaderText = "订单状态";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "CreateTime";
+            this.Column8.HeaderText = "创建时间";
+            this.Column8.Name = "Column8";
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "Remark";
+            this.Column11.HeaderText = "备注";
+            this.Column11.Name = "Column11";
+            // 
+            // logCol
+            // 
+            this.logCol.HeaderText = "查看日志流水";
+            this.logCol.Name = "logCol";
+            this.logCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.logCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.logCol.Text = "查看日志";
+            this.logCol.UseColumnTextForLinkValue = true;
+            // 
+            // auditCol
+            // 
+            this.auditCol.HeaderText = "";
+            this.auditCol.Name = "auditCol";
+            this.auditCol.Text = "审核";
+            this.auditCol.UseColumnTextForLinkValue = true;
+            // 
+            // browseCol
+            // 
+            this.browseCol.HeaderText = "";
+            this.browseCol.Name = "browseCol";
+            this.browseCol.Text = "查看";
+            this.browseCol.UseColumnTextForLinkValue = true;
+            // 
+            // delCol
+            // 
+            this.delCol.HeaderText = "操作";
+            this.delCol.Name = "delCol";
+            this.delCol.Text = "删除";
+            this.delCol.UseColumnTextForLinkValue = true;
+            // 
+            // useCol
+            // 
+            this.useCol.HeaderText = "Column9";
+            this.useCol.Name = "useCol";
+            this.useCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.useCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.useCol.Text = "提取";
+            this.useCol.UseColumnTextForLinkValue = true;
             // 
             // RakeBackMgr
             // 
@@ -459,6 +488,7 @@
         private XiaoCai.WinformUI.DateTimePickerW dtStart;
         private XiaoCai.WinformUI.DateTimePickerW dtEnd;
         private Control.PagerControl pager1;
+        private System.Windows.Forms.ComboBox cbx_OrderStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -470,7 +500,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewLinkColumn logCol;
+        private System.Windows.Forms.DataGridViewLinkColumn auditCol;
+        private System.Windows.Forms.DataGridViewLinkColumn browseCol;
         private System.Windows.Forms.DataGridViewLinkColumn delCol;
-        private System.Windows.Forms.ComboBox cbx_OrderStatus;
+        private System.Windows.Forms.DataGridViewLinkColumn useCol;
     }
 }
