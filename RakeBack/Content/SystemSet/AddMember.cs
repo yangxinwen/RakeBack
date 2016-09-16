@@ -131,10 +131,10 @@ namespace RakeBack.Content.SystemSet
                     }
                     if (HelpCommon._bankType.Equals("allinfinance"))
                     {
-                        if (string.IsNullOrEmpty(this.txtBankZH.Text.Trim()))
+                        if (string.IsNullOrEmpty(this.txtBranchBank.Text.Trim()))
                         {
                             MessageBoxHelper.ShowInfo(this, "银行网点信息为空！");
-                            txtBankZH.Focus();
+                            txtBranchBank.Focus();
                             return false;
                         }
                     }
@@ -183,7 +183,7 @@ namespace RakeBack.Content.SystemSet
             }
             user.LoginId = this.txtLogin.Text;
             user.CreateBank = this.cbxOpenBank.Text;
-            user.BranchBank = string.Empty;
+            user.BranchBank = this.txtBranchBank.Text;
             user.BranchBankZH = this.txtBankZH.Text;
             user.BankNumber = this.txtBankNo.Text;
             user.Province = "广东";
@@ -213,6 +213,17 @@ namespace RakeBack.Content.SystemSet
                             if (result != null && result.IsSuccess)
                             {
                                 MessageBoxHelper.ShowInfo(this, "添加成功");
+
+                                if (ApplicationParam.MainForm != null)
+                                {
+                                    var f = ApplicationParam.MainForm.ShowForm("SystemSet.MemberMgr");
+                                    if (f != null)
+                                    {
+                                        (f as MemberMgr).AutoSearch();
+                                    }
+                                }
+
+
                             }
                             else
                             {

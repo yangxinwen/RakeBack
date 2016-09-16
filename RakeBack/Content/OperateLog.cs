@@ -34,10 +34,11 @@ namespace RakeBack.Content
             dataGridViewW1.AutoGenerateColumns = false;
             pager1.OnPageChanged += Pager1_OnPageChanged;
             this.Shown += OperateLog_Shown;
-        }
+        }        
 
         private void OperateLog_Shown(object sender, EventArgs e)
         {
+            SetDataGridViewStyle(dataGridViewW1);
             Search(_userId, 1);
         }
 

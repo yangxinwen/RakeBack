@@ -17,12 +17,15 @@ namespace RakeBack.Content.RakeBackMgr
         public RakeBackTotal()
         {
             InitializeComponent();
-            dataGridViewW1.AutoGenerateColumns = false;
+
+            this.Load += RakeBackTotal_Load;
         }
 
-
-
-
+        private void RakeBackTotal_Load(object sender, EventArgs e)
+        {
+            SetDataGridViewStyle(dataGridViewW1);
+            buttonW1_Click(sender, e);
+        }
 
         private void Search(string startDate, string endDate)
         {

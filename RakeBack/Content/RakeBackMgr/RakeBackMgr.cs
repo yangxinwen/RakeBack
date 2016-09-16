@@ -20,15 +20,68 @@ namespace RakeBack.Content.RakeBackMgr
         public RakeBackMgr()
         {
             InitializeComponent();
-            dataGridViewW1.AutoGenerateColumns = false;
+
+            this.Load += RakeBackMgr_Load;
             pager1.OnPageChanged += Pager1_OnPageChanged;
 
+            AddOperateColumn();
             InitCombox();
+
+
+
+        }
+
+        private void RakeBackMgr_Load(object sender, EventArgs e)
+        {
+            SetDataGridViewStyle(dataGridViewW1);
+            buttonW1_Click(sender, e);
         }
 
         private void Pager1_OnPageChanged(object sender, EventArgs e)
         {
             Search(_orderCode, _loginCode, _memberName, _orderStatus, _startDate, _endDate, pager1.PageIndex);
+        }
+
+
+        private void AddOperateColumn()
+        {
+            var role = Business.ApplicationParam.UserInfo.RoleId;
+
+            if (role == 0 || role == 3)
+            {
+                var column = new DataGridViewLinkColumn();
+                column.HeaderText = string.Empty;
+                column.Text = "审核";
+                column.UseColumnTextForLinkValue = true;
+                column.Name = "auditCol";
+                dataGridViewW1.Columns.Add(column);
+
+                column = new DataGridViewLinkColumn();
+                column.HeaderText = string.Empty;
+                column.Text = "删除";
+                column.UseColumnTextForLinkValue = true;
+                column.Name = "delCol";
+                dataGridViewW1.Columns.Add(column);
+            }
+
+            else if (role == 2)
+            {
+                var column = new DataGridViewLinkColumn();
+                column.HeaderText = string.Empty;
+                column.Text = "查看";
+                column.UseColumnTextForLinkValue = true;
+                column.Name = "browseCol";
+                dataGridViewW1.Columns.Add(column);
+
+                column = new DataGridViewLinkColumn();
+                column.HeaderText = string.Empty;
+                column.Text = "提取";
+                column.UseColumnTextForLinkValue = true;
+                column.Name = "useCol";
+                dataGridViewW1.Columns.Add(column);
+            }
+
+
         }
 
 
@@ -64,46 +117,18 @@ namespace RakeBack.Content.RakeBackMgr
             }
             else if ("auditCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
+                var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
+                if (order == null) return;
+
+                if (order.OrderStatus != ((int)OrderStatus.NewOrder).ToString())
+                {
+                    MessageBoxHelper.ShowInfo(this,"订单状态不是新单");
+                    return;
+                }
+
                 if (MessageBoxHelper.ShowConf(this, "确认审核？") == DialogResult.OK)
                 {
-                    var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
-                    if (order == null) return;
                     AuditOrder(order);
-                }
-            }
-            else if ("browseCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
-            {
-                if (MessageBoxHelper.ShowConf(this, "确认标记为已查看？") == DialogResult.OK)
-                {
-                    var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
-                    if (order == null) return;
-                    BrowseOrder(order);
-                }
-            }
-            else if ("useCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
-            {
-                if (MessageBoxHelper.ShowConf(this, "确认提取？") == DialogResult.OK)
-                {
-                    var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
-                    if (order == null) return;
-                    var url = "http://218.17.162.159:18888/WebService.asmx";
-                    var args = new string[] { "123", order.OrderId };
-
-
-
-                    try
-                    {
-
-                        string result = (string)WSHelper.InvokeWebService(url, "OutMoney", args);
-
-                        System.Diagnostics.Process.Start("http://baidu.com");
-                    }
-                    catch (Exception)
-                    {
-                        MessageBoxHelper.ShowError(this, "提取失败");
-                    }
-
-
                 }
             }
             else if ("logCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
@@ -113,6 +138,42 @@ namespace RakeBack.Content.RakeBackMgr
                     return;
                 OpenLog(mod.OrderId);
             }
+            //else if ("browseCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
+            //{
+            //    if (MessageBoxHelper.ShowConf(this, "确认标记为已查看？") == DialogResult.OK)
+            //    {
+            //        var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
+            //        if (order == null) return;
+            //        BrowseOrder(order);
+            //    }
+            //}
+            //else if ("useCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
+            //{
+            //    if (MessageBoxHelper.ShowConf(this, "确认提取？") == DialogResult.OK)
+            //    {
+            //        var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
+            //        if (order == null) return;
+            //        var url = "http://218.17.162.159:18888/WebService.asmx";
+            //        var args = new string[] { "123", order.OrderId };
+
+
+
+            //        try
+            //        {
+
+            //            string result = (string)WSHelper.InvokeWebService(url, "OutMoney", args);
+
+            //            System.Diagnostics.Process.Start("http://baidu.com");
+            //        }
+            //        catch (Exception)
+            //        {
+            //            MessageBoxHelper.ShowError(this, "提取失败");
+            //        }
+
+
+            //    }
+            //}
+
         }
 
         private void OpenLog(string id)
@@ -120,7 +181,13 @@ namespace RakeBack.Content.RakeBackMgr
             var dialog = new OrderLog() { OrderId = id };
             dialog.ShowDialog();
         }
-
+        /// <summary>
+        /// 用于自动查询
+        /// </summary>
+        public void AutoSearch()
+        {
+            buttonW1_Click(null, null);
+        }
 
         private bool isVaildOrder(OrderInfo order)
         {
@@ -172,6 +239,7 @@ namespace RakeBack.Content.RakeBackMgr
                             if (result != null && result.IsSuccess)
                             {
                                 MessageBoxHelper.ShowInfo(this, "审核成功");
+                                buttonW1_Click(null, null);
                             }
                             else if (result != null)
                             {
@@ -216,6 +284,7 @@ namespace RakeBack.Content.RakeBackMgr
                             if (result != null && result.IsSuccess)
                             {
                                 MessageBoxHelper.ShowInfo(this, "删除成功");
+                                buttonW1_Click(null, null);
                             }
                             else if (result != null)
                             {
@@ -243,7 +312,7 @@ namespace RakeBack.Content.RakeBackMgr
 
             if (order.OrderStatus != ((int)OrderStatus.Audited).ToString())
             {
-                MessageBoxHelper.ShowInfo(this,  "只可以标记已审核状态的订单！");
+                MessageBoxHelper.ShowInfo(this, "只可以标记已审核状态的订单！");
                 return;
             }
 

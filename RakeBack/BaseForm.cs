@@ -18,7 +18,27 @@ namespace RakeBack
         public BaseForm()
         {
         }
-        
+
+
+        /// <summary>
+        /// 设置tDataGridView显示样式
+        /// </summary>
+        /// <param name="view"></param>
+        protected void SetDataGridViewStyle(DataGridView view)
+        {
+            view.AutoGenerateColumns = false;
+            view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            view.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            view.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            foreach (DataGridViewColumn item in view.Columns)
+            {
+                item.SortMode = DataGridViewColumnSortMode.NotSortable;
+                item.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            }
+
+        }
+
 
         private void _timer_Tick(object sender, EventArgs e)
         {

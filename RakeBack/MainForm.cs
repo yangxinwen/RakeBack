@@ -11,16 +11,22 @@ using RakeBack.Helper;
 using RakeBack.Model;
 using System.Diagnostics;
 using System.Configuration;
+using RakeBack.Business;
 
 namespace RakeBack
 {
     public partial class MainForm : BaseForm
     {
-        private Dictionary<string, BaseForm> _formDic = new Dictionary<string, BaseForm>();        
+        private Dictionary<string, BaseForm> _formDic = new Dictionary<string, BaseForm>();
 
         public MainForm()
         {
             InitializeComponent();
+
+            this.FormClosed += MainForm_FormClosed;
+
+
+            Business.ApplicationParam.MainForm = this;
 
             string txt = string.Empty;
             var role = Business.ApplicationParam.UserInfo.RoleId;
@@ -30,11 +36,23 @@ namespace RakeBack
                 txt = "会员管理员";
             else if (role.Equals(2))
                 txt = "会员";
-            this.Text = string.Format("欢迎{0}{1}使用线上返佣系统",txt,Business.ApplicationParam.UserInfo.UserName);
+            this.Text = string.Format("欢迎{0}{1}使用线上返佣系统", txt, Business.ApplicationParam.UserInfo.UserName);
 
             InitMenuItem();
 
-            ShowForm("Common.MainPage");
+            if (ApplicationParam.UserInfo.IsUpdatePass == "0")
+            {
+                ShowForm("Common.PassordModify");
+                mainMenu.Enabled = false;
+
+            }
+            else
+                ShowForm("Common.MainPage");
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            BllHelper.OutLogin(Business.ApplicationParam.UserInfo.UserId, Business.ApplicationParam.UserInfo.UserName);
         }
 
 
@@ -42,16 +60,18 @@ namespace RakeBack
         /// 通过路径名，显示指定Form
         /// </summary>
         /// <param name="path"></param>
-        private void ShowForm(string path)
+        public BaseForm ShowForm(string path)
         {
+            BaseForm f = null;
             if (_formDic.ContainsKey(path))
             {
-                _formDic[path].Show(dockPanel1);
+                f = _formDic[path];
+                f.Show(dockPanel1);
             }
             else
             {
                 Type type = Type.GetType("RakeBack.Content." + path);
-                if (type == null) return;
+                if (type == null) return null;
                 object obj = type.Assembly.CreateInstance(type.ToString());
                 if (obj != null && obj is BaseForm)
                 {
@@ -59,8 +79,10 @@ namespace RakeBack
                     form.DockStateChanged += Form_DockStateChanged;
                     form.Show(dockPanel1);
                     _formDic.Add(path, form);
+                    f = form;
                 }
             }
+            return f;
         }
 
         private void Form_DockStateChanged(object sender, EventArgs e)

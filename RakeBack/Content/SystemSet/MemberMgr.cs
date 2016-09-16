@@ -18,14 +18,24 @@ namespace RakeBack.Content.SystemSet
         public MemberMgr()
         {
             InitializeComponent();
-            dataGridViewW1.AutoGenerateColumns = false;
+            this.Load += MemberMgr_Load;
+
             InitCombox();
             pager1.OnPageChanged += Pager1_OnPageChanged;
         }
-
+        private void MemberMgr_Load(object sender, EventArgs e)
+        {
+            SetDataGridViewStyle(dataGridViewW1);
+            buttonW1_Click(sender, e);
+        }
         private void Pager1_OnPageChanged(object sender, EventArgs e)
         {
             Search(_code, _name, _roleId, pager1.PageIndex);
+        }
+
+        public void AutoSearch()
+        {
+            buttonW1_Click(null,null);
         }
 
         private void InitCombox()
@@ -98,7 +108,10 @@ namespace RakeBack.Content.SystemSet
             if ("editCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
                 var dilog = new UpdateMember() { OldInfo = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as RakeBackService.UserInfo };
-                dilog.ShowDialog();
+                if (dilog.ShowDialog() == DialogResult.OK)
+                {
+                    buttonW1_Click(null, null);
+                }
             }
             else if ("delCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
@@ -122,6 +135,7 @@ namespace RakeBack.Content.SystemSet
                                     if (result != null && result.IsSuccess)
                                     {
                                         MessageBoxHelper.ShowInfo(this, "删除成功");
+                                        buttonW1_Click(null, null);
                                     }
                                     else if (result != null)
                                     {

@@ -106,7 +106,7 @@
             this.buttonW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
             this.buttonW1.ForeColor = System.Drawing.Color.Black;
             this.buttonW1.IsSilver = false;
-            this.buttonW1.Location = new System.Drawing.Point(102, 172);
+            this.buttonW1.Location = new System.Drawing.Point(117, 172);
             this.buttonW1.MaxImageSize = new System.Drawing.Point(0, 0);
             this.buttonW1.MenuPos = new System.Drawing.Point(0, 0);
             this.buttonW1.Name = "buttonW1";

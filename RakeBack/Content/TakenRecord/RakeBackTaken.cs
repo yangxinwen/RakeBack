@@ -20,10 +20,16 @@ namespace RakeBack.Content.TakenRecord
         public RakeBackTaken()
         {
             InitializeComponent();
-
+            AddOperateColumn();
+            this.Load += RakeBackTaken_Load;
             InitCombox();
-            dataGridViewW1.AutoGenerateColumns = false;
             pager1.OnPageChanged += Pager1_OnPageChanged;
+        }
+
+        private void RakeBackTaken_Load(object sender, EventArgs e)
+        {
+            SetDataGridViewStyle(dataGridViewW1);
+            buttonW1_Click(sender, e);
         }
 
         private void Pager1_OnPageChanged(object sender, EventArgs e)
@@ -31,6 +37,25 @@ namespace RakeBack.Content.TakenRecord
             Search(_startDt, _endDt, _orderStatus, pager1.PageIndex);
         }
 
+
+        /// <summary>
+        /// 添加操作列
+        /// </summary>
+        private void AddOperateColumn()
+        {
+            var role = Business.ApplicationParam.UserInfo.RoleId;
+            if (role == 2)
+            {
+                var column = new DataGridViewLinkColumn();
+                column.HeaderText = string.Empty;
+                column.Text = "提取";
+                column.UseColumnTextForLinkValue = true;
+                column.Name = "useCol";
+                dataGridViewW1.Columns.Add(column);
+            }
+
+
+        }
 
         private void InitCombox()
         {
@@ -59,11 +84,100 @@ namespace RakeBack.Content.TakenRecord
                     return;
                 OpenLog(mod.OrderId);
             }
+            else if ("useCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
+            {
+                var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
+                if (order == null) return;
+
+                if (order.OrderStatus != ((int)OrderStatus.Audited).ToString()&&
+                    order.OrderStatus != ((int)OrderStatus.Browse).ToString())
+                {
+                    MessageBoxHelper.ShowInfo(this, "订单已审核后才允许提取");
+                    return;
+                }
+
+
+
+                BrowseOrder(order);
+
+                if (MessageBoxHelper.ShowConf(this, "确认提取？") == DialogResult.OK)
+                {
+                    var url = "http://218.17.162.159:18888/WebService.asmx";
+                    var args = new string[] { "123", order.OrderId };
+                    try
+                    {
+
+                        string result = (string)WSHelper.InvokeWebService(url, "OutMoney", args);
+
+                        System.Diagnostics.Process.Start("http://baidu.com");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBoxHelper.ShowError(this, "提取失败");
+                    }
+                }
+
+             
+            }
         }
+
+
+
         private void OpenLog(string id)
         {
             var dialog = new OrderLog() { OrderId = id };
             dialog.ShowDialog();
+        }
+
+
+
+        private void BrowseOrder(OrderInfo order)
+        {
+            if (order.OrderStatus != ((int)OrderStatus.Audited).ToString())
+            {
+                return;
+            }
+
+
+            order.OrderStatus = ((int)OrderStatus.Browse).ToString();
+            order.InputPerson = ApplicationParam.UserInfo.InputPerson;
+            order.UpdateTime = DateTime.Now;
+            order.SubmitTime = DateTime.Now;
+
+            //base.StartWait();
+            ThreadHelper.StartNew(() =>
+            {
+                try
+                {
+                    var client = CommunicationHelper.GetClient();
+                    if (client != null)
+                    {
+                        var result = client.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
+                        //base.EndWait();
+                        //this.Invoke(new Action(() =>
+                        //{
+                        //    if (result != null && result.IsSuccess)
+                        //    {
+                        //        MessageBoxHelper.ShowInfo(this, "标记成功");
+                        //    }
+                        //    else if (result != null)
+                        //    {
+                        //        MessageBoxHelper.ShowError(this, "标记失败：" + result.ErrorMsg);
+                        //    }
+                        //}));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //this.Invoke(new Action(() =>
+                    //{
+                    //    base.EndWait();
+                    //    MessageBoxHelper.ShowError(this, "标记失败:" + ex.Message);
+                    //}
+                    //));
+                }
+            });
+
         }
 
         private void buttonW1_Click(object sender, EventArgs e)

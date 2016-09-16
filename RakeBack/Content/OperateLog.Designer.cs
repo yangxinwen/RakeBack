@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pager1 = new RakeBack.Control.PagerControl();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pager1 = new RakeBack.Control.PagerControl();
             this.panel.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
@@ -79,28 +79,6 @@
             this.panel.ToolTipTextExpandIconPanelCollapsed = null;
             this.panel.ToolTipTextExpandIconPanelExpanded = null;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pager1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(1, 62);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 37);
-            this.panel1.TabIndex = 1;
-            // 
-            // pager1
-            // 
-            this.pager1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
-            this.pager1.JumpText = "Go";
-            this.pager1.Location = new System.Drawing.Point(56, 5);
-            this.pager1.Name = "pager1";
-            this.pager1.PageIndex = 1;
-            this.pager1.PageSize = 20;
-            this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(601, 29);
-            this.pager1.TabIndex = 1;
-            // 
             // dataGridViewW1
             // 
             this.dataGridViewW1.AllowUserToResizeRows = false;
@@ -133,7 +111,7 @@
             this.dataGridViewW1.SelectedRowColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(237)))), ((int)(((byte)(206)))));
             this.dataGridViewW1.ShowColumnHeaderCheckBox = false;
             this.dataGridViewW1.ShowEportContextMenu = false;
-            this.dataGridViewW1.Size = new System.Drawing.Size(198, 98);
+            this.dataGridViewW1.Size = new System.Drawing.Size(198, 61);
             this.dataGridViewW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.dataGridViewW1.TabIndex = 0;
             this.dataGridViewW1.ToPrintCols = null;
@@ -163,6 +141,29 @@
             this.Column4.HeaderText = "操作内容";
             this.Column4.Name = "Column4";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pager1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(1, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(198, 37);
+            this.panel1.TabIndex = 1;
+            // 
+            // pager1
+            // 
+            this.pager1.BackColor = System.Drawing.SystemColors.Control;
+            this.pager1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
+            this.pager1.JumpText = "Go";
+            this.pager1.Location = new System.Drawing.Point(0, 0);
+            this.pager1.Name = "pager1";
+            this.pager1.PageIndex = 1;
+            this.pager1.PageSize = 20;
+            this.pager1.RecordCount = 0;
+            this.pager1.Size = new System.Drawing.Size(198, 37);
+            this.pager1.TabIndex = 1;
+            // 
             // OperateLog
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -170,11 +171,12 @@
             this.Controls.Add(this.panel);
             this.HideOnClose = true;
             this.Name = "OperateLog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.TabText = "TestForm";
             this.Text = "操作日志";
             this.panel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

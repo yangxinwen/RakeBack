@@ -20,8 +20,15 @@ namespace RakeBack.Content.RakeBackMgr
         {
             InitializeComponent();
 
-            dataGridViewW1.AutoGenerateColumns = false;
             pager1.OnPageChanged += Pager1_OnPageChanged;
+            this.Load += NewRakeBack_Load;
+
+        }
+
+        private void NewRakeBack_Load(object sender, EventArgs e)
+        {
+            SetDataGridViewStyle(dataGridViewW1);
+            buttonW1_Click(sender, e);
         }
 
         private void Pager1_OnPageChanged(object sender, EventArgs e)
@@ -35,8 +42,18 @@ namespace RakeBack.Content.RakeBackMgr
             if ("newCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
                 var mod = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as UserInfo;
-                var dialog = new AddRakeBackDialog() { UserInfo= mod };
-                dialog.ShowDialog();
+                var dialog = new AddRakeBackDialog() { UserInfo = mod };
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    if (ApplicationParam.MainForm != null)
+                    {
+                        var f= ApplicationParam.MainForm.ShowForm("RakeBackMgr.RakeBackMgr");
+                        if (f != null)
+                        {
+                            (f as RakeBackMgr).AutoSearch();
+                        }
+                    }
+                }
             }
         }
 
@@ -121,7 +138,7 @@ namespace RakeBack.Content.RakeBackMgr
                     this.Invoke(new Action(() =>
                     {
                         base.EndWait();
-                        MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message); 
+                        MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message);
                     }
                     ));
                 }

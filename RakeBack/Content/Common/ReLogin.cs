@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RakeBack.Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,10 +16,8 @@ namespace RakeBack.Content.Common
         /// </summary>
         public ReLogin()
         {
-            InitializeComponent();
-
-            System.Diagnostics.Process.Start(Application.ExecutablePath);
-            Application.Exit();
+            InitializeComponent();            
+            Application.Restart();
         }
     }
 }

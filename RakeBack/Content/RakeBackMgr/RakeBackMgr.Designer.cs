@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pager1 = new RakeBack.Control.PagerControl();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,15 +38,13 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logCol = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.auditCol = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.browseCol = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.delCol = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.useCol = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.pager1 = new RakeBack.Control.PagerControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbx_OrderStatus = new System.Windows.Forms.ComboBox();
             this.dtEnd = new XiaoCai.WinformUI.DateTimePickerW(this.components);
@@ -116,20 +113,6 @@
             this.panel3.Size = new System.Drawing.Size(1281, 404);
             this.panel3.TabIndex = 2;
             // 
-            // pager1
-            // 
-            this.pager1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pager1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
-            this.pager1.JumpText = "Go";
-            this.pager1.Location = new System.Drawing.Point(0, 375);
-            this.pager1.Name = "pager1";
-            this.pager1.PageIndex = 1;
-            this.pager1.PageSize = 20;
-            this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(1281, 29);
-            this.pager1.TabIndex = 1;
-            // 
             // dataGridViewW1
             // 
             this.dataGridViewW1.AllowUserToResizeRows = false;
@@ -147,15 +130,12 @@
             this.Column3,
             this.Column4,
             this.Column5,
+            this.Column9,
             this.Column6,
             this.Column7,
             this.Column8,
             this.Column11,
-            this.logCol,
-            this.auditCol,
-            this.browseCol,
-            this.delCol,
-            this.useCol});
+            this.logCol});
             this.dataGridViewW1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewW1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
             this.dataGridViewW1.Location = new System.Drawing.Point(0, 0);
@@ -173,7 +153,7 @@
             this.dataGridViewW1.SelectedRowColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(237)))), ((int)(((byte)(206)))));
             this.dataGridViewW1.ShowColumnHeaderCheckBox = false;
             this.dataGridViewW1.ShowEportContextMenu = false;
-            this.dataGridViewW1.Size = new System.Drawing.Size(1281, 404);
+            this.dataGridViewW1.Size = new System.Drawing.Size(1281, 375);
             this.dataGridViewW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.dataGridViewW1.TabIndex = 8;
             this.dataGridViewW1.ToPrintCols = null;
@@ -216,15 +196,21 @@
             this.Column5.HeaderText = "开户银行\t";
             this.Column5.Name = "Column5";
             // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "BranchBank";
+            this.Column9.HeaderText = "开户分行";
+            this.Column9.Name = "Column9";
+            // 
             // Column6
             // 
             this.Column6.DataPropertyName = "BranchBankZH";
-            this.Column6.HeaderText = "银行网点信息";
+            this.Column6.HeaderText = "开户支行";
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
-            this.Column7.DataPropertyName = "OrderStatus";
+            this.Column7.DataPropertyName = "OrderStatusText";
             this.Column7.HeaderText = "订单状态";
             this.Column7.Name = "Column7";
             // 
@@ -249,35 +235,19 @@
             this.logCol.Text = "查看日志";
             this.logCol.UseColumnTextForLinkValue = true;
             // 
-            // auditCol
+            // pager1
             // 
-            this.auditCol.HeaderText = "";
-            this.auditCol.Name = "auditCol";
-            this.auditCol.Text = "审核";
-            this.auditCol.UseColumnTextForLinkValue = true;
-            // 
-            // browseCol
-            // 
-            this.browseCol.HeaderText = "";
-            this.browseCol.Name = "browseCol";
-            this.browseCol.Text = "查看";
-            this.browseCol.UseColumnTextForLinkValue = true;
-            // 
-            // delCol
-            // 
-            this.delCol.HeaderText = "操作";
-            this.delCol.Name = "delCol";
-            this.delCol.Text = "删除";
-            this.delCol.UseColumnTextForLinkValue = true;
-            // 
-            // useCol
-            // 
-            this.useCol.HeaderText = "Column9";
-            this.useCol.Name = "useCol";
-            this.useCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.useCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.useCol.Text = "提取";
-            this.useCol.UseColumnTextForLinkValue = true;
+            this.pager1.BackColor = System.Drawing.SystemColors.Control;
+            this.pager1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
+            this.pager1.JumpText = "Go";
+            this.pager1.Location = new System.Drawing.Point(0, 375);
+            this.pager1.Name = "pager1";
+            this.pager1.PageIndex = 1;
+            this.pager1.PageSize = 20;
+            this.pager1.RecordCount = 0;
+            this.pager1.Size = new System.Drawing.Size(1281, 29);
+            this.pager1.TabIndex = 1;
             // 
             // panel1
             // 
@@ -302,6 +272,7 @@
             // 
             // cbx_OrderStatus
             // 
+            this.cbx_OrderStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_OrderStatus.FormattingEnabled = true;
             this.cbx_OrderStatus.Location = new System.Drawing.Point(608, 14);
             this.cbx_OrderStatus.Name = "cbx_OrderStatus";
@@ -458,7 +429,7 @@
             this.HideOnClose = true;
             this.Name = "RakeBackMgr";
             this.ShowIcon = false;
-            this.TabText = "管理返佣";
+            this.TabText = "返佣管理";
             this.Text = "返佣管理";
             this.panel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -495,14 +466,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewLinkColumn logCol;
-        private System.Windows.Forms.DataGridViewLinkColumn auditCol;
-        private System.Windows.Forms.DataGridViewLinkColumn browseCol;
-        private System.Windows.Forms.DataGridViewLinkColumn delCol;
-        private System.Windows.Forms.DataGridViewLinkColumn useCol;
     }
 }

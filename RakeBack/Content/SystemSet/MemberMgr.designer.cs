@@ -105,7 +105,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 49);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1281, 344);
+            this.panel3.Size = new System.Drawing.Size(1281, 363);
             this.panel3.TabIndex = 2;
             // 
             // dataGridViewW1
@@ -148,7 +148,7 @@
             this.dataGridViewW1.SelectedRowColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(237)))), ((int)(((byte)(206)))));
             this.dataGridViewW1.ShowColumnHeaderCheckBox = false;
             this.dataGridViewW1.ShowEportContextMenu = false;
-            this.dataGridViewW1.Size = new System.Drawing.Size(1281, 344);
+            this.dataGridViewW1.Size = new System.Drawing.Size(1281, 363);
             this.dataGridViewW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.dataGridViewW1.TabIndex = 5;
             this.dataGridViewW1.ToPrintCols = null;
@@ -181,7 +181,7 @@
             // 
             // Column4
             // 
-            this.Column4.DataPropertyName = "RoleId";
+            this.Column4.DataPropertyName = "RoleName";
             this.Column4.HeaderText = "用户角色";
             this.Column4.Name = "Column4";
             // 
@@ -236,22 +236,23 @@
             // 
             this.panel2.Controls.Add(this.pager1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 393);
+            this.panel2.Location = new System.Drawing.Point(0, 412);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1281, 60);
+            this.panel2.Size = new System.Drawing.Size(1281, 41);
             this.panel2.TabIndex = 1;
             // 
             // pager1
             // 
-            this.pager1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pager1.BackColor = System.Drawing.SystemColors.Control;
+            this.pager1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
             this.pager1.JumpText = "Go";
-            this.pager1.Location = new System.Drawing.Point(137, 17);
+            this.pager1.Location = new System.Drawing.Point(0, 0);
             this.pager1.Name = "pager1";
             this.pager1.PageIndex = 1;
             this.pager1.PageSize = 20;
             this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(601, 29);
+            this.pager1.Size = new System.Drawing.Size(1281, 41);
             this.pager1.TabIndex = 0;
             // 
             // panel1
@@ -271,6 +272,7 @@
             // 
             // cbx_Role
             // 
+            this.cbx_Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_Role.FormattingEnabled = true;
             this.cbx_Role.Location = new System.Drawing.Point(432, 15);
             this.cbx_Role.Name = "cbx_Role";
@@ -358,7 +360,7 @@
             this.HideOnClose = true;
             this.Name = "MemberMgr";
             this.ShowIcon = false;
-            this.TabText = "信息管理";
+            this.TabText = "系统用户";
             this.Text = "信息管理";
             this.panel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

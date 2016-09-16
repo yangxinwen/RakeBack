@@ -30,7 +30,6 @@
         {
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pager1 = new RakeBack.Control.PagerControl();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +40,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.newCol = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.pager1 = new RakeBack.Control.PagerControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
             this.txtCustomerName = new XiaoCai.WinformUI.TextBoxW();
@@ -93,27 +93,13 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pager1);
             this.panel3.Controls.Add(this.dataGridViewW1);
+            this.panel3.Controls.Add(this.pager1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 49);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(915, 404);
             this.panel3.TabIndex = 2;
-            // 
-            // pager1
-            // 
-            this.pager1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pager1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
-            this.pager1.JumpText = "Go";
-            this.pager1.Location = new System.Drawing.Point(0, 375);
-            this.pager1.Name = "pager1";
-            this.pager1.PageIndex = 1;
-            this.pager1.PageSize = 20;
-            this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(915, 29);
-            this.pager1.TabIndex = 1;
             // 
             // dataGridViewW1
             // 
@@ -152,7 +138,7 @@
             this.dataGridViewW1.SelectedRowColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(237)))), ((int)(((byte)(206)))));
             this.dataGridViewW1.ShowColumnHeaderCheckBox = false;
             this.dataGridViewW1.ShowEportContextMenu = false;
-            this.dataGridViewW1.Size = new System.Drawing.Size(915, 404);
+            this.dataGridViewW1.Size = new System.Drawing.Size(915, 375);
             this.dataGridViewW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.dataGridViewW1.TabIndex = 4;
             this.dataGridViewW1.ToPrintCols = null;
@@ -179,7 +165,7 @@
             // 
             // Column4
             // 
-            this.Column4.DataPropertyName = "RoleId";
+            this.Column4.DataPropertyName = "RoleName";
             this.Column4.HeaderText = "用户角色";
             this.Column4.Name = "Column4";
             // 
@@ -215,6 +201,20 @@
             this.newCol.Text = "新建返佣";
             this.newCol.ToolTipText = "操作";
             this.newCol.UseColumnTextForLinkValue = true;
+            // 
+            // pager1
+            // 
+            this.pager1.BackColor = System.Drawing.SystemColors.Control;
+            this.pager1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
+            this.pager1.JumpText = "Go";
+            this.pager1.Location = new System.Drawing.Point(0, 375);
+            this.pager1.Name = "pager1";
+            this.pager1.PageIndex = 1;
+            this.pager1.PageSize = 20;
+            this.pager1.RecordCount = 0;
+            this.pager1.Size = new System.Drawing.Size(915, 29);
+            this.pager1.TabIndex = 1;
             // 
             // panel1
             // 
@@ -319,6 +319,7 @@
         private XiaoCai.WinformUI.LabelW labelW2;
         private XiaoCai.WinformUI.TextBoxW txtLoginCode;
         private XiaoCai.WinformUI.LabelW labelW1;
+        private Control.PagerControl pager1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -328,6 +329,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewLinkColumn newCol;
-        private Control.PagerControl pager1;
     }
 }

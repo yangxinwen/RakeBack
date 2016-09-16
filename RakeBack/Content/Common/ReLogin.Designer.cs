@@ -67,16 +67,16 @@
             this.panel.ToolTipTextExpandIconPanelCollapsed = null;
             this.panel.ToolTipTextExpandIconPanelExpanded = null;
             // 
-            // Exit
+            // ReLogin
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(477, 228);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HideOnClose = true;
-            this.Name = "Exit";
-            this.TabText = "修改密码";
-            this.Text = "修改密码";
+            this.Name = "ReLogin";
+            this.TabText = "注销";
+            this.Text = "注销";
             this.ResumeLayout(false);
 
         }

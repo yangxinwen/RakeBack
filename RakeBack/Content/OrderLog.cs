@@ -38,6 +38,7 @@ namespace RakeBack.Content
 
         private void OperateLog_Shown(object sender, EventArgs e)
         {
+            SetDataGridViewStyle(dataGridViewW1);
             Search(_orderId, 1);
         }
 

@@ -68,7 +68,8 @@ namespace RakeBack.Content.Common
                         {
                             if (result != null && result.IsSuccess)
                             {
-                                MessageBoxHelper.ShowInfo(this, "更新成功");
+                                MessageBoxHelper.ShowInfo(this, "更新成功,您需要重新登录");
+                                Application.Restart();
                             }
                             else if (result != null)
                             {

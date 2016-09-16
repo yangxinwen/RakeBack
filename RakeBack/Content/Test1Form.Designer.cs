@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
@@ -39,7 +37,6 @@
             this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.CaptionFont = new System.Drawing.Font("微软雅黑", 11.75F, System.Drawing.FontStyle.Bold);
             this.panel.CaptionHeight = 27;
-            this.panel.Controls.Add(this.button1);
             this.panel.CustomColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.panel.CustomColors.CaptionCloseIcon = System.Drawing.SystemColors.ControlText;
             this.panel.CustomColors.CaptionExpandIcon = System.Drawing.SystemColors.ControlText;
@@ -53,32 +50,21 @@
             this.panel.CustomColors.ContentGradientBegin = System.Drawing.SystemColors.ButtonFace;
             this.panel.CustomColors.ContentGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.panel.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
-            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel.Image = null;
-            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Location = new System.Drawing.Point(55, 42);
             this.panel.MinimumSize = new System.Drawing.Size(27, 27);
             this.panel.Name = "panel";
             this.panel.PanelStyle = XiaoCai.WinformUI.Panels.PanelStyle.Office2007;
             this.panel.ShowCaptionbar = false;
             this.panel.ShowCaptionbarBorder = false;
             this.panel.ShowTransparentBackground = false;
-            this.panel.Size = new System.Drawing.Size(358, 277);
+            this.panel.Size = new System.Drawing.Size(256, 209);
             this.panel.TabIndex = 10;
             this.panel.Text = "panelW4";
             this.panel.ToolTipTextCloseIcon = null;
             this.panel.ToolTipTextExpandIconPanelCollapsed = null;
             this.panel.ToolTipTextExpandIconPanelExpanded = null;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(129, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Test1Form
             // 
@@ -90,7 +76,6 @@
             this.Name = "Test1Form";
             this.TabText = "Test1Form";
             this.Text = "TestForm";
-            this.panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -98,6 +83,5 @@
         #endregion
 
         private XiaoCai.WinformUI.Panels.PanelW panel;
-        private System.Windows.Forms.Button button1;
     }
 }
