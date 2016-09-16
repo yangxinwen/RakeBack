@@ -32,16 +32,6 @@
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pager1 = new RakeBack.Control.PagerControl();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cbx_OrderStatus = new System.Windows.Forms.ComboBox();
-            this.dtEnd = new XiaoCai.WinformUI.DateTimePickerW(this.components);
-            this.dtStart = new XiaoCai.WinformUI.DateTimePickerW(this.components);
-            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
-            this.labelW1 = new XiaoCai.WinformUI.LabelW();
-            this.labelW6 = new XiaoCai.WinformUI.LabelW();
-            this.labelW5 = new XiaoCai.WinformUI.LabelW();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +44,16 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pager1 = new RakeBack.Control.PagerControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbx_OrderStatus = new System.Windows.Forms.ComboBox();
+            this.dtEnd = new XiaoCai.WinformUI.DateTimePickerW(this.components);
+            this.dtStart = new XiaoCai.WinformUI.DateTimePickerW(this.components);
+            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
+            this.labelW1 = new XiaoCai.WinformUI.LabelW();
+            this.labelW6 = new XiaoCai.WinformUI.LabelW();
+            this.labelW5 = new XiaoCai.WinformUI.LabelW();
             this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).BeginInit();
@@ -151,133 +151,10 @@
             this.dataGridViewW1.ShowEportContextMenu = false;
             this.dataGridViewW1.Size = new System.Drawing.Size(1281, 344);
             this.dataGridViewW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dataGridViewW1.TabIndex = 0;
+            this.dataGridViewW1.TabIndex = 5;
             this.dataGridViewW1.ToPrintCols = null;
             this.dataGridViewW1.ToPrintRows = null;
             this.dataGridViewW1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewW1_CellContentClick);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pager1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 393);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1281, 60);
-            this.panel2.TabIndex = 1;
-            // 
-            // pager1
-            // 
-            this.pager1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
-            this.pager1.JumpText = "Go";
-            this.pager1.Location = new System.Drawing.Point(89, 19);
-            this.pager1.Name = "pager1";
-            this.pager1.PageIndex = 1;
-            this.pager1.PageSize = 20;
-            this.pager1.RecordCount = 0;
-            this.pager1.Size = new System.Drawing.Size(601, 29);
-            this.pager1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.cbx_OrderStatus);
-            this.panel1.Controls.Add(this.dtEnd);
-            this.panel1.Controls.Add(this.dtStart);
-            this.panel1.Controls.Add(this.buttonW1);
-            this.panel1.Controls.Add(this.labelW1);
-            this.panel1.Controls.Add(this.labelW6);
-            this.panel1.Controls.Add(this.labelW5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1281, 49);
-            this.panel1.TabIndex = 0;
-            // 
-            // cbx_OrderStatus
-            // 
-            this.cbx_OrderStatus.FormattingEnabled = true;
-            this.cbx_OrderStatus.Location = new System.Drawing.Point(450, 14);
-            this.cbx_OrderStatus.Name = "cbx_OrderStatus";
-            this.cbx_OrderStatus.Size = new System.Drawing.Size(121, 20);
-            this.cbx_OrderStatus.TabIndex = 4;
-            // 
-            // dtEnd
-            // 
-            this.dtEnd.CustomFormat = "yyyy-MM-dd";
-            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEnd.Location = new System.Drawing.Point(268, 13);
-            this.dtEnd.Name = "dtEnd";
-            this.dtEnd.ShowUpDown = true;
-            this.dtEnd.Size = new System.Drawing.Size(100, 21);
-            this.dtEnd.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dtEnd.TabIndex = 3;
-            // 
-            // dtStart
-            // 
-            this.dtStart.CustomFormat = "yyyy-MM-dd";
-            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtStart.Location = new System.Drawing.Point(89, 15);
-            this.dtStart.Name = "dtStart";
-            this.dtStart.ShowUpDown = true;
-            this.dtStart.Size = new System.Drawing.Size(100, 21);
-            this.dtStart.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dtStart.TabIndex = 3;
-            // 
-            // buttonW1
-            // 
-            this.buttonW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.buttonW1.ForeColor = System.Drawing.Color.Black;
-            this.buttonW1.IsSilver = false;
-            this.buttonW1.Location = new System.Drawing.Point(611, 11);
-            this.buttonW1.MaxImageSize = new System.Drawing.Point(0, 0);
-            this.buttonW1.MenuPos = new System.Drawing.Point(0, 0);
-            this.buttonW1.Name = "buttonW1";
-            this.buttonW1.Size = new System.Drawing.Size(75, 23);
-            this.buttonW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.buttonW1.TabIndex = 2;
-            this.buttonW1.Text = "查询";
-            this.buttonW1.ToFocused = false;
-            this.buttonW1.UseVisualStyleBackColor = true;
-            this.buttonW1.Click += new System.EventHandler(this.buttonW1_Click);
-            // 
-            // labelW1
-            // 
-            this.labelW1.AutoSize = true;
-            this.labelW1.BackColor = System.Drawing.Color.Transparent;
-            this.labelW1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW1.Location = new System.Drawing.Point(392, 18);
-            this.labelW1.Name = "labelW1";
-            this.labelW1.Size = new System.Drawing.Size(65, 12);
-            this.labelW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW1.TabIndex = 0;
-            this.labelW1.Text = "订单状态：";
-            this.labelW1.UseStyle = false;
-            // 
-            // labelW6
-            // 
-            this.labelW6.AutoSize = true;
-            this.labelW6.BackColor = System.Drawing.Color.Transparent;
-            this.labelW6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW6.Location = new System.Drawing.Point(208, 19);
-            this.labelW6.Name = "labelW6";
-            this.labelW6.Size = new System.Drawing.Size(65, 12);
-            this.labelW6.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW6.TabIndex = 0;
-            this.labelW6.Text = "截止时间：";
-            this.labelW6.UseStyle = false;
-            // 
-            // labelW5
-            // 
-            this.labelW5.AutoSize = true;
-            this.labelW5.BackColor = System.Drawing.Color.Transparent;
-            this.labelW5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW5.Location = new System.Drawing.Point(29, 19);
-            this.labelW5.Name = "labelW5";
-            this.labelW5.Size = new System.Drawing.Size(65, 12);
-            this.labelW5.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW5.TabIndex = 0;
-            this.labelW5.Text = "起始时间：";
-            this.labelW5.UseStyle = false;
             // 
             // Column10
             // 
@@ -352,6 +229,129 @@
             // 
             this.Column13.HeaderText = "操作";
             this.Column13.Name = "Column13";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pager1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 393);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1281, 60);
+            this.panel2.TabIndex = 1;
+            // 
+            // pager1
+            // 
+            this.pager1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pager1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(78)))), ((int)(((byte)(151)))));
+            this.pager1.JumpText = "Go";
+            this.pager1.Location = new System.Drawing.Point(89, 19);
+            this.pager1.Name = "pager1";
+            this.pager1.PageIndex = 1;
+            this.pager1.PageSize = 20;
+            this.pager1.RecordCount = 0;
+            this.pager1.Size = new System.Drawing.Size(601, 29);
+            this.pager1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cbx_OrderStatus);
+            this.panel1.Controls.Add(this.dtEnd);
+            this.panel1.Controls.Add(this.dtStart);
+            this.panel1.Controls.Add(this.buttonW1);
+            this.panel1.Controls.Add(this.labelW1);
+            this.panel1.Controls.Add(this.labelW6);
+            this.panel1.Controls.Add(this.labelW5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1281, 49);
+            this.panel1.TabIndex = 0;
+            // 
+            // cbx_OrderStatus
+            // 
+            this.cbx_OrderStatus.FormattingEnabled = true;
+            this.cbx_OrderStatus.Location = new System.Drawing.Point(450, 14);
+            this.cbx_OrderStatus.Name = "cbx_OrderStatus";
+            this.cbx_OrderStatus.Size = new System.Drawing.Size(121, 20);
+            this.cbx_OrderStatus.TabIndex = 3;
+            // 
+            // dtEnd
+            // 
+            this.dtEnd.CustomFormat = "yyyy-MM-dd";
+            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEnd.Location = new System.Drawing.Point(268, 13);
+            this.dtEnd.Name = "dtEnd";
+            this.dtEnd.ShowUpDown = true;
+            this.dtEnd.Size = new System.Drawing.Size(100, 21);
+            this.dtEnd.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.dtEnd.TabIndex = 2;
+            // 
+            // dtStart
+            // 
+            this.dtStart.CustomFormat = "yyyy-MM-dd";
+            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStart.Location = new System.Drawing.Point(89, 15);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.ShowUpDown = true;
+            this.dtStart.Size = new System.Drawing.Size(100, 21);
+            this.dtStart.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.dtStart.TabIndex = 1;
+            // 
+            // buttonW1
+            // 
+            this.buttonW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
+            this.buttonW1.ForeColor = System.Drawing.Color.Black;
+            this.buttonW1.IsSilver = false;
+            this.buttonW1.Location = new System.Drawing.Point(611, 11);
+            this.buttonW1.MaxImageSize = new System.Drawing.Point(0, 0);
+            this.buttonW1.MenuPos = new System.Drawing.Point(0, 0);
+            this.buttonW1.Name = "buttonW1";
+            this.buttonW1.Size = new System.Drawing.Size(75, 23);
+            this.buttonW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.buttonW1.TabIndex = 4;
+            this.buttonW1.Text = "查询";
+            this.buttonW1.ToFocused = false;
+            this.buttonW1.UseVisualStyleBackColor = true;
+            this.buttonW1.Click += new System.EventHandler(this.buttonW1_Click);
+            // 
+            // labelW1
+            // 
+            this.labelW1.AutoSize = true;
+            this.labelW1.BackColor = System.Drawing.Color.Transparent;
+            this.labelW1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW1.Location = new System.Drawing.Point(392, 18);
+            this.labelW1.Name = "labelW1";
+            this.labelW1.Size = new System.Drawing.Size(65, 12);
+            this.labelW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW1.TabIndex = 0;
+            this.labelW1.Text = "订单状态：";
+            this.labelW1.UseStyle = false;
+            // 
+            // labelW6
+            // 
+            this.labelW6.AutoSize = true;
+            this.labelW6.BackColor = System.Drawing.Color.Transparent;
+            this.labelW6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW6.Location = new System.Drawing.Point(208, 19);
+            this.labelW6.Name = "labelW6";
+            this.labelW6.Size = new System.Drawing.Size(65, 12);
+            this.labelW6.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW6.TabIndex = 0;
+            this.labelW6.Text = "截止时间：";
+            this.labelW6.UseStyle = false;
+            // 
+            // labelW5
+            // 
+            this.labelW5.AutoSize = true;
+            this.labelW5.BackColor = System.Drawing.Color.Transparent;
+            this.labelW5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW5.Location = new System.Drawing.Point(29, 19);
+            this.labelW5.Name = "labelW5";
+            this.labelW5.Size = new System.Drawing.Size(65, 12);
+            this.labelW5.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW5.TabIndex = 0;
+            this.labelW5.Text = "起始时间：";
+            this.labelW5.UseStyle = false;
             // 
             // RakeBackTaken
             // 

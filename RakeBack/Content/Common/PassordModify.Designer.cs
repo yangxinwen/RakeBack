@@ -95,7 +95,7 @@
             this.buttonW2.Name = "buttonW2";
             this.buttonW2.Size = new System.Drawing.Size(75, 23);
             this.buttonW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.buttonW2.TabIndex = 2;
+            this.buttonW2.TabIndex = 5;
             this.buttonW2.Text = "清空";
             this.buttonW2.ToFocused = false;
             this.buttonW2.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             this.buttonW1.Name = "buttonW1";
             this.buttonW1.Size = new System.Drawing.Size(75, 23);
             this.buttonW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.buttonW1.TabIndex = 2;
+            this.buttonW1.TabIndex = 4;
             this.buttonW1.Text = "提交";
             this.buttonW1.ToFocused = false;
             this.buttonW1.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@
             this.txtNewConf.PasswordChar = '*';
             this.txtNewConf.Size = new System.Drawing.Size(141, 21);
             this.txtNewConf.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtNewConf.TabIndex = 1;
+            this.txtNewConf.TabIndex = 3;
             // 
             // labelW3
             // 
@@ -147,7 +147,7 @@
             this.txtNew.PasswordChar = '*';
             this.txtNew.Size = new System.Drawing.Size(141, 21);
             this.txtNew.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtNew.TabIndex = 1;
+            this.txtNew.TabIndex = 2;
             // 
             // labelW2
             // 

@@ -60,7 +60,7 @@
             this.cbxCity.Location = new System.Drawing.Point(176, 222);
             this.cbxCity.Name = "cbxCity";
             this.cbxCity.Size = new System.Drawing.Size(100, 20);
-            this.cbxCity.TabIndex = 59;
+            this.cbxCity.TabIndex = 9;
             // 
             // cbxOpenBank
             // 
@@ -68,7 +68,7 @@
             this.cbxOpenBank.Location = new System.Drawing.Point(176, 147);
             this.cbxOpenBank.Name = "cbxOpenBank";
             this.cbxOpenBank.Size = new System.Drawing.Size(100, 20);
-            this.cbxOpenBank.TabIndex = 58;
+            this.cbxOpenBank.TabIndex = 6;
             // 
             // cbxProvince
             // 
@@ -76,7 +76,7 @@
             this.cbxProvince.Location = new System.Drawing.Point(176, 198);
             this.cbxProvince.Name = "cbxProvince";
             this.cbxProvince.Size = new System.Drawing.Size(100, 20);
-            this.cbxProvince.TabIndex = 57;
+            this.cbxProvince.TabIndex = 8;
             // 
             // cbxRole
             // 
@@ -84,7 +84,7 @@
             this.cbxRole.Location = new System.Drawing.Point(176, 124);
             this.cbxRole.Name = "cbxRole";
             this.cbxRole.Size = new System.Drawing.Size(100, 20);
-            this.cbxRole.TabIndex = 56;
+            this.cbxRole.TabIndex = 5;
             // 
             // labelW19
             // 
@@ -189,7 +189,7 @@
             this.buttonW2.Name = "buttonW2";
             this.buttonW2.Size = new System.Drawing.Size(75, 23);
             this.buttonW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.buttonW2.TabIndex = 46;
+            this.buttonW2.TabIndex = 13;
             this.buttonW2.Text = "取消";
             this.buttonW2.ToFocused = false;
             this.buttonW2.UseVisualStyleBackColor = true;
@@ -205,7 +205,7 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.btnOK.TabIndex = 47;
+            this.btnOK.TabIndex = 12;
             this.btnOK.Text = "提交";
             this.btnOK.ToFocused = false;
             this.btnOK.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(152, 50);
             this.txtRemark.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtRemark.TabIndex = 45;
+            this.txtRemark.TabIndex = 11;
             // 
             // txtBankNo
             // 
@@ -226,7 +226,7 @@
             this.txtBankNo.Name = "txtBankNo";
             this.txtBankNo.Size = new System.Drawing.Size(100, 21);
             this.txtBankNo.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtBankNo.TabIndex = 44;
+            this.txtBankNo.TabIndex = 10;
             // 
             // txtBankZH
             // 
@@ -234,7 +234,7 @@
             this.txtBankZH.Name = "txtBankZH";
             this.txtBankZH.Size = new System.Drawing.Size(100, 21);
             this.txtBankZH.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtBankZH.TabIndex = 42;
+            this.txtBankZH.TabIndex = 7;
             // 
             // txtTelphone
             // 
@@ -242,7 +242,7 @@
             this.txtTelphone.Name = "txtTelphone";
             this.txtTelphone.Size = new System.Drawing.Size(100, 21);
             this.txtTelphone.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtTelphone.TabIndex = 41;
+            this.txtTelphone.TabIndex = 4;
             // 
             // txtCustomer
             // 
@@ -250,7 +250,7 @@
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(100, 21);
             this.txtCustomer.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtCustomer.TabIndex = 40;
+            this.txtCustomer.TabIndex = 3;
             // 
             // txtLoginPwd
             // 
@@ -259,7 +259,7 @@
             this.txtLoginPwd.PasswordChar = '*';
             this.txtLoginPwd.Size = new System.Drawing.Size(100, 21);
             this.txtLoginPwd.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtLoginPwd.TabIndex = 39;
+            this.txtLoginPwd.TabIndex = 2;
             // 
             // txtLogin
             // 
@@ -268,7 +268,7 @@
             this.txtLogin.ReadOnly = true;
             this.txtLogin.Size = new System.Drawing.Size(100, 21);
             this.txtLogin.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtLogin.TabIndex = 38;
+            this.txtLogin.TabIndex = 1;
             // 
             // labelW7
             // 

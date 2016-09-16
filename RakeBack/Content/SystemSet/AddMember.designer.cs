@@ -112,7 +112,7 @@
             this.cbxOpenBank.Location = new System.Drawing.Point(199, 171);
             this.cbxOpenBank.Name = "cbxOpenBank";
             this.cbxOpenBank.Size = new System.Drawing.Size(100, 20);
-            this.cbxOpenBank.TabIndex = 33;
+            this.cbxOpenBank.TabIndex = 6;
             // 
             // cbxRole
             // 
@@ -120,7 +120,7 @@
             this.cbxRole.Location = new System.Drawing.Point(199, 148);
             this.cbxRole.Name = "cbxRole";
             this.cbxRole.Size = new System.Drawing.Size(100, 20);
-            this.cbxRole.TabIndex = 32;
+            this.cbxRole.TabIndex = 5;
             // 
             // labelW19
             // 
@@ -199,7 +199,7 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.btnOK.TabIndex = 25;
+            this.btnOK.TabIndex = 10;
             this.btnOK.Text = "提交";
             this.btnOK.ToFocused = false;
             this.btnOK.UseVisualStyleBackColor = true;
@@ -212,7 +212,7 @@
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(158, 72);
             this.txtRemark.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtRemark.TabIndex = 23;
+            this.txtRemark.TabIndex = 9;
             // 
             // txtBankNo
             // 
@@ -220,7 +220,7 @@
             this.txtBankNo.Name = "txtBankNo";
             this.txtBankNo.Size = new System.Drawing.Size(100, 21);
             this.txtBankNo.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtBankNo.TabIndex = 22;
+            this.txtBankNo.TabIndex = 8;
             // 
             // txtBankZH
             // 
@@ -228,7 +228,7 @@
             this.txtBankZH.Name = "txtBankZH";
             this.txtBankZH.Size = new System.Drawing.Size(100, 21);
             this.txtBankZH.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtBankZH.TabIndex = 20;
+            this.txtBankZH.TabIndex = 7;
             // 
             // txtTelphone
             // 
@@ -236,7 +236,7 @@
             this.txtTelphone.Name = "txtTelphone";
             this.txtTelphone.Size = new System.Drawing.Size(100, 21);
             this.txtTelphone.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtTelphone.TabIndex = 19;
+            this.txtTelphone.TabIndex = 4;
             // 
             // txtCustomer
             // 
@@ -244,7 +244,7 @@
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(100, 21);
             this.txtCustomer.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtCustomer.TabIndex = 18;
+            this.txtCustomer.TabIndex = 3;
             // 
             // txtLoginPwd
             // 
@@ -253,7 +253,7 @@
             this.txtLoginPwd.PasswordChar = '*';
             this.txtLoginPwd.Size = new System.Drawing.Size(100, 21);
             this.txtLoginPwd.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtLoginPwd.TabIndex = 17;
+            this.txtLoginPwd.TabIndex = 2;
             // 
             // txtLogin
             // 
@@ -261,7 +261,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(100, 21);
             this.txtLogin.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtLogin.TabIndex = 16;
+            this.txtLogin.TabIndex = 1;
             // 
             // labelW7
             // 

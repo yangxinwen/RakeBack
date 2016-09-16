@@ -88,7 +88,7 @@
             this.buttonW1.Name = "buttonW1";
             this.buttonW1.Size = new System.Drawing.Size(75, 23);
             this.buttonW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.buttonW1.TabIndex = 2;
+            this.buttonW1.TabIndex = 3;
             this.buttonW1.Text = "提交";
             this.buttonW1.ToFocused = false;
             this.buttonW1.UseVisualStyleBackColor = true;
@@ -308,7 +308,7 @@
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(152, 50);
             this.txtRemark.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtRemark.TabIndex = 1;
+            this.txtRemark.TabIndex = 2;
             // 
             // labelW18
             // 
@@ -374,7 +374,7 @@
             this.buttonW2.Name = "buttonW2";
             this.buttonW2.Size = new System.Drawing.Size(75, 23);
             this.buttonW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.buttonW2.TabIndex = 2;
+            this.buttonW2.TabIndex = 4;
             this.buttonW2.Text = "取消";
             this.buttonW2.ToFocused = false;
             this.buttonW2.UseVisualStyleBackColor = true;

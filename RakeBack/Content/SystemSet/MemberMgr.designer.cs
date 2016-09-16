@@ -150,7 +150,7 @@
             this.dataGridViewW1.ShowEportContextMenu = false;
             this.dataGridViewW1.Size = new System.Drawing.Size(1281, 344);
             this.dataGridViewW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dataGridViewW1.TabIndex = 0;
+            this.dataGridViewW1.TabIndex = 5;
             this.dataGridViewW1.ToPrintCols = null;
             this.dataGridViewW1.ToPrintRows = null;
             this.dataGridViewW1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewW1_CellContentClick);
@@ -288,7 +288,7 @@
             this.buttonW1.Name = "buttonW1";
             this.buttonW1.Size = new System.Drawing.Size(75, 23);
             this.buttonW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.buttonW1.TabIndex = 2;
+            this.buttonW1.TabIndex = 4;
             this.buttonW1.Text = "查询";
             this.buttonW1.ToFocused = false;
             this.buttonW1.UseVisualStyleBackColor = true;
@@ -321,7 +321,7 @@
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(100, 21);
             this.txtCustomer.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.txtCustomer.TabIndex = 1;
+            this.txtCustomer.TabIndex = 2;
             // 
             // labelW2
             // 
