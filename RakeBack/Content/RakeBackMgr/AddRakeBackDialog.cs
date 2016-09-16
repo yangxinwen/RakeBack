@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace RakeBack.Content.RakeBackMgr
 {
-    public partial class AddRakeBackDialog : RakeBack.BaseDialog
+    public partial class AddRakeBackDialog : RakeBack.BaseForm
     {
 
         private RakeBackService.UserInfo _userInfo = null;

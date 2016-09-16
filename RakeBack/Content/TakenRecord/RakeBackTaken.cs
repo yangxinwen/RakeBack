@@ -95,29 +95,12 @@ namespace RakeBack.Content.TakenRecord
                     MessageBoxHelper.ShowInfo(this, "订单已审核后才允许提取");
                     return;
                 }
-
-
-
                 BrowseOrder(order);
 
-                if (MessageBoxHelper.ShowConf(this, "确认提取？") == DialogResult.OK)
-                {
-                    var url = "http://218.17.162.159:18888/WebService.asmx";
-                    var args = new string[] { "123", order.OrderId };
-                    try
-                    {
-
-                        string result = (string)WSHelper.InvokeWebService(url, "OutMoney", args);
-
-                        System.Diagnostics.Process.Start("http://baidu.com");
-                    }
-                    catch (Exception)
-                    {
-                        MessageBoxHelper.ShowError(this, "提取失败");
-                    }
-                }
-
-             
+                var form = new RakeBackUse();
+                form.InitOrderInfo(order);
+                if (form.ShowDialog() == DialogResult.OK)
+                    buttonW1_Click(null, null);                          
             }
         }
 

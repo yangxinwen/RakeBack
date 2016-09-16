@@ -119,6 +119,12 @@
     <Compile Include="Content\SystemSet\UpdateMember.Designer.cs">
       <DependentUpon>UpdateMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="Content\TakenRecord\RakeBackUse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\TakenRecord\RakeBackUse.Designer.cs">
+      <DependentUpon>RakeBackUse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Content\TakenRecord\RakeBackTaken.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Content\SystemSet\UpdateMember.resx">
       <DependentUpon>UpdateMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\TakenRecord\RakeBackUse.resx">
+      <DependentUpon>RakeBackUse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Content\TakenRecord\RakeBackTaken.resx">
       <DependentUpon>RakeBackTaken.cs</DependentUpon>
