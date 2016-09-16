@@ -26,7 +26,6 @@ namespace RakeBack.Content.SystemSet
         private void MemberMgr_Load(object sender, EventArgs e)
         {
             SetDataGridViewStyle(dataGridViewW1);
-            buttonW1_Click(sender, e);
         }
         private void Pager1_OnPageChanged(object sender, EventArgs e)
         {
@@ -81,6 +80,7 @@ namespace RakeBack.Content.SystemSet
                                 cbx_Role.ValueMember = "Key";
                                 bs.DataSource = dic;
                                 cbx_Role.DataSource = bs;
+                                buttonW1_Click(null, null);
 
                             }
                             else
