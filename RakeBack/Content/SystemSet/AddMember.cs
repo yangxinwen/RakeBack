@@ -70,7 +70,7 @@ namespace RakeBack.Content.SystemSet
                             }
                             else
                             {
-                                MessageBox.Show("角色信息查询出错");
+                                MessageBoxHelper.ShowError(this, "角色信息查询出错");
                             }
                         }));
                         base.EndWait();
@@ -80,7 +80,7 @@ namespace RakeBack.Content.SystemSet
                 {
                     this.Invoke(new Action(() =>
                     {
-                        MessageBox.Show("查询出错:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message);
                     }
                     ));
                 }
@@ -104,19 +104,19 @@ namespace RakeBack.Content.SystemSet
             {
                 if (string.IsNullOrEmpty(this.txtLogin.Text.Trim()))
                 {
-                    MessageBox.Show(this, "请输入登陆账号");
+                    MessageBoxHelper.ShowInfo(this, "请输入登陆账号");
                     txtLogin.Focus();
                     return false;
                 }
                 if (string.IsNullOrEmpty(this.txtLoginPwd.Text.Trim()))
                 {
-                    MessageBox.Show(this, "请输入用户密码");
+                    MessageBoxHelper.ShowInfo(this, "请输入用户密码");
                     txtLoginPwd.Focus();
                     return false;
                 }
                 if (string.IsNullOrEmpty(this.txtCustomer.Text.Trim()))
                 {
-                    MessageBox.Show(this, "请输入用户名称");
+                    MessageBoxHelper.ShowInfo(this, "请输入用户名称");
                     txtCustomer.Focus();
                     return false;
                 }
@@ -125,7 +125,7 @@ namespace RakeBack.Content.SystemSet
                 {
                     if (cbxOpenBank.SelectedItem == null || cbxOpenBank.SelectedValue.ToString().Equals("0"))
                     {
-                        MessageBox.Show(this, "请选择开户银行！");
+                        MessageBoxHelper.ShowInfo(this, "请选择开户银行！");
                         cbxOpenBank.Focus();
                         return false;
                     }
@@ -133,14 +133,14 @@ namespace RakeBack.Content.SystemSet
                     {
                         if (string.IsNullOrEmpty(this.txtBankZH.Text.Trim()))
                         {
-                            MessageBox.Show(this, "银行网点信息为空！");
+                            MessageBoxHelper.ShowInfo(this, "银行网点信息为空！");
                             txtBankZH.Focus();
                             return false;
                         }
                     }
                     if (string.IsNullOrEmpty(this.txtBankNo.Text.Trim()))
                     {
-                        MessageBox.Show(this, "请输入银行卡号！");
+                        MessageBoxHelper.ShowInfo(this, "请输入银行卡号！");
                         txtBankNo.Focus();
                         return false;
                     }
@@ -148,7 +148,7 @@ namespace RakeBack.Content.SystemSet
                     long bank = 0;
                     if (long.TryParse(this.txtBankNo.Text, out bank) == false)
                     {
-                        MessageBox.Show(this, "银行卡号必须全部是数字！");
+                        MessageBoxHelper.ShowInfo(this, "银行卡号必须全部是数字！");
                         txtBankNo.Focus();
                         return false;
                     }
@@ -212,11 +212,11 @@ namespace RakeBack.Content.SystemSet
                         {
                             if (result != null && result.IsSuccess)
                             {
-                                MessageBox.Show("添加成功");
+                                MessageBoxHelper.ShowInfo(this, "添加成功");
                             }
                             else
                             {
-                                MessageBox.Show("添加失败:"+result.ErrorMsg);
+                                MessageBoxHelper.ShowError(this, "添加失败:" +result.ErrorMsg);
                             }
                         }));
                     }
@@ -226,7 +226,7 @@ namespace RakeBack.Content.SystemSet
                     this.Invoke(new Action(() =>
                     {
                         base.EndWait();
-                        MessageBox.Show("添加失败:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "添加失败:" + ex.Message);
                     }
                     ));
                 }

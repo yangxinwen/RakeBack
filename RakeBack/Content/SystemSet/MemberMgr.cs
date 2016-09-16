@@ -75,7 +75,7 @@ namespace RakeBack.Content.SystemSet
                             }
                             else
                             {
-                                MessageBox.Show("角色信息查询出错");
+                                MessageBoxHelper.ShowError(this, "角色信息查询出错");
                             }
                         }));
                         base.EndWait();
@@ -85,7 +85,7 @@ namespace RakeBack.Content.SystemSet
                 {
                     this.Invoke(new Action(() =>
                     {
-                        MessageBox.Show("查询出错:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message);
                     }
                     ));
                 }
@@ -102,7 +102,7 @@ namespace RakeBack.Content.SystemSet
             }
             else if ("delCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
-                if (MessageBox.Show("确认删除？", "确认对话框", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBoxHelper.ShowConf(this, "确认删除？") == DialogResult.OK)
                 {
                     var mod = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as RakeBackService.UserInfo;
                     if (mod == null)
@@ -121,11 +121,11 @@ namespace RakeBack.Content.SystemSet
                                 {
                                     if (result != null && result.IsSuccess)
                                     {
-                                        MessageBox.Show("删除成功");
+                                        MessageBoxHelper.ShowInfo(this, "删除成功");
                                     }
                                     else if (result != null)
                                     {
-                                        MessageBox.Show("删除失败:" + result.ErrorMsg);
+                                        MessageBoxHelper.ShowError(this, "删除失败:" + result.ErrorMsg);
                                     }
                                 }));
                             }
@@ -135,7 +135,7 @@ namespace RakeBack.Content.SystemSet
                             this.Invoke(new Action(() =>
                             {
                                 base.EndWait();
-                                MessageBox.Show("删除失败:" + ex.Message);
+                                MessageBoxHelper.ShowError(this, "删除失败:" + ex.Message);
                             }
                             ));
                         }
@@ -238,7 +238,7 @@ namespace RakeBack.Content.SystemSet
                             }
                             else
                             {
-                                MessageBox.Show("查询出错");
+                                MessageBoxHelper.ShowError(this, "查询出错");
                             }
                         }));
                         base.EndWait();
@@ -249,7 +249,7 @@ namespace RakeBack.Content.SystemSet
                     this.Invoke(new Action(() =>
                     {
                         base.EndWait();
-                        MessageBox.Show("查询出错:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message);
                     }
                     ));
                 }

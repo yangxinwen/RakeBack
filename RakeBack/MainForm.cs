@@ -14,17 +14,24 @@ using System.Configuration;
 
 namespace RakeBack
 {
-    public partial class MainForm : Form
+    public partial class MainForm : BaseForm
     {
-        private Dictionary<string, BaseForm> _formDic = new Dictionary<string, BaseForm>();
-
-        private string _loginType = "0";
+        private Dictionary<string, BaseForm> _formDic = new Dictionary<string, BaseForm>();        
 
         public MainForm()
         {
             InitializeComponent();
 
-            _loginType = ConfigurationManager.AppSettings["LoginType"];
+            string txt = string.Empty;
+            var role = Business.ApplicationParam.UserInfo.RoleId;
+            if (role.Equals(0))
+                txt = "系统管理员";
+            else if (role.Equals(3))
+                txt = "会员管理员";
+            else if (role.Equals(2))
+                txt = "会员";
+            this.Text = string.Format("欢迎{0}{1}使用线上返佣系统",txt,Business.ApplicationParam.UserInfo.UserName);
+
             InitMenuItem();
 
             ShowForm("Common.MainPage");
@@ -76,6 +83,7 @@ namespace RakeBack
             var menuItem = new MenuItemModel() { Name = "常用操作", Path = null, IsEnable = true };
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "首页", Path = "Common.MainPage", IsEnable = true });
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "修改密码", Path = "Common.PassordModify", IsEnable = true });
+            menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "注销", Path = "Common.ReLogin", IsEnable = true });
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "退出", Path = "Common.Exit", IsEnable = true });
             list.Add(menuItem);
 

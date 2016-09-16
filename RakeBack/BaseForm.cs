@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RakeBack.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,11 @@ namespace RakeBack
 
         private Timer _timer = null;
 
+        public BaseForm()
+        {
+        }
+        
+
         private void _timer_Tick(object sender, EventArgs e)
         {
             if (this.Enabled == false)
@@ -21,7 +27,7 @@ namespace RakeBack
                 _timer.Stop();
                 _timer = null;
                 EndWait();
-                MessageBox.Show("超时");
+                MessageBoxHelper.ShowInfo(this, "超时");
             }
         }
 

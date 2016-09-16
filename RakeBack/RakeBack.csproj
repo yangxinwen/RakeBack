@@ -70,6 +70,12 @@
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Content\Common\ReLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\Common\ReLogin.Designer.cs">
+      <DependentUpon>ReLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Content\Common\Exit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,8 @@
     <Compile Include="Helper\DesSecurityCommon.cs" />
     <Compile Include="Helper\HelpCommon.cs" />
     <Compile Include="Helper\MenuItemHelper.cs" />
+    <Compile Include="Helper\MessageBoxEx.cs" />
+    <Compile Include="Helper\MessageBoxHelper.cs" />
     <Compile Include="Helper\StringHelper.cs" />
     <Compile Include="Helper\ThreadHelper.cs" />
     <Compile Include="Helper\ValidCode.cs" />
@@ -199,6 +207,9 @@
     </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Common\ReLogin.resx">
+      <DependentUpon>ReLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Content\Common\Exit.resx">
       <DependentUpon>Exit.cs</DependentUpon>

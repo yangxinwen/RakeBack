@@ -59,7 +59,7 @@ namespace RakeBack.Content.RakeBackMgr
             double amount = 0;
             if (double.TryParse(txtAmount.Text, out amount) == false || amount <= 0)
             {
-                MessageBox.Show("请输入正确的金额");
+                MessageBoxHelper.ShowInfo(this, "请输入正确的金额");
                 return;
             }
             
@@ -111,12 +111,12 @@ namespace RakeBack.Content.RakeBackMgr
 
                     if (result != null && result.IsSuccess)
                     {
-                        MessageBox.Show("新单创建成功");
+                        MessageBoxHelper.ShowInfo(this, "新单创建成功");
                         this.DialogResult = DialogResult.OK;
                     }
                     else if (result != null)
                     {
-                        MessageBox.Show("新单创建失败:" + result.ErrorMsg);
+                        MessageBoxHelper.ShowError(this, "新单创建失败:" + result.ErrorMsg);
                     }
 
                 }

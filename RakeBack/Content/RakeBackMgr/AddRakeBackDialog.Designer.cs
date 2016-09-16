@@ -343,10 +343,9 @@
             this.lbAmountUp.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lbAmountUp.Location = new System.Drawing.Point(148, 243);
             this.lbAmountUp.Name = "lbAmountUp";
-            this.lbAmountUp.Size = new System.Drawing.Size(29, 12);
+            this.lbAmountUp.Size = new System.Drawing.Size(0, 12);
             this.lbAmountUp.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.lbAmountUp.TabIndex = 3;
-            this.lbAmountUp.Text = "....";
             this.lbAmountUp.UseStyle = false;
             // 
             // labelW21

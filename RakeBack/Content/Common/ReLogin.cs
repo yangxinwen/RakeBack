@@ -8,16 +8,17 @@ using System.Windows.Forms;
 
 namespace RakeBack.Content.Common
 {
-    public partial class MainPage : RakeBack.BaseForm
+    public partial class ReLogin : RakeBack.BaseForm
     {
-        public MainPage()
+        /// <summary>
+        /// 重新登录
+        /// </summary>
+        public ReLogin()
         {
             InitializeComponent();
-        }
 
-        private void linkLabel1_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://120.76.78.5:81/webadmin/login.aspx ");
+            System.Diagnostics.Process.Start(Application.ExecutablePath);
+            Application.Exit();
         }
     }
 }

@@ -236,7 +236,8 @@
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginForm";
+            this.TabText = "欢迎使用线上返佣系统";
+            this.Text = "欢迎使用线上返佣系统";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbValid)).EndInit();

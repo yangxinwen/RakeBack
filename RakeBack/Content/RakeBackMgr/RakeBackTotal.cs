@@ -120,7 +120,7 @@ namespace RakeBack.Content.RakeBackMgr
                     this.Invoke(new Action(() =>
                     {
                         base.EndWait();
-                        MessageBox.Show("查询出错:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message);
                     }
                     ));
                 }
@@ -131,7 +131,7 @@ namespace RakeBack.Content.RakeBackMgr
         {
             if (dtStart.Value.Date > dtEnd.Value.Date)
             {
-                MessageBox.Show(this, "查询截止时间不能早于起始时间！");
+                MessageBoxHelper.ShowInfo(this, "查询截止时间不能早于起始时间！");
                 return;
             }
 

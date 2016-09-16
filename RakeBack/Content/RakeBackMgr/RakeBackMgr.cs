@@ -55,7 +55,7 @@ namespace RakeBack.Content.RakeBackMgr
         {
             if ("delCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
-                if (MessageBox.Show("确认删除？", "确认对话框", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBoxHelper.ShowConf(this, "确认删除？") == DialogResult.OK)
                 {
                     var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
                     if (order == null) return;
@@ -64,7 +64,7 @@ namespace RakeBack.Content.RakeBackMgr
             }
             else if ("auditCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
-                if (MessageBox.Show("确认审核？", "确认对话框", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBoxHelper.ShowConf(this, "确认审核？") == DialogResult.OK)
                 {
                     var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
                     if (order == null) return;
@@ -73,7 +73,7 @@ namespace RakeBack.Content.RakeBackMgr
             }
             else if ("browseCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
-                if (MessageBox.Show("确认标记为已查看？", "确认对话框", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBoxHelper.ShowConf(this, "确认标记为已查看？") == DialogResult.OK)
                 {
                     var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
                     if (order == null) return;
@@ -82,7 +82,7 @@ namespace RakeBack.Content.RakeBackMgr
             }
             else if ("useCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
-                if (MessageBox.Show("确认提取？", "确认对话框", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBoxHelper.ShowConf(this, "确认提取？") == DialogResult.OK)
                 {
                     var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
                     if (order == null) return;
@@ -100,7 +100,7 @@ namespace RakeBack.Content.RakeBackMgr
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("提取失败");
+                        MessageBoxHelper.ShowError(this, "提取失败");
                     }
 
 
@@ -126,22 +126,22 @@ namespace RakeBack.Content.RakeBackMgr
         {
             if (order.OrderStatus == "2")
             {
-                MessageBox.Show(this, "客户已经浏览该笔订单了，不能处理！");
+                MessageBoxHelper.ShowInfo(this, "客户已经浏览该笔订单了，不能处理！");
                 return false;
             }
             else if (order.OrderStatus == "3")
             {
-                MessageBox.Show(this, "该笔订单银行已经返回成功了，不能处理！");
+                MessageBoxHelper.ShowInfo(this, "该笔订单银行已经返回成功了，不能处理！");
                 return false;
             }
             else if (order.OrderStatus == "4")
             {
-                MessageBox.Show(this, "该笔订单银行已经返回失败了，不能处理！");
+                MessageBoxHelper.ShowInfo(this, "该笔订单银行已经返回失败了，不能处理！");
                 return false;
             }
             else if (order.OrderStatus == "5")
             {
-                MessageBox.Show(this, "该笔订单正在等待银行返回处理结果，不能处理！");
+                MessageBoxHelper.ShowInfo(this, "该笔订单正在等待银行返回处理结果，不能处理！");
                 return false;
             }
 
@@ -171,11 +171,11 @@ namespace RakeBack.Content.RakeBackMgr
                         {
                             if (result != null && result.IsSuccess)
                             {
-                                MessageBox.Show("审核成功");
+                                MessageBoxHelper.ShowInfo(this, "审核成功");
                             }
                             else if (result != null)
                             {
-                                MessageBox.Show("审核失败：" + result.ErrorMsg);
+                                MessageBoxHelper.ShowError(this, "审核失败：" + result.ErrorMsg);
                             }
                         }));
                     }
@@ -185,7 +185,7 @@ namespace RakeBack.Content.RakeBackMgr
                     this.Invoke(new Action(() =>
                     {
                         base.EndWait();
-                        MessageBox.Show("审核失败:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "审核失败:" + ex.Message);
                     }
                     ));
                 }
@@ -215,11 +215,11 @@ namespace RakeBack.Content.RakeBackMgr
                         {
                             if (result != null && result.IsSuccess)
                             {
-                                MessageBox.Show("删除成功");
+                                MessageBoxHelper.ShowInfo(this, "删除成功");
                             }
                             else if (result != null)
                             {
-                                MessageBox.Show("删除失败：" + result.ErrorMsg);
+                                MessageBoxHelper.ShowError(this, "删除失败：" + result.ErrorMsg);
                             }
                         }));
                     }
@@ -229,7 +229,7 @@ namespace RakeBack.Content.RakeBackMgr
                     this.Invoke(new Action(() =>
                     {
                         base.EndWait();
-                        MessageBox.Show("删除失败:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "删除失败:" + ex.Message);
                     }
                     ));
                 }
@@ -243,7 +243,7 @@ namespace RakeBack.Content.RakeBackMgr
 
             if (order.OrderStatus != ((int)OrderStatus.Audited).ToString())
             {
-                MessageBox.Show(this, "只可以标记已审核状态的订单！");
+                MessageBoxHelper.ShowInfo(this,  "只可以标记已审核状态的订单！");
                 return;
             }
 
@@ -267,11 +267,11 @@ namespace RakeBack.Content.RakeBackMgr
                         {
                             if (result != null && result.IsSuccess)
                             {
-                                MessageBox.Show("标记成功");
+                                MessageBoxHelper.ShowInfo(this, "标记成功");
                             }
                             else if (result != null)
                             {
-                                MessageBox.Show("标记失败：" + result.ErrorMsg);
+                                MessageBoxHelper.ShowError(this, "标记失败：" + result.ErrorMsg);
                             }
                         }));
                     }
@@ -281,7 +281,7 @@ namespace RakeBack.Content.RakeBackMgr
                     this.Invoke(new Action(() =>
                     {
                         base.EndWait();
-                        MessageBox.Show("标记失败:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "标记失败:" + ex.Message);
                     }
                     ));
                 }
@@ -358,7 +358,7 @@ namespace RakeBack.Content.RakeBackMgr
             {
                 if (DateTime.Parse(_endDate) < DateTime.Parse(_startDate))
                 {
-                    MessageBox.Show(this, "查询截止时间不能早于起始时间！");
+                    MessageBoxHelper.ShowInfo(this, "查询截止时间不能早于起始时间！");
                     return null;
                 }
             }
@@ -395,7 +395,7 @@ namespace RakeBack.Content.RakeBackMgr
                             }
                             else
                             {
-                                MessageBox.Show("查询出错");
+                                MessageBoxHelper.ShowError(this, "查询出错");
                             }
                         }));
                         base.EndWait();
@@ -406,7 +406,7 @@ namespace RakeBack.Content.RakeBackMgr
                     this.Invoke(new Action(() =>
                     {
                         base.EndWait();
-                        MessageBox.Show("查询出错:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message);
                     }
                     ));
                 }

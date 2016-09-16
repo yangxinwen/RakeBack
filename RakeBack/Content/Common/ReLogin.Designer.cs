@@ -1,6 +1,6 @@
 ﻿namespace RakeBack.Content.Common
 {
-    partial class Exit
+    partial class ReLogin
     {
         /// <summary>
         /// 必需的设计器变量。

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RakeBack.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,13 +22,17 @@ namespace RakeBack
             Application.ThreadException += Application_ThreadException;
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
+
             //Application.Run(new MainForm());
             //return;
-            var login = new LoginForm();
-            if(login.ShowDialog()==DialogResult.OK)
+            var login = new LoginForm();    
+            if (login.ShowDialog()==DialogResult.OK)
             {
                 Application.Run(new MainForm());
             }
+
+
+
         }
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

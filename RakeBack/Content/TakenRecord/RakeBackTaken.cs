@@ -138,7 +138,7 @@ namespace RakeBack.Content.TakenRecord
                             }
                             else
                             {
-                                MessageBox.Show("查询出错");
+                                MessageBoxHelper.ShowError(this, "查询出错");
                             }
                         }));
                         base.EndWait();
@@ -149,7 +149,7 @@ namespace RakeBack.Content.TakenRecord
                     this.Invoke(new Action(() =>
                     {
                         base.EndWait();
-                        MessageBox.Show("查询出错:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message);
                     }
                     ));
                 }

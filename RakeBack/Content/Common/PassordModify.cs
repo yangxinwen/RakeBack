@@ -21,21 +21,21 @@ namespace RakeBack.Content.Common
 
             if (string.IsNullOrEmpty(txtOld.Text))
             {
-                MessageBox.Show("请输入原密码");
+                MessageBoxHelper.ShowInfo(this,"请输入原密码");
                 txtOld.Focus();
                 return false;
 
             }
             if (string.IsNullOrEmpty(txtNew.Text))
             {
-                MessageBox.Show("请输入新密码");
+                MessageBoxHelper.ShowInfo(this, "请输入新密码");
                 txtNew.Focus();
                 return false;
 
             }
             if (string.IsNullOrEmpty(txtNewConf.Text))
             {
-                MessageBox.Show("请输入确认密码");
+                MessageBoxHelper.ShowInfo(this, "请输入确认密码");
                 txtNewConf.Focus();
                 return false;
 
@@ -43,7 +43,7 @@ namespace RakeBack.Content.Common
 
             if (txtNewConf.Text.Equals(txtNew.Text) == false)
             {
-                MessageBox.Show("确认密码不一致");
+                MessageBoxHelper.ShowInfo(this, "确认密码不一致");
                 return false;
 
             }
@@ -68,11 +68,11 @@ namespace RakeBack.Content.Common
                         {
                             if (result != null && result.IsSuccess)
                             {
-                                MessageBox.Show("更新成功");
+                                MessageBoxHelper.ShowInfo(this, "更新成功");
                             }
                             else if (result != null)
                             {
-                                MessageBox.Show("更新失败:" + result.ErrorMsg);
+                                MessageBoxHelper.ShowError(this, "更新失败:" + result.ErrorMsg);
                             }
                         }));
                     }
@@ -82,7 +82,7 @@ namespace RakeBack.Content.Common
                     this.Invoke(new Action(() =>
                     {
                         base.EndWait();
-                        MessageBox.Show("删除失败:" + ex.Message);
+                        MessageBoxHelper.ShowError(this, "删除失败:" + ex.Message);
                     }
                     ));
                 }
