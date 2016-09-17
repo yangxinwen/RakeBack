@@ -211,12 +211,12 @@
             this.labelW9.AutoSize = true;
             this.labelW9.BackColor = System.Drawing.Color.Transparent;
             this.labelW9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW9.Location = new System.Drawing.Point(99, 235);
+            this.labelW9.Location = new System.Drawing.Point(75, 235);
             this.labelW9.Name = "labelW9";
-            this.labelW9.Size = new System.Drawing.Size(41, 12);
+            this.labelW9.Size = new System.Drawing.Size(65, 12);
             this.labelW9.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.labelW9.TabIndex = 33;
-            this.labelW9.Text = "备注：";
+            this.labelW9.Text = "备    注：";
             this.labelW9.UseStyle = false;
             // 
             // lbBankZH
@@ -410,12 +410,12 @@
             this.labelW4.AutoSize = true;
             this.labelW4.BackColor = System.Drawing.Color.Transparent;
             this.labelW4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW4.Location = new System.Drawing.Point(87, 39);
+            this.labelW4.Location = new System.Drawing.Point(76, 39);
             this.labelW4.Name = "labelW4";
-            this.labelW4.Size = new System.Drawing.Size(53, 12);
+            this.labelW4.Size = new System.Drawing.Size(65, 12);
             this.labelW4.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.labelW4.TabIndex = 11;
-            this.labelW4.Text = "订单号：";
+            this.labelW4.Text = "订 单 号：";
             this.labelW4.UseStyle = false;
             // 
             // lbLogin

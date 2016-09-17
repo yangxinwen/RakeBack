@@ -56,6 +56,7 @@
             // panel
             // 
             this.panel.AssociatedSplitter = null;
+            this.panel.AutoScroll = true;
             this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.CaptionFont = new System.Drawing.Font("微软雅黑", 11.75F, System.Drawing.FontStyle.Bold);
             this.panel.CaptionHeight = 27;
@@ -229,7 +230,7 @@
             this.txtRemark.Location = new System.Drawing.Point(199, 274);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(158, 72);
+            this.txtRemark.Size = new System.Drawing.Size(195, 72);
             this.txtRemark.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.txtRemark.TabIndex = 10;
             // 
@@ -237,7 +238,7 @@
             // 
             this.txtBankNo.Location = new System.Drawing.Point(199, 247);
             this.txtBankNo.Name = "txtBankNo";
-            this.txtBankNo.Size = new System.Drawing.Size(100, 21);
+            this.txtBankNo.Size = new System.Drawing.Size(195, 21);
             this.txtBankNo.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.txtBankNo.TabIndex = 9;
             // 
@@ -245,7 +246,7 @@
             // 
             this.txtBankZH.Location = new System.Drawing.Point(199, 220);
             this.txtBankZH.Name = "txtBankZH";
-            this.txtBankZH.Size = new System.Drawing.Size(100, 21);
+            this.txtBankZH.Size = new System.Drawing.Size(195, 21);
             this.txtBankZH.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.txtBankZH.TabIndex = 8;
             // 
@@ -253,7 +254,7 @@
             // 
             this.txtBranchBank.Location = new System.Drawing.Point(199, 195);
             this.txtBranchBank.Name = "txtBranchBank";
-            this.txtBranchBank.Size = new System.Drawing.Size(100, 21);
+            this.txtBranchBank.Size = new System.Drawing.Size(195, 21);
             this.txtBranchBank.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.txtBranchBank.TabIndex = 7;
             // 

@@ -32,12 +32,10 @@
             this.labelW5 = new XiaoCai.WinformUI.LabelW();
             this.labelW9 = new XiaoCai.WinformUI.LabelW();
             this.labelW4 = new XiaoCai.WinformUI.LabelW();
-            this.labelW3 = new XiaoCai.WinformUI.LabelW();
             this.labelW7 = new XiaoCai.WinformUI.LabelW();
             this.labelW2 = new XiaoCai.WinformUI.LabelW();
             this.labelW6 = new XiaoCai.WinformUI.LabelW();
             this.labelW1 = new XiaoCai.WinformUI.LabelW();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,11 +45,9 @@
             this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.CaptionFont = new System.Drawing.Font("微软雅黑", 11.75F, System.Drawing.FontStyle.Bold);
             this.panel.CaptionHeight = 27;
-            this.panel.Controls.Add(this.linkLabel1);
             this.panel.Controls.Add(this.labelW5);
             this.panel.Controls.Add(this.labelW9);
             this.panel.Controls.Add(this.labelW4);
-            this.panel.Controls.Add(this.labelW3);
             this.panel.Controls.Add(this.labelW7);
             this.panel.Controls.Add(this.labelW2);
             this.panel.Controls.Add(this.labelW6);
@@ -79,7 +75,7 @@
             this.panel.ShowCaptionbar = false;
             this.panel.ShowCaptionbarBorder = false;
             this.panel.ShowTransparentBackground = false;
-            this.panel.Size = new System.Drawing.Size(638, 228);
+            this.panel.Size = new System.Drawing.Size(809, 228);
             this.panel.TabIndex = 10;
             this.panel.Text = "panelW4";
             this.panel.ToolTipTextCloseIcon = null;
@@ -90,10 +86,11 @@
             // 
             this.labelW5.AutoSize = true;
             this.labelW5.BackColor = System.Drawing.Color.Transparent;
+            this.labelW5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelW5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelW5.Location = new System.Drawing.Point(45, 40);
             this.labelW5.Name = "labelW5";
-            this.labelW5.Size = new System.Drawing.Size(83, 12);
+            this.labelW5.Size = new System.Drawing.Size(90, 12);
             this.labelW5.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.labelW5.TabIndex = 0;
             this.labelW5.Text = "系统基本信息 ";
@@ -104,7 +101,7 @@
             this.labelW9.AutoSize = true;
             this.labelW9.BackColor = System.Drawing.Color.Transparent;
             this.labelW9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW9.Location = new System.Drawing.Point(166, 157);
+            this.labelW9.Location = new System.Drawing.Point(181, 129);
             this.labelW9.Name = "labelW9";
             this.labelW9.Size = new System.Drawing.Size(479, 12);
             this.labelW9.Style = XiaoCai.WinformUI.Style.Office2007Blue;
@@ -117,33 +114,20 @@
             this.labelW4.AutoSize = true;
             this.labelW4.BackColor = System.Drawing.Color.Transparent;
             this.labelW4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW4.Location = new System.Drawing.Point(45, 157);
+            this.labelW4.Location = new System.Drawing.Point(45, 129);
             this.labelW4.Name = "labelW4";
-            this.labelW4.Size = new System.Drawing.Size(95, 12);
+            this.labelW4.Size = new System.Drawing.Size(113, 12);
             this.labelW4.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.labelW4.TabIndex = 0;
-            this.labelW4.Text = "安全访问说明： ";
+            this.labelW4.Text = "3、安全访问说明： ";
             this.labelW4.UseStyle = false;
-            // 
-            // labelW3
-            // 
-            this.labelW3.AutoSize = true;
-            this.labelW3.BackColor = System.Drawing.Color.Transparent;
-            this.labelW3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW3.Location = new System.Drawing.Point(45, 129);
-            this.labelW3.Name = "labelW3";
-            this.labelW3.Size = new System.Drawing.Size(107, 12);
-            this.labelW3.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW3.TabIndex = 0;
-            this.labelW3.Text = "目前访问地址为： ";
-            this.labelW3.UseStyle = false;
             // 
             // labelW7
             // 
             this.labelW7.AutoSize = true;
             this.labelW7.BackColor = System.Drawing.Color.Transparent;
             this.labelW7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW7.Location = new System.Drawing.Point(166, 101);
+            this.labelW7.Location = new System.Drawing.Point(181, 101);
             this.labelW7.Name = "labelW7";
             this.labelW7.Size = new System.Drawing.Size(215, 12);
             this.labelW7.Style = XiaoCai.WinformUI.Style.Office2007Blue;
@@ -158,10 +142,10 @@
             this.labelW2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelW2.Location = new System.Drawing.Point(45, 101);
             this.labelW2.Name = "labelW2";
-            this.labelW2.Size = new System.Drawing.Size(119, 12);
+            this.labelW2.Size = new System.Drawing.Size(137, 12);
             this.labelW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.labelW2.TabIndex = 0;
-            this.labelW2.Text = "提取返佣资金时间： ";
+            this.labelW2.Text = "2、提取返佣资金时间： ";
             this.labelW2.UseStyle = false;
             // 
             // labelW6
@@ -169,7 +153,7 @@
             this.labelW6.AutoSize = true;
             this.labelW6.BackColor = System.Drawing.Color.Transparent;
             this.labelW6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW6.Location = new System.Drawing.Point(166, 73);
+            this.labelW6.Location = new System.Drawing.Point(181, 73);
             this.labelW6.Name = "labelW6";
             this.labelW6.Size = new System.Drawing.Size(95, 12);
             this.labelW6.Style = XiaoCai.WinformUI.Style.Office2007Blue;
@@ -184,27 +168,16 @@
             this.labelW1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelW1.Location = new System.Drawing.Point(45, 73);
             this.labelW1.Name = "labelW1";
-            this.labelW1.Size = new System.Drawing.Size(95, 12);
+            this.labelW1.Size = new System.Drawing.Size(113, 12);
             this.labelW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.labelW1.TabIndex = 0;
-            this.labelW1.Text = "软件版本信息： ";
+            this.labelW1.Text = "1、软件版本信息： ";
             this.labelW1.UseStyle = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(168, 128);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(257, 12);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://120.76.78.5:81/webadmin/login.aspx ";
-            this.linkLabel1.Click += new System.EventHandler(this.linkLabel1_Click);
             // 
             // MainPage
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(638, 228);
+            this.ClientSize = new System.Drawing.Size(809, 228);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HideOnClose = true;
@@ -224,10 +197,8 @@
         private XiaoCai.WinformUI.LabelW labelW5;
         private XiaoCai.WinformUI.LabelW labelW9;
         private XiaoCai.WinformUI.LabelW labelW4;
-        private XiaoCai.WinformUI.LabelW labelW3;
         private XiaoCai.WinformUI.LabelW labelW7;
         private XiaoCai.WinformUI.LabelW labelW2;
         private XiaoCai.WinformUI.LabelW labelW6;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

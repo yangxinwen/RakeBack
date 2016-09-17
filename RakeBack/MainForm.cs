@@ -76,6 +76,7 @@ namespace RakeBack
                 if (obj != null && obj is BaseForm)
                 {
                     var form = obj as BaseForm;
+                    form.DockStateChanged -= Form_DockStateChanged;
                     form.DockStateChanged += Form_DockStateChanged;
                     form.Show(dockPanel1);
                     _formDic.Add(path, form);
@@ -84,12 +85,40 @@ namespace RakeBack
             }
             return f;
         }
+        /// <summary>
+        /// 移除指定窗体
+        /// </summary>
+        /// <param name="path"></param>
+        public void RemoveForm(string path)
+        {
+            if (_formDic.ContainsKey(path))
+            {
+                dockPanel1.Controls.Remove(_formDic[path]);
+                _formDic.Remove(path);
+            }
+        }
+
+        /// <summary>
+        /// 移除指定窗体
+        /// </summary>
+        /// <param name="path"></param>
+        public void RemoveForm(BaseForm form)
+        {
+            if (_formDic.ContainsValue(form))
+            {
+                var item = _formDic.FirstOrDefault(a => a.Value.Equals(form));
+                item.Value.Dispose();
+                dockPanel1.Controls.Remove(item.Value);
+                _formDic.Remove(item.Key);
+            }
+        }
 
         private void Form_DockStateChanged(object sender, EventArgs e)
         {
             var form = sender as BaseForm;
 
-            //if(form.DockState==XiaoCai.WinformUI.Docking.DockState.Hidden)
+            if (form.DockState == XiaoCai.WinformUI.Docking.DockState.Hidden)
+                RemoveForm(form);
 
         }
 

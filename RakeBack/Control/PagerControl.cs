@@ -15,6 +15,13 @@ namespace RakeBack.Control
         public PagerControl()
         {
             InitializeComponent();
+
+            this.Load += PagerControl_Load;
+        }
+
+        private void PagerControl_Load(object sender, EventArgs e)
+        {
+            this.PageSize = 35;
         }
 
         #endregion

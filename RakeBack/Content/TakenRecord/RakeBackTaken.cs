@@ -24,6 +24,30 @@ namespace RakeBack.Content.TakenRecord
             this.Load += RakeBackTaken_Load;
             InitCombox();
             pager1.OnPageChanged += Pager1_OnPageChanged;
+            dataGridViewW1.DataSourceChanged += DataGridViewW1_DataSourceChanged;
+        }
+
+        private void DataGridViewW1_DataSourceChanged(object sender, EventArgs e)
+        {
+            //控制提取按钮的显示
+            if (dataGridViewW1.Columns.Contains("useCol"))
+            {
+                foreach (DataGridViewRow row in dataGridViewW1.Rows)
+                {
+                    var data = (row.DataBoundItem as OrderInfo);
+                    if (data != null)
+                    {
+                        var cell = row.Cells["useCol"] as DataGridViewLinkCell;
+                        if (data.OrderStatus.Equals("" + (int)OrderStatus.Audited) ||
+                            data.OrderStatus.Equals("" + (int)OrderStatus.Browse))
+                        {
+                            cell.UseColumnTextForLinkValue = true;
+                        }
+                        else
+                            cell.UseColumnTextForLinkValue = false;
+                    }
+                }
+            }
         }
 
         private void RakeBackTaken_Load(object sender, EventArgs e)
@@ -89,7 +113,7 @@ namespace RakeBack.Content.TakenRecord
                 var order = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as OrderInfo;
                 if (order == null) return;
 
-                if (order.OrderStatus != ((int)OrderStatus.Audited).ToString()&&
+                if (order.OrderStatus != ((int)OrderStatus.Audited).ToString() &&
                     order.OrderStatus != ((int)OrderStatus.Browse).ToString())
                 {
                     MessageBoxHelper.ShowInfo(this, "订单已审核后才允许提取");
@@ -100,7 +124,7 @@ namespace RakeBack.Content.TakenRecord
                 var form = new RakeBackUse();
                 form.InitOrderInfo(order);
                 if (form.ShowDialog() == DialogResult.OK)
-                    buttonW1_Click(null, null);                          
+                    buttonW1_Click(null, null);
             }
         }
 

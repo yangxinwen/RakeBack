@@ -133,8 +133,14 @@ namespace RakeBack.Content.SystemSet
                     {
                         if (string.IsNullOrEmpty(this.txtBranchBank.Text.Trim()))
                         {
-                            MessageBoxHelper.ShowInfo(this, "银行网点信息为空！");
+                            MessageBoxHelper.ShowInfo(this, "开户分行信息为空！");
                             txtBranchBank.Focus();
+                            return false;
+                        }
+                        if (string.IsNullOrEmpty(this.txtBankZH.Text.Trim()))
+                        {
+                            MessageBoxHelper.ShowInfo(this, "开户支行信息为空！");
+                            txtBankZH.Focus();
                             return false;
                         }
                     }
@@ -220,6 +226,7 @@ namespace RakeBack.Content.SystemSet
                                     if (f != null)
                                     {
                                         (f as MemberMgr).AutoSearch();
+                                        this.Hide();
                                     }
                                 }
 

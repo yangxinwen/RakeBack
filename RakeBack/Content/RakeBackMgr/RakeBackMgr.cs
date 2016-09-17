@@ -27,14 +27,55 @@ namespace RakeBack.Content.RakeBackMgr
             AddOperateColumn();
             InitCombox();
 
-
-
+            dataGridViewW1.DataSourceChanged += DataGridViewW1_DataSourceChanged;
         }
 
         private void RakeBackMgr_Load(object sender, EventArgs e)
         {
             SetDataGridViewStyle(dataGridViewW1);
             buttonW1_Click(sender, e);
+        }
+
+        private void DataGridViewW1_DataSourceChanged(object sender, EventArgs e)
+        {
+            //控制审核按钮的显示
+            if (dataGridViewW1.Columns.Contains("auditCol"))
+            {
+                foreach (DataGridViewRow row in dataGridViewW1.Rows)
+                {
+                    var data = (row.DataBoundItem as OrderInfo);
+                    if (data != null)
+                    {
+                        var cell = row.Cells["auditCol"] as DataGridViewLinkCell;
+                        if (data.OrderStatus.Equals("" + (int)OrderStatus.NewOrder))
+                        {
+                            cell.UseColumnTextForLinkValue = true;
+                        }
+                        else
+                            cell.UseColumnTextForLinkValue = false;
+                    }
+                }
+            }
+
+            //控制删除按钮的显示
+            if (dataGridViewW1.Columns.Contains("delCol"))
+            {
+                foreach (DataGridViewRow row in dataGridViewW1.Rows)
+                {
+                    var data = (row.DataBoundItem as OrderInfo);
+                    if (data != null)
+                    {
+                        var cell = row.Cells["delCol"] as DataGridViewLinkCell;
+                        if (data.OrderStatus.Equals("" + (int)OrderStatus.NewOrder)||
+                            data.OrderStatus.Equals("" + (int)OrderStatus.Audited))
+                        {
+                            cell.UseColumnTextForLinkValue = true;
+                        }
+                        else
+                            cell.UseColumnTextForLinkValue = false;
+                    }
+                }
+            }
         }
 
         private void Pager1_OnPageChanged(object sender, EventArgs e)

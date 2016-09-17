@@ -178,7 +178,6 @@
             this.txtPassword.Size = new System.Drawing.Size(100, 21);
             this.txtPassword.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.txtPassword.TabIndex = 2;
-            this.txtPassword.Text = "88888";
             // 
             // labelW2
             // 
@@ -200,7 +199,6 @@
             this.txtUser.Size = new System.Drawing.Size(100, 21);
             this.txtUser.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.txtUser.TabIndex = 1;
-            this.txtUser.Text = "1";
             // 
             // labelW1
             // 

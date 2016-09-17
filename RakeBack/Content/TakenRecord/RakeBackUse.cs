@@ -40,6 +40,7 @@ namespace RakeBack.Content.TakenRecord
 
             if (MessageBoxHelper.ShowConf(this, "确认提取？") == DialogResult.OK)
             {
+                BllHelper.UpdateOrderStatus(_info, OrderStatus.BankDealing);
                 var url = "http://218.17.162.159:18888/WebService.asmx";
                 var args = new string[] { "123", _info.OrderId };
                 try

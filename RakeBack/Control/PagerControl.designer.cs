@@ -203,7 +203,7 @@
             this.txtPageSize.Name = "txtPageSize";
             this.txtPageSize.Size = new System.Drawing.Size(32, 21);
             this.txtPageSize.TabIndex = 46;
-            this.txtPageSize.Text = "20";
+            this.txtPageSize.Text = "35";
             this.txtPageSize.TextChanged += new System.EventHandler(this.txtPageSize_TextChanged);
             this.txtPageSize.Leave += new System.EventHandler(this.txtPageSize_Leave);
             // 

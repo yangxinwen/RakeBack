@@ -28,7 +28,7 @@ namespace RakeBack
         {
             view.AutoGenerateColumns = false;
             view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            view.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            view.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             view.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             foreach (DataGridViewColumn item in view.Columns)
