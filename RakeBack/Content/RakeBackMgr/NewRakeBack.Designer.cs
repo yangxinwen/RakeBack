@@ -147,7 +147,7 @@
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "UserId";
+            this.Column1.DataPropertyName = "loginId";
             this.Column1.HeaderText = "登陆账号";
             this.Column1.Name = "Column1";
             // 

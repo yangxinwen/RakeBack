@@ -20,16 +20,13 @@ namespace RakeBack
 
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             Application.ThreadException += Application_ThreadException;
-            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-
-
-            //Application.Run(new MainForm());
-            //return;
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;            
 
 
             bool createNew;
             using (System.Threading.Mutex mutex = new System.Threading.Mutex(true, Application.ProductName, out createNew))
             {
+                createNew = true;
                 if (createNew)
                 {
                     var login = new LoginForm();
@@ -45,13 +42,6 @@ namespace RakeBack
                     System.Environment.Exit(1);
                 }
             }
-
-
-
-        
-
-
-
         }
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

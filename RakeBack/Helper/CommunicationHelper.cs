@@ -28,6 +28,7 @@ namespace RakeBack.Helper
                     _client.State == System.ServiceModel.CommunicationState.Faulted)
                 {
                     _client = new RakeBackServiceClient();
+                    _client.ChannelFactory.Closed += ChannelFactory_Closed;
                     _client.Open();
                 }
 
@@ -37,6 +38,11 @@ namespace RakeBack.Helper
                 throw new Exception("创建链路失败:" + ex.Message);
             }
             return _client;
+        }
+
+        private static void ChannelFactory_Closed(object sender, EventArgs e)
+        {
+            MessageBoxHelper.ShowError(null,"已与服务端断开连接");
         }
     }
 }

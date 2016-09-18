@@ -111,6 +111,12 @@
   <wsdl:message name="IRakeBackService_GetConfig_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetConfigResponse" />
   </wsdl:message>
+  <wsdl:message name="IRakeBackService_AddOrderFlowLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderFlowLog" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_AddOrderFlowLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderFlowLogResponse" />
+  </wsdl:message>
   <wsdl:portType name="IRakeBackService">
     <wsdl:operation name="GetNewRakeBack">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetNewRakeBack" message="tns:IRakeBackService_GetNewRakeBack_InputMessage" />
@@ -179,6 +185,10 @@
     <wsdl:operation name="GetConfig">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetConfig" message="tns:IRakeBackService_GetConfig_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetConfigResponse" message="tns:IRakeBackService_GetConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderFlowLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/AddOrderFlowLog" message="tns:IRakeBackService_AddOrderFlowLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/AddOrderFlowLogResponse" message="tns:IRakeBackService_AddOrderFlowLog_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRakeBackService" type="tns:IRakeBackService">
@@ -329,6 +339,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetConfig">
       <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderFlowLog">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/AddOrderFlowLog" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

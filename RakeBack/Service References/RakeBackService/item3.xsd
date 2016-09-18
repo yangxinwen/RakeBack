@@ -264,4 +264,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ResponseBaseOfstring" nillable="true" type="tns:ResponseBaseOfstring" />
+  <xs:simpleType name="OrderFlowLogType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IEOpen" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OrderFlowLogType" nillable="true" type="tns:OrderFlowLogType" />
 </xs:schema>

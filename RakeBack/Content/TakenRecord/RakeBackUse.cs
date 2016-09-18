@@ -34,33 +34,37 @@ namespace RakeBack.Content.TakenRecord
             {
                 MessageBoxHelper.ShowInfo(this, "验证码输入错误");
                 return;
-            }
-
-
+            }           
 
             if (MessageBoxHelper.ShowConf(this, "确认提取？") == DialogResult.OK)
             {
-                //BllHelper.UpdateOrderStatus(_info, OrderStatus.BankDealing);
-                var url = ApplicationParam.OutMoneyUrl;
-                //var args = new string[] { "B2CSettleKey=123", "Id="+ _info.OrderId + "" };  //
-                var args = new object[] { ApplicationParam.B2CSettleKey, _info.OrderId };  //
+                if (!_info.OrderStatus.Trim().Equals("2"))
+                {
+                    MessageBoxHelper.ShowInfo(this, "订单状态不正常，请重新提取！");
+                    return;
+                }
+
+                string url = ApplicationParam.OutMoneyUrl;                
+                string[] argg = new string[2];
+                argg[0] = ApplicationParam.B2CSettleKey;
+                argg[1] = _info.Id.ToString();
                 try
                 {
-
-                    string result = (string)WSHelper.InvokeWebService(url, "OutMoney", args);
-
-                    if (result.Contains("Http://"))
-                    {
-                        System.Diagnostics.Process.Start(result);
-                        this.DialogResult = DialogResult.OK;
-                    }
-                    else
-                        new Exception(result);
+                    string result = (string)WSHelper.InvokeWebService(url, "OutMoney", argg);
+                    MessageBoxHelper.ShowInfo(this,result);
+                    //if (result.Contains("Http://"))
+                    //{
+                    //    System.Diagnostics.Process.Start(result);
+                    //    this.DialogResult = DialogResult.OK;
+                    //}
+                    //else
+                    //    new Exception(result);
                 }
                 catch (Exception ex)
                 {
                     MessageBoxHelper.ShowError(this, "提取失败:"+ex.Message);
                 }
+                this.DialogResult = DialogResult.OK;
             }
         }
 

@@ -11,6 +11,27 @@ namespace RakeBack.Business
 {
     public class BllHelper
     {
+        /// <summary>
+        /// 添加订单流水日志
+        /// </summary>
+        /// <param name="logType"></param>
+        /// <param name="orderId"></param>
+        public static void AddOrderFlowLog(OrderFlowLogType logType, string orderId)
+        {
+            ThreadHelper.StartNew(() =>
+            {
+                try
+                {
+                    var client = CommunicationHelper.GetClient();
+                    if (client != null)
+                    {
+                        var result = client.AddOrderFlowLog(logType,orderId);
+                    }
+                }
+                catch (Exception ex) { }
+            });
+        }
+
         public static void LoadConfig()
         {
             ThreadHelper.StartNew(() =>

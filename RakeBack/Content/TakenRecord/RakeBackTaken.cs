@@ -120,7 +120,7 @@ namespace RakeBack.Content.TakenRecord
                     return;
                 }
                 BrowseOrder(order);
-
+                BllHelper.AddOrderFlowLog(OrderFlowLogType.IEOpen, order.OrderId);
                 var form = new RakeBackUse();
                 form.InitOrderInfo(order);
                 if (form.ShowDialog() == DialogResult.OK)

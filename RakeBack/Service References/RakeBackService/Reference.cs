@@ -1971,6 +1971,14 @@ namespace RakeBack.RakeBackService {
         }
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderFlowLogType", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    public enum OrderFlowLogType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        IEOpen = 0,
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RakeBackService.IRakeBackService")]
     public interface IRakeBackService {
@@ -2025,6 +2033,9 @@ namespace RakeBack.RakeBackService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/GetConfig", ReplyAction="http://tempuri.org/IRakeBackService/GetConfigResponse")]
         RakeBack.RakeBackService.ResponseBaseOfstring GetConfig(string key);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddOrderFlowLog", ReplyAction="http://tempuri.org/IRakeBackService/AddOrderFlowLogResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfboolean AddOrderFlowLog(RakeBack.RakeBackService.OrderFlowLogType logType, string orderId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2120,6 +2131,10 @@ namespace RakeBack.RakeBackService {
         
         public RakeBack.RakeBackService.ResponseBaseOfstring GetConfig(string key) {
             return base.Channel.GetConfig(key);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfboolean AddOrderFlowLog(RakeBack.RakeBackService.OrderFlowLogType logType, string orderId) {
+            return base.Channel.AddOrderFlowLog(logType, orderId);
         }
     }
 }
