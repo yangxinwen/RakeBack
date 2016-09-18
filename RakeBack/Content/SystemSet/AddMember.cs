@@ -68,9 +68,9 @@ namespace RakeBack.Content.SystemSet
                                 cbxRole.DataSource = bs;
 
                             }
-                            else
+                            else if(result != null)
                             {
-                                MessageBoxHelper.ShowError(this, "角色信息查询出错");
+                                MessageBoxHelper.ShowError(this, "角色信息查询出错"+result.ErrorMsg);
                             }
                         }));
                         base.EndWait();
@@ -232,7 +232,7 @@ namespace RakeBack.Content.SystemSet
 
 
                             }
-                            else
+                            else if(result!=null)
                             {
                                 MessageBoxHelper.ShowError(this, "添加失败:" +result.ErrorMsg);
                             }

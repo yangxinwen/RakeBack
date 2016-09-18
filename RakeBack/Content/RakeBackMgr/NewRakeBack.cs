@@ -125,9 +125,9 @@ namespace RakeBack.Content.RakeBackMgr
                                 pager1.PageIndex = pageIndex;
                                 pager1.DrawControl(result.Count);
                             }
-                            else
+                            else if (result != null)
                             {
-                                MessageBoxHelper.ShowError(this, "查询出错");
+                                MessageBoxHelper.ShowError(this, "查询出错:"+result.ErrorMsg);
                             }
                         }));
                         base.EndWait();

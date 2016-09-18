@@ -83,9 +83,9 @@ namespace RakeBack.Content.SystemSet
                                 buttonW1_Click(null, null);
 
                             }
-                            else
+                            else if(result!=null)
                             {
-                                MessageBoxHelper.ShowError(this, "角色信息查询出错");
+                                MessageBoxHelper.ShowError(this, "角色信息查询出错:"+result.ErrorMsg);
                             }
                         }));
                         base.EndWait();
@@ -250,9 +250,9 @@ namespace RakeBack.Content.SystemSet
                                 pager1.PageIndex = pageIndex;
                                 pager1.DrawControl(result.Count);
                             }
-                            else
+                            else if (result != null)
                             {
-                                MessageBoxHelper.ShowError(this, "查询出错");
+                                MessageBoxHelper.ShowError(this, "查询出错:"+result.ErrorMsg);
                             }
                         }));
                         base.EndWait();

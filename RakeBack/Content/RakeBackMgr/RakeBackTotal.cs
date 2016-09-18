@@ -53,6 +53,8 @@ namespace RakeBack.Content.RakeBackMgr
                             mod.ALlCount = result.Content.Item1;
                             mod.ALl = result.Content.Item2;
                         }
+                        else if (result != null)
+                            throw new Exception(result.ErrorMsg);
 
 
                         //newOrder
@@ -64,6 +66,8 @@ namespace RakeBack.Content.RakeBackMgr
                             mod.NewOrderCount = result.Content.Item1;
                             mod.NewOrder = result.Content.Item2;
                         }
+                        else if (result != null)
+                            throw new Exception(result.ErrorMsg);
                         //Audited
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.Audited);
@@ -73,6 +77,8 @@ namespace RakeBack.Content.RakeBackMgr
                             mod.AuditedCount = result.Content.Item1;
                             mod.Audited = result.Content.Item2;
                         }
+                        else if (result != null)
+                            throw new Exception(result.ErrorMsg);
                         //Browse
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.Browse);
@@ -82,6 +88,8 @@ namespace RakeBack.Content.RakeBackMgr
                             mod.BrowsedCount = result.Content.Item1;
                             mod.Browsed = result.Content.Item2;
                         }
+                        else if (result != null)
+                            throw new Exception(result.ErrorMsg);
                         //BankReturnSuccess
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.BankReturnSuccess);
@@ -91,6 +99,8 @@ namespace RakeBack.Content.RakeBackMgr
                             mod.BankReturnSuccessCount = result.Content.Item1;
                             mod.BankReturnSuccess = result.Content.Item2;
                         }
+                        else if (result != null)
+                            throw new Exception(result.ErrorMsg);
                         //BankReturnFail
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.BankReturnFail);
@@ -100,6 +110,8 @@ namespace RakeBack.Content.RakeBackMgr
                             mod.BankReturnFailCount = result.Content.Item1;
                             mod.BankReturnFail = result.Content.Item2;
                         }
+                        else if (result != null)
+                            throw new Exception(result.ErrorMsg);
                         //BankDealing
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.BankDealing);
@@ -109,6 +121,8 @@ namespace RakeBack.Content.RakeBackMgr
                             mod.BankDealingCount = result.Content.Item1;
                             mod.BankDealing = result.Content.Item2;
                         }
+                        else if (result != null)
+                            throw new Exception(result.ErrorMsg);
 
                         this.Invoke(new Action(() =>
                         {
