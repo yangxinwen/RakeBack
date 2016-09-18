@@ -9,6 +9,10 @@ namespace RakeBack.Business
 {
     public class ApplicationParam
     {
+
+        public static string OutMoneyUrl { get; set; }
+        public static string B2CSettleKey { get; set; }
+
         /// <summary>
         /// 当前用户信息
         /// </summary>

@@ -11,6 +11,28 @@ namespace RakeBack.Business
 {
     public class BllHelper
     {
+        public static void LoadConfig()
+        {
+            ThreadHelper.StartNew(() =>
+            {
+                try
+                {
+                    var client = CommunicationHelper.GetClient();
+                    if (client != null)
+                    {
+                        var result = client.GetConfig("OutMoneyUrl");
+                        if (result != null && result.IsSuccess)
+                            ApplicationParam.OutMoneyUrl = result.Content;
+
+                        result = client.GetConfig("B2CSettleKey");
+                        if (result != null && result.IsSuccess)
+                            ApplicationParam.B2CSettleKey = result.Content;
+                    }
+                }
+                catch (Exception ex) { }
+            });
+        }
+
         public static void OutLogin(int userId, string userName)
         {
             ThreadHelper.StartNew(() =>

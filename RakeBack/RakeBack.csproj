@@ -328,6 +328,9 @@
     <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfboolean.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

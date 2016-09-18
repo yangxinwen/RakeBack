@@ -25,11 +25,30 @@ namespace RakeBack
 
             //Application.Run(new MainForm());
             //return;
-            var login = new LoginForm();    
-            if (login.ShowDialog()==DialogResult.OK)
+
+
+            bool createNew;
+            using (System.Threading.Mutex mutex = new System.Threading.Mutex(true, Application.ProductName, out createNew))
             {
-                Application.Run(new MainForm());
+                if (createNew)
+                {
+                    var login = new LoginForm();
+                    if (login.ShowDialog() == DialogResult.OK)
+                    {
+                        Application.Run(new MainForm());
+                    }
+                }
+                else
+                {
+                    MessageBoxHelper.ShowInfo(null,"应用程序已经在运行中...");
+                    //System.Threading.Thread.Sleep(1000);
+                    System.Environment.Exit(1);
+                }
             }
+
+
+
+        
 
 
 

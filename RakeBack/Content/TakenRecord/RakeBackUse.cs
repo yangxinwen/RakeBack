@@ -40,19 +40,26 @@ namespace RakeBack.Content.TakenRecord
 
             if (MessageBoxHelper.ShowConf(this, "确认提取？") == DialogResult.OK)
             {
-                BllHelper.UpdateOrderStatus(_info, OrderStatus.BankDealing);
-                var url = "http://218.17.162.159:18888/WebService.asmx";
-                var args = new string[] { "123", _info.OrderId };
+                //BllHelper.UpdateOrderStatus(_info, OrderStatus.BankDealing);
+                var url = ApplicationParam.OutMoneyUrl;
+                //var args = new string[] { "B2CSettleKey=123", "Id="+ _info.OrderId + "" };  //
+                var args = new object[] { ApplicationParam.B2CSettleKey, _info.OrderId };  //
                 try
                 {
 
                     string result = (string)WSHelper.InvokeWebService(url, "OutMoney", args);
 
-                    System.Diagnostics.Process.Start("http://baidu.com");
+                    if (result.Contains("Http://"))
+                    {
+                        System.Diagnostics.Process.Start(result);
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                        new Exception(result);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBoxHelper.ShowError(this, "提取失败");
+                    MessageBoxHelper.ShowError(this, "提取失败:"+ex.Message);
                 }
             }
         }

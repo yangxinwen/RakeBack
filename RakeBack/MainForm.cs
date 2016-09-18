@@ -27,6 +27,8 @@ namespace RakeBack
 
 
             Business.ApplicationParam.MainForm = this;
+            BllHelper.LoadConfig();
+
 
             string txt = string.Empty;
             var role = Business.ApplicationParam.UserInfo.RoleId;
@@ -49,6 +51,10 @@ namespace RakeBack
             else
                 ShowForm("Common.MainPage");
         }
+
+
+
+
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {

@@ -105,6 +105,12 @@
   <wsdl:message name="IRakeBackService_GetOrderLog_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetOrderLogResponse" />
   </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfig" />
+  </wsdl:message>
+  <wsdl:message name="IRakeBackService_GetConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigResponse" />
+  </wsdl:message>
   <wsdl:portType name="IRakeBackService">
     <wsdl:operation name="GetNewRakeBack">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetNewRakeBack" message="tns:IRakeBackService_GetNewRakeBack_InputMessage" />
@@ -169,6 +175,10 @@
     <wsdl:operation name="GetOrderLog">
       <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetOrderLog" message="tns:IRakeBackService_GetOrderLog_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetOrderLogResponse" message="tns:IRakeBackService_GetOrderLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRakeBackService/GetConfig" message="tns:IRakeBackService_GetConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRakeBackService/GetConfigResponse" message="tns:IRakeBackService_GetConfig_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRakeBackService" type="tns:IRakeBackService">
@@ -310,6 +320,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetOrderLog">
       <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetOrderLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfig">
+      <soap:operation soapAction="http://tempuri.org/IRakeBackService/GetConfig" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
