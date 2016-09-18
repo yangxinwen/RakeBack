@@ -132,7 +132,6 @@
             this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.mainMenu);
             this.Name = "MainForm";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TabText = "MainForm";
             this.Text = "MainForm";

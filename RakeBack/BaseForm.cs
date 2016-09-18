@@ -17,6 +17,13 @@ namespace RakeBack
 
         public BaseForm()
         {
+            this.Load += BaseForm_Load;
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
+            if (this.DesignMode == false)
+                this.Icon = new System.Drawing.Icon(Application.StartupPath + "/Resource/RakeBack.ico");
         }
 
 
@@ -77,6 +84,20 @@ namespace RakeBack
                 _timer.Stop();
                 _timer = null;
             }
+
+        }
+
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
+            this.SuspendLayout();
+            // 
+            // BaseForm
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "BaseForm";
+            this.ResumeLayout(false);
 
         }
     }
