@@ -19,16 +19,26 @@ namespace RakeBack
     {
         private Dictionary<string, BaseForm> _formDic = new Dictionary<string, BaseForm>();
 
+        private bool _isLocked = false;
+        private Timer _lockTimer = new Timer();
+        /// <summary>
+        /// 闲置时间
+        /// </summary>
+        private int _freeTime = 0;
+
         public MainForm()
         {
             InitializeComponent();
 
             this.FormClosed += MainForm_FormClosed;
-
+            this.MouseMove += MainForm_MouseMove;
 
             Business.ApplicationParam.MainForm = this;
             BllHelper.LoadConfig();
 
+            _lockTimer.Interval = 10 * 1000;
+            _lockTimer.Tick += _lockTimer_Tick;
+            _lockTimer.Start();
 
             string txt = string.Empty;
             var role = Business.ApplicationParam.UserInfo.RoleId;
@@ -52,9 +62,21 @@ namespace RakeBack
                 ShowForm("Common.MainPage");
         }
 
+        private void _lockTimer_Tick(object sender, EventArgs e)
+        {
+            if (_isLocked) return;
+            Debug.WriteLine(_freeTime);
+            _freeTime += 10;
+            if (_freeTime >= 60)
+            {
+                ShowForm("Common.LockPanel");
+            }
+        }
 
-
-
+        private void MainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            _freeTime = 0;
+        }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -119,6 +141,29 @@ namespace RakeBack
             }
         }
 
+        public void LockPanel()
+        {
+            _isLocked = true;
+            _freeTime = 0;
+        }
+        public void UnLockPanel(BaseForm form)
+        {
+            _isLocked = false;
+
+            ThreadHelper.StartNew(() =>
+            {
+                System.Threading.Thread.Sleep(1 * 1000);
+                this.Invoke(new Action(() =>
+                {
+                    RemoveForm(form);
+                }));
+
+
+
+            });
+
+        }
+
         private void Form_DockStateChanged(object sender, EventArgs e)
         {
             var form = sender as BaseForm;
@@ -139,6 +184,7 @@ namespace RakeBack
 
             var menuItem = new MenuItemModel() { Name = "常用操作", Path = null, IsEnable = true };
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "首页", Path = "Common.MainPage", IsEnable = true });
+            menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "锁屏", Path = "Common.LockPanel", IsEnable = true });
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "修改密码", Path = "Common.PassordModify", IsEnable = true });
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "注销", Path = "Common.ReLogin", IsEnable = true });
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "退出", Path = "Common.Exit", IsEnable = true });
@@ -164,8 +210,8 @@ namespace RakeBack
             if (roleId == 0 || roleId == 3)
             {  //系统管理员和会员管理员
                 menuItem = new MenuItemModel() { Name = "系统设置", Path = null, IsEnable = true };
-                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "添加用户", Path = "SystemSet.AddMember", IsEnable = true });
-                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "系统用户", Path = "SystemSet.MemberMgr", IsEnable = true });
+                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "添加会员", Path = "SystemSet.AddMember", IsEnable = true });
+                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "会员管理", Path = "SystemSet.MemberMgr", IsEnable = true });
                 list.Add(menuItem);
             }
             var menuList = MenuItemHelper.MakeMenuItem(list);

@@ -16,8 +16,10 @@ namespace RakeBack.Content.Common
         /// </summary>
         public ReLogin()
         {
-            InitializeComponent();            
-            Application.Restart();
+            InitializeComponent();
+
+            Application.Exit();
+            System.Diagnostics.Process.Start(Application.StartupPath+"/RakeBack.exe","sdf");
         }
     }
 }

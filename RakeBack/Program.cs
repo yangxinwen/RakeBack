@@ -13,20 +13,24 @@ namespace RakeBack
         /// 应用程序的主入口点。
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             Application.ThreadException += Application_ThreadException;
-            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;            
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+
 
 
             bool createNew;
             using (System.Threading.Mutex mutex = new System.Threading.Mutex(true, Application.ProductName, out createNew))
             {
-                createNew = true;
+
+                if (args.Length>0)
+                    createNew = true;
+                //createNew = true;
                 if (createNew)
                 {
                     var login = new LoginForm();

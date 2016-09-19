@@ -13,6 +13,11 @@ namespace RakeBack.Business
         public static string OutMoneyUrl { get; set; }
         public static string B2CSettleKey { get; set; }
 
+
+        /// <summary>
+        /// 输入密码
+        /// </summary>
+        public static string InputPwd { get; set; }
         /// <summary>
         /// 当前用户信息
         /// </summary>

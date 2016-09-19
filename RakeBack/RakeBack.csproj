@@ -74,6 +74,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Business\BllHelper.cs" />
+    <Compile Include="Content\Common\LockDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\Common\LockDialog.Designer.cs">
+      <DependentUpon>LockDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Common\LockPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\Common\LockPanel.Designer.cs">
+      <DependentUpon>LockPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Content\Common\ReLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +230,12 @@
     </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Common\LockDialog.resx">
+      <DependentUpon>LockDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Common\LockPanel.resx">
+      <DependentUpon>LockPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Content\Common\ReLogin.resx">
       <DependentUpon>ReLogin.cs</DependentUpon>
