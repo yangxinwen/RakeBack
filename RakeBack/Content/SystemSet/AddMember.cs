@@ -30,11 +30,8 @@ namespace RakeBack.Content.SystemSet
             ThreadHelper.StartNew(() =>
             {
                 try
-                {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.GetRoleInfo();
+                {                  
+                        var result = CommunicationHelper.GetRoleInfo();
 
                         this.Invoke(new Action(() =>
                         {
@@ -74,7 +71,7 @@ namespace RakeBack.Content.SystemSet
                             }
                         }));
                         base.EndWait();
-                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -208,10 +205,8 @@ namespace RakeBack.Content.SystemSet
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.AddUserInfo(user,ApplicationParam.UserInfo.LoginId);
+                 
+                        var result = CommunicationHelper.AddUserInfo(user,ApplicationParam.UserInfo.LoginId);
 
                         base.EndWait();
                         this.Invoke(new Action(() =>
@@ -237,7 +232,7 @@ namespace RakeBack.Content.SystemSet
                                 MessageBoxHelper.ShowError(this, "添加失败:" +result.ErrorMsg);
                             }
                         }));
-                    }
+                    
                 }
                 catch (Exception ex)
                 {

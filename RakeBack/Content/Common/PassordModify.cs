@@ -21,7 +21,7 @@ namespace RakeBack.Content.Common
 
             if (string.IsNullOrEmpty(txtOld.Text))
             {
-                MessageBoxHelper.ShowInfo(this,"请输入原密码");
+                MessageBoxHelper.ShowInfo(this, "请输入原密码");
                 txtOld.Focus();
                 return false;
 
@@ -59,24 +59,21 @@ namespace RakeBack.Content.Common
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
+
+                    var result = CommunicationHelper.UpdateUserPassword(userId, oldPwd, newPwd);
+                    base.EndWait();
+                    this.Invoke(new Action(() =>
                     {
-                        var result = client.UpdateUserPassword(userId, oldPwd, newPwd);
-                        base.EndWait();
-                        this.Invoke(new Action(() =>
+                        if (result != null && result.IsSuccess)
                         {
-                            if (result != null && result.IsSuccess)
-                            {
-                                MessageBoxHelper.ShowInfo(this, "更新成功,您需要重新登录");
-                                Application.Restart();
-                            }
-                            else if (result != null)
-                            {
-                                MessageBoxHelper.ShowError(this, "更新失败:" + result.ErrorMsg);
-                            }
-                        }));
-                    }
+                            MessageBoxHelper.ShowInfo(this, "更新成功,您需要重新登录");
+                            Application.Restart();
+                        }
+                        else if (result != null)
+                        {
+                            MessageBoxHelper.ShowError(this, "更新失败:" + result.ErrorMsg);
+                        }
+                    }));
                 }
                 catch (Exception ex)
                 {

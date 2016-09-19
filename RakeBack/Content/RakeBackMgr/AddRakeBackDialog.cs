@@ -103,10 +103,8 @@ namespace RakeBack.Content.RakeBackMgr
 
             try
             {
-                var client = CommunicationHelper.GetClient();
-                if (client != null)
-                {
-                    var result = client.AddRakeBack(order, ApplicationParam.UserInfo.LoginId);
+              
+                    var result = CommunicationHelper.AddRakeBack(order, ApplicationParam.UserInfo.LoginId);
 
 
                     if (result != null && result.IsSuccess)
@@ -119,7 +117,7 @@ namespace RakeBack.Content.RakeBackMgr
                         MessageBoxHelper.ShowError(this, "新单创建失败:" + result.ErrorMsg);
                     }
 
-                }
+                
             }
             catch (Exception)
             {

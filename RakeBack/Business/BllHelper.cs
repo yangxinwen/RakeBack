@@ -22,11 +22,9 @@ namespace RakeBack.Business
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.AddOrderFlowLog(logType,orderId);
-                    }
+
+                    var result = CommunicationHelper.AddOrderFlowLog(logType, orderId);
+
                 }
                 catch (Exception ex) { }
             });
@@ -38,17 +36,15 @@ namespace RakeBack.Business
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.GetConfig("OutMoneyUrl");
-                        if (result != null && result.IsSuccess)
-                            ApplicationParam.OutMoneyUrl = result.Content;
 
-                        result = client.GetConfig("B2CSettleKey");
-                        if (result != null && result.IsSuccess)
-                            ApplicationParam.B2CSettleKey = result.Content;
-                    }
+                    var result = CommunicationHelper.GetConfig("OutMoneyUrl");
+                    if (result != null && result.IsSuccess)
+                        ApplicationParam.OutMoneyUrl = result.Content;
+
+                    result = CommunicationHelper.GetConfig("B2CSettleKey");
+                    if (result != null && result.IsSuccess)
+                        ApplicationParam.B2CSettleKey = result.Content;
+
                 }
                 catch (Exception ex) { }
             });
@@ -60,11 +56,9 @@ namespace RakeBack.Business
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.OutLogin(userId, userName);
-                    }
+
+                    var result = CommunicationHelper.OutLogin(userId, userName);
+
                 }
                 catch (Exception ex) { }
             });
@@ -80,19 +74,30 @@ namespace RakeBack.Business
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        order.OrderStatus = (int)status + "";
-                        order.InputPerson = ApplicationParam.UserInfo.InputPerson;
-                        order.UpdateTime = DateTime.Now;
-                        order.SubmitTime = DateTime.Now;
 
-                        var result = client.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
-                    }
+                    order.OrderStatus = (int)status + "";
+                    order.InputPerson = ApplicationParam.UserInfo.InputPerson;
+                    order.UpdateTime = DateTime.Now;
+                    order.SubmitTime = DateTime.Now;
+
+                    var result = CommunicationHelper.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
+
                 }
                 catch (Exception ex) { }
             });
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

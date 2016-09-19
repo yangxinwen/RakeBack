@@ -111,10 +111,8 @@ namespace RakeBack.Content.RakeBackMgr
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.GetNewRakeBack(pager1.PageSize, pageIndex, dic);
+               
+                        var result = CommunicationHelper.GetNewRakeBack(pager1.PageSize, pageIndex, dic);
 
                         this.Invoke(new Action(() =>
                         {
@@ -131,7 +129,7 @@ namespace RakeBack.Content.RakeBackMgr
                             }
                         }));
                         base.EndWait();
-                    }
+                    
                 }
                 catch (Exception ex)
                 {

@@ -270,10 +270,8 @@ namespace RakeBack.Content.RakeBackMgr
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
+                  
+                        var result = CommunicationHelper.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
                         base.EndWait();
                         this.Invoke(new Action(() =>
                         {
@@ -287,7 +285,7 @@ namespace RakeBack.Content.RakeBackMgr
                                 MessageBoxHelper.ShowError(this, "审核失败：" + result.ErrorMsg);
                             }
                         }));
-                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -315,10 +313,8 @@ namespace RakeBack.Content.RakeBackMgr
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.DelOrderInfo(order, ApplicationParam.UserInfo.LoginId);
+                 
+                        var result = CommunicationHelper.DelOrderInfo(order, ApplicationParam.UserInfo.LoginId);
                         base.EndWait();
                         this.Invoke(new Action(() =>
                         {
@@ -332,7 +328,7 @@ namespace RakeBack.Content.RakeBackMgr
                                 MessageBoxHelper.ShowError(this, "删除失败：" + result.ErrorMsg);
                             }
                         }));
-                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -368,10 +364,8 @@ namespace RakeBack.Content.RakeBackMgr
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
+                
+                        var result = CommunicationHelper.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
                         base.EndWait();
                         this.Invoke(new Action(() =>
                         {
@@ -384,7 +378,7 @@ namespace RakeBack.Content.RakeBackMgr
                                 MessageBoxHelper.ShowError(this, "标记失败：" + result.ErrorMsg);
                             }
                         }));
-                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -489,10 +483,8 @@ namespace RakeBack.Content.RakeBackMgr
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.GetRakeBack(pager1.PageSize, pageIndex, dic);
+                  
+                        var result = CommunicationHelper.GetRakeBack(pager1.PageSize, pageIndex, dic);
 
                         this.Invoke(new Action(() =>
                         {
@@ -509,7 +501,7 @@ namespace RakeBack.Content.RakeBackMgr
                             }
                         }));
                         base.EndWait();
-                    }
+                    
                 }
                 catch (Exception ex)
                 {

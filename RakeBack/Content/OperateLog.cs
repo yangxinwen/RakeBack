@@ -34,7 +34,7 @@ namespace RakeBack.Content
             dataGridViewW1.AutoGenerateColumns = false;
             pager1.OnPageChanged += Pager1_OnPageChanged;
             this.Shown += OperateLog_Shown;
-        }        
+        }
 
         private void OperateLog_Shown(object sender, EventArgs e)
         {
@@ -49,34 +49,32 @@ namespace RakeBack.Content
 
         private void Search(int userId, int pageIndex)
         {
-            var dic = new Dictionary<string,string>();
+            var dic = new Dictionary<string, string>();
             dic.Add("userId", userId.ToString());
             base.StartWait();
             ThreadHelper.StartNew(() =>
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.GetOperateLog(pager1.PageSize, pageIndex, dic);
 
-                        this.Invoke(new Action(() =>
+                    var result = CommunicationHelper.GetOperateLog(pager1.PageSize, pageIndex, dic);
+
+                    this.Invoke(new Action(() =>
+                    {
+                        if (result != null && result.IsSuccess)
                         {
-                            if (result != null && result.IsSuccess)
-                            {
-                                dataGridViewW1.DataSource = result.Content;
+                            dataGridViewW1.DataSource = result.Content;
                                 //重新绘制分页控件
                                 pager1.PageIndex = pageIndex;
-                                pager1.DrawControl(result.Count);
-                            }
-                            else
-                            {
-                                MessageBoxHelper.ShowError(this, "查询出错");
-                            }
-                        }));
-                        base.EndWait();
-                    }
+                            pager1.DrawControl(result.Count);
+                        }
+                        else
+                        {
+                            MessageBoxHelper.ShowError(this, "查询出错");
+                        }
+                    }));
+                    base.EndWait();
+
                 }
                 catch (Exception ex)
                 {

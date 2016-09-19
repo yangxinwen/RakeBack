@@ -30,7 +30,7 @@ namespace RakeBack
 
                 if (args.Length>0)
                     createNew = true;
-                //createNew = true;
+                createNew = true;
                 if (createNew)
                 {
                     var login = new LoginForm();

@@ -56,10 +56,8 @@ namespace RakeBack.Content
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.GetOrderLog(pager1.PageSize, pageIndex, dic);
+              
+                        var result = CommunicationHelper.GetOrderLog(pager1.PageSize, pageIndex, dic);
 
                         this.Invoke(new Action(() =>
                         {
@@ -76,7 +74,7 @@ namespace RakeBack.Content
                             }
                         }));
                         base.EndWait();
-                    }
+                    
                 }
                 catch (Exception ex)
                 {

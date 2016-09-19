@@ -35,10 +35,7 @@ namespace RakeBack.Content.RakeBackMgr
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-
+                
                         Dictionary<string, string> baseDic = new Dictionary<string, string>();
                         baseDic.Add("startDate", startDate);
                         baseDic.Add("endDate", endDate);
@@ -47,7 +44,7 @@ namespace RakeBack.Content.RakeBackMgr
 
                         //all
                         var dic = new Dictionary<string, string>(baseDic);
-                        var result = client.GetAmountStatistics(dic);
+                        var result = CommunicationHelper.GetAmountStatistics(dic);
                         if (result != null && result.IsSuccess)
                         {
                             mod.ALlCount = result.Content.Item1;
@@ -60,7 +57,7 @@ namespace RakeBack.Content.RakeBackMgr
                         //newOrder
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.NewOrder);
-                        result = client.GetAmountStatistics(dic);
+                        result = CommunicationHelper.GetAmountStatistics(dic);
                         if (result != null && result.IsSuccess)
                         {
                             mod.NewOrderCount = result.Content.Item1;
@@ -71,7 +68,7 @@ namespace RakeBack.Content.RakeBackMgr
                         //Audited
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.Audited);
-                        result = client.GetAmountStatistics(dic);
+                        result = CommunicationHelper.GetAmountStatistics(dic);
                         if (result != null && result.IsSuccess)
                         {
                             mod.AuditedCount = result.Content.Item1;
@@ -82,7 +79,7 @@ namespace RakeBack.Content.RakeBackMgr
                         //Browse
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.Browse);
-                        result = client.GetAmountStatistics(dic);
+                        result = CommunicationHelper.GetAmountStatistics(dic);
                         if (result != null && result.IsSuccess)
                         {
                             mod.BrowsedCount = result.Content.Item1;
@@ -93,7 +90,7 @@ namespace RakeBack.Content.RakeBackMgr
                         //BankReturnSuccess
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.BankReturnSuccess);
-                        result = client.GetAmountStatistics(dic);
+                        result = CommunicationHelper.GetAmountStatistics(dic);
                         if (result != null && result.IsSuccess)
                         {
                             mod.BankReturnSuccessCount = result.Content.Item1;
@@ -104,7 +101,7 @@ namespace RakeBack.Content.RakeBackMgr
                         //BankReturnFail
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.BankReturnFail);
-                        result = client.GetAmountStatistics(dic);
+                        result = CommunicationHelper.GetAmountStatistics(dic);
                         if (result != null && result.IsSuccess)
                         {
                             mod.BankReturnFailCount = result.Content.Item1;
@@ -115,7 +112,7 @@ namespace RakeBack.Content.RakeBackMgr
                         //BankDealing
                         dic = new Dictionary<string, string>(baseDic);
                         dic.Add("orderstatus", "" + (int)Model.OrderStatus.BankDealing);
-                        result = client.GetAmountStatistics(dic);
+                        result = CommunicationHelper.GetAmountStatistics(dic);
                         if (result != null && result.IsSuccess)
                         {
                             mod.BankDealingCount = result.Content.Item1;
@@ -130,7 +127,7 @@ namespace RakeBack.Content.RakeBackMgr
                             dataGridViewW1.DataSource = new List<Model.RakeBackTakenModel>() { mod };
                             lbResult.Text = string.Format("查询时间范围为：{0}至{1}的返佣资金统计表", startDate, endDate);
                         }));
-                    }
+                    
                 }
                 catch (Exception ex)
                 {

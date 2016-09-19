@@ -43,10 +43,8 @@ namespace RakeBack.Content.SystemSet
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.GetRoleInfo();
+                
+                        var result = CommunicationHelper.GetRoleInfo();
 
                         this.Invoke(new Action(() =>
                         {
@@ -89,7 +87,7 @@ namespace RakeBack.Content.SystemSet
                             }
                         }));
                         base.EndWait();
-                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -124,10 +122,8 @@ namespace RakeBack.Content.SystemSet
                     {
                         try
                         {
-                            var client = CommunicationHelper.GetClient();
-                            if (client != null)
-                            {
-                                var result = client.DelUserInfo(mod.UserId, ApplicationParam.UserInfo.LoginId);
+                          
+                                var result = CommunicationHelper.DelUserInfo(mod.UserId, ApplicationParam.UserInfo.LoginId);
 
                                 base.EndWait();
                                 this.Invoke(new Action(() =>
@@ -142,7 +138,7 @@ namespace RakeBack.Content.SystemSet
                                         MessageBoxHelper.ShowError(this, "删除失败:" + result.ErrorMsg);
                                     }
                                 }));
-                            }
+                            
                         }
                         catch (Exception ex)
                         {
@@ -236,10 +232,8 @@ namespace RakeBack.Content.SystemSet
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.GetUserInfo(pager1.PageSize, pageIndex, dic);
+                   
+                        var result = CommunicationHelper.GetUserInfo(pager1.PageSize, pageIndex, dic);
 
                         this.Invoke(new Action(() =>
                         {
@@ -256,7 +250,7 @@ namespace RakeBack.Content.SystemSet
                             }
                         }));
                         base.EndWait();
-                    }
+                    
                 }
                 catch (Exception ex)
                 {

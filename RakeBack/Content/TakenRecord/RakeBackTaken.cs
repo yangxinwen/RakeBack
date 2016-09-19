@@ -156,10 +156,8 @@ namespace RakeBack.Content.TakenRecord
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
+                  
+                        var result = CommunicationHelper.UpdateOrderInfo(order, ApplicationParam.UserInfo.LoginId);
                         //base.EndWait();
                         //this.Invoke(new Action(() =>
                         //{
@@ -172,7 +170,7 @@ namespace RakeBack.Content.TakenRecord
                         //        MessageBoxHelper.ShowError(this, "标记失败：" + result.ErrorMsg);
                         //    }
                         //}));
-                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -243,10 +241,7 @@ namespace RakeBack.Content.TakenRecord
             {
                 try
                 {
-                    var client = CommunicationHelper.GetClient();
-                    if (client != null)
-                    {
-                        var result = client.GetRakeBack(pager1.PageSize, pageIndex, dic);
+                        var result = CommunicationHelper.GetRakeBack(pager1.PageSize, pageIndex, dic);
 
                         this.Invoke(new Action(() =>
                         {
@@ -263,7 +258,7 @@ namespace RakeBack.Content.TakenRecord
                             }
                         }));
                         base.EndWait();
-                    }
+                    
                 }
                 catch (Exception ex)
                 {
