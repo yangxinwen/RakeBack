@@ -38,7 +38,7 @@
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAboutSystemItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnHelpItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dockPanel1 = new XiaoCai.WinformUI.Docking.DockPanel();
+            this.dockPanel1 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,14 +114,11 @@
             // dockPanel1
             // 
             this.dockPanel1.ActiveAutoHideContent = null;
-            this.dockPanel1.AllowDrop = true;
-            this.dockPanel1.AllowEndUserDocking = false;
             this.dockPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dockPanel1.DocumentStyle = XiaoCai.WinformUI.Docking.DocumentStyle.DockingWindow;
+            this.dockPanel1.DockBackColor = System.Drawing.SystemColors.Control;
             this.dockPanel1.Location = new System.Drawing.Point(0, 25);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Size = new System.Drawing.Size(721, 374);
-            this.dockPanel1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.dockPanel1.TabIndex = 2;
             // 
             // MainForm
@@ -131,11 +128,13 @@
             this.ClientSize = new System.Drawing.Size(721, 399);
             this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.mainMenu);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.HideOnClose = true;
+            this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TabText = "MainForm";
             this.Text = "MainForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -154,7 +153,7 @@
         private System.Windows.Forms.ToolStripMenuItem 帮助HToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnAboutSystemItem;
         private System.Windows.Forms.ToolStripMenuItem btnHelpItem;
-        private XiaoCai.WinformUI.Docking.DockPanel dockPanel1;
+        private WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel1;
     }
 }
 

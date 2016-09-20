@@ -19,7 +19,6 @@ namespace RakeBack.Content.SystemSet
         {
             InitializeComponent();
 
-
             InitRoleCombox();
             InitBankCombox();
         }
@@ -27,61 +26,61 @@ namespace RakeBack.Content.SystemSet
 
         private void InitRoleCombox()
         {
-            ThreadHelper.StartNew(() =>
+            //ThreadHelper.StartNew(() =>
+            //{
+            try
             {
-                try
-                {                  
-                        var result = CommunicationHelper.GetRoleInfo();
+                var result = CommunicationHelper.GetRoleInfo();
 
-                        this.Invoke(new Action(() =>
-                        {
-                            if (result != null && result.IsSuccess)
-                            {
-                                var dic = new Dictionary<int, string>();
-
-                                if (ApplicationParam.UserInfo.RoleId == 0)
-                                {
-                                    dic.Add(0, "系统管理员");
-                                    foreach (var item in result.Content)
-                                    {
-                                        dic.Add(item.RoleId, item.RoleName);
-                                    }
-                                }
-                                else if (ApplicationParam.UserInfo.RoleId == 3)
-                                {
-                                    foreach (var item in result.Content)
-                                    {
-                                        if (item.RoleId != 3)
-                                        {
-                                            dic.Add(item.RoleId, item.RoleName);
-                                        }
-                                    }
-                                }
-
-                                BindingSource bs = new BindingSource();
-                                cbxRole.DisplayMember = "Value";
-                                cbxRole.ValueMember = "Key";
-                                bs.DataSource = dic;
-                                cbxRole.DataSource = bs;
-
-                            }
-                            else if(result != null)
-                            {
-                                MessageBoxHelper.ShowError(this, "角色信息查询出错"+result.ErrorMsg);
-                            }
-                        }));
-                        base.EndWait();
-                    
-                }
-                catch (Exception ex)
-                {
-                    this.Invoke(new Action(() =>
+                //this.Invoke(new Action(() =>
+                //{
+                    if (result != null && result.IsSuccess)
                     {
-                        MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message);
+                        var dic = new Dictionary<int, string>();
+
+                        if (ApplicationParam.UserInfo.RoleId == 0)
+                        {
+                            dic.Add(0, "系统管理员");
+                            foreach (var item in result.Content)
+                            {
+                                dic.Add(item.RoleId, item.RoleName);
+                            }
+                        }
+                        else if (ApplicationParam.UserInfo.RoleId == 3)
+                        {
+                            foreach (var item in result.Content)
+                            {
+                                if (item.RoleId != 3)
+                                {
+                                    dic.Add(item.RoleId, item.RoleName);
+                                }
+                            }
+                        }
+
+                        BindingSource bs = new BindingSource();
+                        cbxRole.DisplayMember = "Value";
+                        cbxRole.ValueMember = "Key";
+                        bs.DataSource = dic;
+                        cbxRole.DataSource = bs;
+
                     }
-                    ));
+                    else if (result != null)
+                    {
+                        MessageBoxHelper.ShowError(this, "角色信息查询出错" + result.ErrorMsg);
+                    }
+                //}));
+                //base.EndWait();
+
+            }
+            catch (Exception ex)
+            {
+                this.Invoke(new Action(() =>
+                {
+                    MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message);
                 }
-            });
+                ));
+            }
+            //});
         }
 
         private void InitBankCombox()
@@ -205,34 +204,34 @@ namespace RakeBack.Content.SystemSet
             {
                 try
                 {
-                 
-                        var result = CommunicationHelper.AddUserInfo(user,ApplicationParam.UserInfo.LoginId);
 
-                        base.EndWait();
-                        this.Invoke(new Action(() =>
+                    var result = CommunicationHelper.AddUserInfo(user, ApplicationParam.UserInfo.LoginId);
+
+                    base.EndWait();
+                    this.Invoke(new Action(() =>
+                    {
+                        if (result != null && result.IsSuccess)
                         {
-                            if (result != null && result.IsSuccess)
-                            {
-                                MessageBoxHelper.ShowInfo(this, "添加成功");
+                            MessageBoxHelper.ShowInfo(this, "添加成功");
 
-                                if (ApplicationParam.MainForm != null)
+                            if (ApplicationParam.MainForm != null)
+                            {
+                                var f = ApplicationParam.MainForm.ShowForm("SystemSet.MemberMgr");
+                                if (f != null)
                                 {
-                                    var f = ApplicationParam.MainForm.ShowForm("SystemSet.MemberMgr");
-                                    if (f != null)
-                                    {
-                                        (f as MemberMgr).AutoSearch();
-                                        this.Hide();
-                                    }
+                                    (f as MemberMgr).AutoSearch();
+                                    this.Hide();
                                 }
+                            }
 
 
-                            }
-                            else if(result!=null)
-                            {
-                                MessageBoxHelper.ShowError(this, "添加失败:" +result.ErrorMsg);
-                            }
-                        }));
-                    
+                        }
+                        else if (result != null)
+                        {
+                            MessageBoxHelper.ShowError(this, "添加失败:" + result.ErrorMsg);
+                        }
+                    }));
+
                 }
                 catch (Exception ex)
                 {

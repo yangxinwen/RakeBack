@@ -33,5 +33,11 @@ namespace RakeBack.Content.Common
                 MessageBoxHelper.ShowInfo(this, "密码错误");
             }
         }
+
+        private void buttonW2_Click(object sender, EventArgs e)
+        {
+            if (MessageBoxHelper.ShowConf(this, "确认退出系统") == DialogResult.OK)
+                Application.Exit();
+        }
     }
 }

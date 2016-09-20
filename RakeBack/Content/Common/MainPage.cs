@@ -14,6 +14,7 @@ namespace RakeBack.Content.Common
         {
             InitializeComponent();
         }
+        
 
         private void linkLabel1_Click(object sender, EventArgs e)
         {

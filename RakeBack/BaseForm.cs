@@ -1,11 +1,12 @@
-﻿using RakeBack.Helper;
+﻿using RakeBack.Business;
+using RakeBack.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using XiaoCai.WinformUI.Docking;
+using WeifenLuo.WinFormsUI.Docking;
 
 namespace RakeBack
 {
@@ -18,12 +19,20 @@ namespace RakeBack
         public BaseForm()
         {
             this.Load += BaseForm_Load;
+            this.MouseMove += BaseForm_MouseMove;
         }
 
+        private void BaseForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (ApplicationParam.MainForm != null)
+                ApplicationParam.MainForm._freeTime = 0;
+        }
         private void BaseForm_Load(object sender, EventArgs e)
         {
             if (this.DesignMode == false)
                 this.Icon = new System.Drawing.Icon(Application.StartupPath + "/Resource/RakeBack.ico");
+
+            this.HideOnClose = true;
         }
 
 
@@ -33,6 +42,7 @@ namespace RakeBack
         /// <param name="view"></param>
         protected void SetDataGridViewStyle(DataGridView view)
         {
+            view.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             view.AutoGenerateColumns = false;
             view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             view.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
@@ -60,9 +70,9 @@ namespace RakeBack
 
         public void StartWait()
         {
-            this.Enabled = false;
-
             this.TabText += "...";
+            this.Enabled = false;
+            this.Activate();
             if (_timer != null && _timer.Enabled)
                 _timer.Stop();
             _timer = new Timer();

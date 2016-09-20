@@ -24,7 +24,7 @@ namespace RakeBack
         /// <summary>
         /// 闲置时间
         /// </summary>
-        private int _freeTime = 0;
+        public int _freeTime = 0;
 
         public MainForm()
         {
@@ -60,6 +60,14 @@ namespace RakeBack
             }
             else
                 ShowForm("Common.MainPage");
+
+
+            this.Load += MainForm_Load;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void _lockTimer_Tick(object sender, EventArgs e)
@@ -67,7 +75,8 @@ namespace RakeBack
             if (_isLocked) return;
             Debug.WriteLine(_freeTime);
             _freeTime += 10;
-            if (_freeTime >= 60)
+            //无操作10分钟锁屏
+            if (_freeTime >= 60 * 1000 * 10)
             {
                 ShowForm("Common.LockPanel");
             }
@@ -106,7 +115,7 @@ namespace RakeBack
                     var form = obj as BaseForm;
                     form.DockStateChanged -= Form_DockStateChanged;
                     form.DockStateChanged += Form_DockStateChanged;
-                    form.Show(dockPanel1);
+                    form.Show(dockPanel1, WeifenLuo.WinFormsUI.Docking.DockState.Document);
                     _formDic.Add(path, form);
                     f = form;
                 }
@@ -152,7 +161,7 @@ namespace RakeBack
 
             ThreadHelper.StartNew(() =>
             {
-                System.Threading.Thread.Sleep(1 * 1000);
+                System.Threading.Thread.Sleep(500);
                 this.Invoke(new Action(() =>
                 {
                     RemoveForm(form);
@@ -168,9 +177,11 @@ namespace RakeBack
         {
             var form = sender as BaseForm;
 
-            if (form.DockState == XiaoCai.WinformUI.Docking.DockState.Hidden)
+            if (form.DockState == WeifenLuo.WinFormsUI.Docking.DockState.Hidden)
                 RemoveForm(form);
 
+            if (ApplicationParam.MainForm != null)
+                ApplicationParam.MainForm._freeTime = 0;
         }
 
         /// <summary>

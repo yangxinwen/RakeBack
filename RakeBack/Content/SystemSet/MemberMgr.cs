@@ -39,15 +39,15 @@ namespace RakeBack.Content.SystemSet
 
         private void InitCombox()
         {
-            ThreadHelper.StartNew(() =>
-            {
+            //ThreadHelper.StartNew(() =>
+            //{
                 try
                 {
                 
                         var result = CommunicationHelper.GetRoleInfo();
 
-                        this.Invoke(new Action(() =>
-                        {
+                        //this.Invoke(new Action(() =>
+                        //{
                             if (result != null && result.IsSuccess)
                             {
                                 var dic = new Dictionary<int, string>();
@@ -85,8 +85,8 @@ namespace RakeBack.Content.SystemSet
                             {
                                 MessageBoxHelper.ShowError(this, "角色信息查询出错:"+result.ErrorMsg);
                             }
-                        }));
-                        base.EndWait();
+                        //}));
+                        //base.EndWait();
                     
                 }
                 catch (Exception ex)
@@ -97,7 +97,7 @@ namespace RakeBack.Content.SystemSet
                     }
                     ));
                 }
-            });
+            //});
         }
 
 

@@ -32,6 +32,7 @@
             this.labelW1 = new XiaoCai.WinformUI.LabelW();
             this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
             this.textBoxW1 = new XiaoCai.WinformUI.TextBoxW();
+            this.buttonW2 = new XiaoCai.WinformUI.ButtonW();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +43,7 @@
             this.panel.CaptionFont = new System.Drawing.Font("微软雅黑", 11.75F, System.Drawing.FontStyle.Bold);
             this.panel.CaptionHeight = 27;
             this.panel.Controls.Add(this.labelW1);
+            this.panel.Controls.Add(this.buttonW2);
             this.panel.Controls.Add(this.buttonW1);
             this.panel.Controls.Add(this.textBoxW1);
             this.panel.CustomColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
@@ -67,7 +69,7 @@
             this.panel.ShowCaptionbar = false;
             this.panel.ShowCaptionbarBorder = false;
             this.panel.ShowTransparentBackground = false;
-            this.panel.Size = new System.Drawing.Size(394, 161);
+            this.panel.Size = new System.Drawing.Size(434, 161);
             this.panel.TabIndex = 11;
             this.panel.Text = "panelW4";
             this.panel.ToolTipTextCloseIcon = null;
@@ -113,12 +115,31 @@
             this.textBoxW1.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.textBoxW1.TabIndex = 3;
             // 
+            // buttonW2
+            // 
+            this.buttonW2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
+            this.buttonW2.ForeColor = System.Drawing.Color.Black;
+            this.buttonW2.IsSilver = false;
+            this.buttonW2.Location = new System.Drawing.Point(345, 62);
+            this.buttonW2.MaxImageSize = new System.Drawing.Point(0, 0);
+            this.buttonW2.MenuPos = new System.Drawing.Point(0, 0);
+            this.buttonW2.Name = "buttonW2";
+            this.buttonW2.Size = new System.Drawing.Size(75, 23);
+            this.buttonW2.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.buttonW2.TabIndex = 4;
+            this.buttonW2.Text = "退出系统";
+            this.buttonW2.ToFocused = false;
+            this.buttonW2.UseVisualStyleBackColor = true;
+            this.buttonW2.Click += new System.EventHandler(this.buttonW2_Click);
+            // 
             // LockDialog
             // 
             this.AcceptButton = this.buttonW1;
-            this.ClientSize = new System.Drawing.Size(394, 161);
+            this.ClientSize = new System.Drawing.Size(434, 161);
             this.Controls.Add(this.panel);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.HideOnClose = true;
             this.MaximizeBox = false;
             this.Name = "LockDialog";
             this.ShowInTaskbar = false;
@@ -137,5 +158,6 @@
         private XiaoCai.WinformUI.LabelW labelW1;
         private XiaoCai.WinformUI.ButtonW buttonW1;
         private XiaoCai.WinformUI.TextBoxW textBoxW1;
+        private XiaoCai.WinformUI.ButtonW buttonW2;
     }
 }

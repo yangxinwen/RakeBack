@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,11 +42,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbResult = new XiaoCai.WinformUI.LabelW();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtEnd = new XiaoCai.WinformUI.DateTimePickerW(this.components);
-            this.dtStart = new XiaoCai.WinformUI.DateTimePickerW(this.components);
             this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
             this.labelW1 = new XiaoCai.WinformUI.LabelW();
             this.labelW6 = new XiaoCai.WinformUI.LabelW();
+            this.dtEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtStart = new System.Windows.Forms.DateTimePicker();
             this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).BeginInit();
@@ -107,9 +106,9 @@
             // 
             this.dataGridViewW1.AllowUserToResizeRows = false;
             this.dataGridViewW1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dataGridViewW1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(247)))), ((int)(((byte)(254)))));
+            this.dataGridViewW1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewW1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewW1.ColumnHeaderDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.dataGridViewW1.ColumnHeaderDownColor = System.Drawing.SystemColors.Control;
             this.dataGridViewW1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -121,7 +120,7 @@
             this.dataGridViewW1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewW1.ColumnHeadersHeight = 24;
             this.dataGridViewW1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewW1.ColumnHeaderUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.dataGridViewW1.ColumnHeaderUpColor = System.Drawing.SystemColors.Control;
             this.dataGridViewW1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column10,
             this.Column1,
@@ -131,7 +130,7 @@
             this.Column5,
             this.Column6});
             this.dataGridViewW1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewW1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.dataGridViewW1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridViewW1.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewW1.Name = "dataGridViewW1";
             this.dataGridViewW1.PrimaryRowcolor1 = System.Drawing.Color.White;
@@ -226,8 +225,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dtEnd);
             this.panel1.Controls.Add(this.dtStart);
+            this.panel1.Controls.Add(this.dtEnd);
             this.panel1.Controls.Add(this.buttonW1);
             this.panel1.Controls.Add(this.labelW1);
             this.panel1.Controls.Add(this.labelW6);
@@ -237,31 +236,9 @@
             this.panel1.Size = new System.Drawing.Size(1281, 49);
             this.panel1.TabIndex = 0;
             // 
-            // dtEnd
-            // 
-            this.dtEnd.CustomFormat = "yyyy-MM-dd";
-            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEnd.Location = new System.Drawing.Point(275, 14);
-            this.dtEnd.Name = "dtEnd";
-            this.dtEnd.ShowUpDown = true;
-            this.dtEnd.Size = new System.Drawing.Size(100, 21);
-            this.dtEnd.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dtEnd.TabIndex = 2;
-            // 
-            // dtStart
-            // 
-            this.dtStart.CustomFormat = "yyyy-MM-dd";
-            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtStart.Location = new System.Drawing.Point(96, 16);
-            this.dtStart.Name = "dtStart";
-            this.dtStart.ShowUpDown = true;
-            this.dtStart.Size = new System.Drawing.Size(100, 21);
-            this.dtStart.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dtStart.TabIndex = 1;
-            // 
             // buttonW1
             // 
-            this.buttonW1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
+            this.buttonW1.BorderColor = System.Drawing.SystemColors.Control;
             this.buttonW1.ForeColor = System.Drawing.Color.Black;
             this.buttonW1.IsSilver = false;
             this.buttonW1.Location = new System.Drawing.Point(408, 14);
@@ -302,6 +279,26 @@
             this.labelW6.Text = "截止时间：";
             this.labelW6.UseStyle = false;
             // 
+            // dtEnd
+            // 
+            this.dtEnd.CustomFormat = "yyyy-MM-dd";
+            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEnd.Location = new System.Drawing.Point(277, 16);
+            this.dtEnd.Name = "dtEnd";
+            this.dtEnd.ShowUpDown = true;
+            this.dtEnd.Size = new System.Drawing.Size(102, 21);
+            this.dtEnd.TabIndex = 10;
+            // 
+            // dtStart
+            // 
+            this.dtStart.CustomFormat = "yyyy-MM-dd";
+            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStart.Location = new System.Drawing.Point(89, 16);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.ShowUpDown = true;
+            this.dtStart.Size = new System.Drawing.Size(102, 21);
+            this.dtStart.TabIndex = 10;
+            // 
             // RakeBackTotal
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -334,8 +331,6 @@
         private XiaoCai.WinformUI.ButtonW buttonW1;
         private XiaoCai.WinformUI.LabelW labelW6;
         private XiaoCai.WinformUI.LabelW lbResult;
-        private XiaoCai.WinformUI.DateTimePickerW dtStart;
-        private XiaoCai.WinformUI.DateTimePickerW dtEnd;
         private XiaoCai.WinformUI.LabelW labelW1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -344,5 +339,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DateTimePicker dtStart;
+        private System.Windows.Forms.DateTimePicker dtEnd;
     }
 }

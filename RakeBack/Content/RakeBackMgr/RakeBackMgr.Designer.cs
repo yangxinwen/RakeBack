@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
@@ -46,9 +45,9 @@
             this.logCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.pager1 = new RakeBack.Control.PagerControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtStart = new System.Windows.Forms.DateTimePicker();
             this.cbx_OrderStatus = new System.Windows.Forms.ComboBox();
-            this.dtEnd = new XiaoCai.WinformUI.DateTimePickerW(this.components);
-            this.dtStart = new XiaoCai.WinformUI.DateTimePickerW(this.components);
             this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
             this.labelW6 = new XiaoCai.WinformUI.LabelW();
             this.labelW4 = new XiaoCai.WinformUI.LabelW();
@@ -120,7 +119,7 @@
             this.dataGridViewW1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewW1.ColumnHeaderDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
             this.dataGridViewW1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridViewW1.ColumnHeadersHeight = 19;
+            this.dataGridViewW1.ColumnHeadersHeight = 16;
             this.dataGridViewW1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewW1.ColumnHeaderUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.dataGridViewW1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -244,16 +243,17 @@
             this.pager1.Location = new System.Drawing.Point(0, 375);
             this.pager1.Name = "pager1";
             this.pager1.PageIndex = 1;
-            this.pager1.PageSize = 20;
+            this.pager1.PageSize = 35;
             this.pager1.RecordCount = 0;
             this.pager1.Size = new System.Drawing.Size(1281, 29);
             this.pager1.TabIndex = 1;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cbx_OrderStatus);
+            this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.dtEnd);
             this.panel1.Controls.Add(this.dtStart);
+            this.panel1.Controls.Add(this.cbx_OrderStatus);
             this.panel1.Controls.Add(this.buttonW1);
             this.panel1.Controls.Add(this.labelW6);
             this.panel1.Controls.Add(this.labelW4);
@@ -270,6 +270,26 @@
             this.panel1.Size = new System.Drawing.Size(1281, 49);
             this.panel1.TabIndex = 0;
             // 
+            // dtEnd
+            // 
+            this.dtEnd.CustomFormat = "yyyy-MM-dd";
+            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEnd.Location = new System.Drawing.Point(975, 14);
+            this.dtEnd.Name = "dtEnd";
+            this.dtEnd.ShowUpDown = true;
+            this.dtEnd.Size = new System.Drawing.Size(102, 21);
+            this.dtEnd.TabIndex = 8;
+            // 
+            // dtStart
+            // 
+            this.dtStart.CustomFormat = "yyyy-MM-dd";
+            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStart.Location = new System.Drawing.Point(800, 13);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.ShowUpDown = true;
+            this.dtStart.Size = new System.Drawing.Size(102, 21);
+            this.dtStart.TabIndex = 8;
+            // 
             // cbx_OrderStatus
             // 
             this.cbx_OrderStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -278,28 +298,6 @@
             this.cbx_OrderStatus.Name = "cbx_OrderStatus";
             this.cbx_OrderStatus.Size = new System.Drawing.Size(121, 20);
             this.cbx_OrderStatus.TabIndex = 4;
-            // 
-            // dtEnd
-            // 
-            this.dtEnd.CustomFormat = "yyyy-MM-dd";
-            this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEnd.Location = new System.Drawing.Point(974, 12);
-            this.dtEnd.Name = "dtEnd";
-            this.dtEnd.ShowUpDown = true;
-            this.dtEnd.Size = new System.Drawing.Size(100, 21);
-            this.dtEnd.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dtEnd.TabIndex = 6;
-            // 
-            // dtStart
-            // 
-            this.dtStart.CustomFormat = "yyyy-MM-dd";
-            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtStart.Location = new System.Drawing.Point(795, 14);
-            this.dtStart.Name = "dtStart";
-            this.dtStart.ShowUpDown = true;
-            this.dtStart.Size = new System.Drawing.Size(100, 21);
-            this.dtStart.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.dtStart.TabIndex = 5;
             // 
             // buttonW1
             // 
@@ -425,6 +423,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1281, 453);
             this.Controls.Add(this.panel);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HideOnClose = true;
             this.Name = "RakeBackMgr";
@@ -456,8 +455,6 @@
         private XiaoCai.WinformUI.TextBoxW txtMember;
         private XiaoCai.WinformUI.LabelW labelW5;
         private XiaoCai.WinformUI.LabelW labelW3;
-        private XiaoCai.WinformUI.DateTimePickerW dtStart;
-        private XiaoCai.WinformUI.DateTimePickerW dtEnd;
         private Control.PagerControl pager1;
         private System.Windows.Forms.ComboBox cbx_OrderStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
@@ -472,5 +469,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewLinkColumn logCol;
+        private System.Windows.Forms.DateTimePicker dtStart;
+        private System.Windows.Forms.DateTimePicker dtEnd;
     }
 }

@@ -1,4 +1,5 @@
-﻿using RakeBack.RakeBackService;
+﻿using RakeBack.Business;
+using RakeBack.RakeBackService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +39,9 @@ namespace RakeBack.Helper
             {
                 throw new Exception("创建链路失败:" + ex.Message);
             }
+
+            if (ApplicationParam.MainForm != null)
+                ApplicationParam.MainForm._freeTime = 0;
             return _client;
         }
 

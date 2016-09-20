@@ -348,6 +348,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(780, 542);
             this.Controls.Add(this.panel);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.HideOnClose = true;
             this.Name = "AddMember";
             this.TabText = "添加用户";
             this.Text = "信息管理";

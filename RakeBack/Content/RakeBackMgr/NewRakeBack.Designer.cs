@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
@@ -107,8 +108,15 @@
             this.dataGridViewW1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(247)))), ((int)(((byte)(254)))));
             this.dataGridViewW1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewW1.ColumnHeaderDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.dataGridViewW1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridViewW1.ColumnHeadersHeight = 19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewW1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewW1.ColumnHeadersHeight = 16;
             this.dataGridViewW1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewW1.ColumnHeaderUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.dataGridViewW1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -211,7 +219,7 @@
             this.pager1.Location = new System.Drawing.Point(0, 375);
             this.pager1.Name = "pager1";
             this.pager1.PageIndex = 1;
-            this.pager1.PageSize = 20;
+            this.pager1.PageSize = 35;
             this.pager1.RecordCount = 0;
             this.pager1.Size = new System.Drawing.Size(915, 29);
             this.pager1.TabIndex = 1;
@@ -293,6 +301,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(915, 453);
             this.Controls.Add(this.panel);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HideOnClose = true;
             this.Name = "NewRakeBack";

@@ -7,7 +7,7 @@ using XiaoCai.WinformUI.Forms;
 
 namespace RakeBack
 {
-    public class BaseDialog : CustomFormW
+    public class BaseDialog 
     {
 
     }

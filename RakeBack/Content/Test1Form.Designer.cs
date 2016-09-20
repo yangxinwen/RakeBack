@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
+            this.dtStart = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // panel
@@ -66,10 +67,21 @@
             this.panel.ToolTipTextExpandIconPanelCollapsed = null;
             this.panel.ToolTipTextExpandIconPanelExpanded = null;
             // 
+            // dtStart
+            // 
+            this.dtStart.CustomFormat = "yyyy-MM-dd";
+            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStart.Location = new System.Drawing.Point(219, 51);
+            this.dtStart.Name = "dtStart";
+            this.dtStart.ShowUpDown = true;
+            this.dtStart.Size = new System.Drawing.Size(102, 21);
+            this.dtStart.TabIndex = 9;
+            // 
             // Test1Form
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(358, 277);
+            this.Controls.Add(this.dtStart);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HideOnClose = true;
@@ -83,5 +95,6 @@
         #endregion
 
         private XiaoCai.WinformUI.Panels.PanelW panel;
+        private System.Windows.Forms.DateTimePicker dtStart;
     }
 }

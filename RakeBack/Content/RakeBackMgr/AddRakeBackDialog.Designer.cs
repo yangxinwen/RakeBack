@@ -448,7 +448,10 @@
             this.CancelButton = this.buttonW2;
             this.ClientSize = new System.Drawing.Size(348, 394);
             this.Controls.Add(this.panel);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.HideOnClose = true;
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddRakeBackDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
