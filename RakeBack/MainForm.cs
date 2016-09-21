@@ -221,8 +221,8 @@ namespace RakeBack
             if (roleId == 0 || roleId == 3)
             {  //系统管理员和会员管理员
                 menuItem = new MenuItemModel() { Name = "系统设置", Path = null, IsEnable = true };
-                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "添加会员", Path = "SystemSet.AddMember", IsEnable = true });
-                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "会员管理", Path = "SystemSet.MemberMgr", IsEnable = true });
+                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "添加用户", Path = "SystemSet.AddMember", IsEnable = true });
+                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "信息管理", Path = "SystemSet.MemberMgr", IsEnable = true });
                 list.Add(menuItem);
             }
             var menuList = MenuItemHelper.MakeMenuItem(list);

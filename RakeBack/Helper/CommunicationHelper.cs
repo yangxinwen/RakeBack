@@ -15,7 +15,9 @@ namespace RakeBack.Helper
     /// </summary>
     public class CommunicationHelper
     {
-        private static RakeBackServiceClient _client = null;        
+        private static RakeBackServiceClient _client = null;
+
+        private static object lockObject = new object();
 
         /// <summary>
         /// 获取服务客户端代理
@@ -23,26 +25,29 @@ namespace RakeBack.Helper
         /// <returns></returns>
         public static RakeBackServiceClient GetClient()
         {
-            try
+            lock (lockObject)
             {
-                if (_client == null ||
-                    _client.State == System.ServiceModel.CommunicationState.Closed ||
-                    _client.State == System.ServiceModel.CommunicationState.Closing ||
-                    _client.State == System.ServiceModel.CommunicationState.Faulted)
+                try
                 {
-                    _client = new RakeBackServiceClient();
-                    _client.Open();
+                    if (_client == null ||
+                        _client.State == System.ServiceModel.CommunicationState.Closed ||
+                        _client.State == System.ServiceModel.CommunicationState.Closing ||
+                        _client.State == System.ServiceModel.CommunicationState.Faulted)
+                    {
+                        _client = new RakeBackServiceClient();
+                        _client.Open();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("创建链路失败:" + ex.Message);
                 }
 
+                if (ApplicationParam.MainForm != null)
+                    ApplicationParam.MainForm._freeTime = 0;
+                return _client;
             }
-            catch (Exception ex)
-            {
-                throw new Exception("创建链路失败:" + ex.Message);
-            }
-
-            if (ApplicationParam.MainForm != null)
-                ApplicationParam.MainForm._freeTime = 0;
-            return _client;
         }
 
         public static string SessionId;
@@ -50,7 +55,7 @@ namespace RakeBack.Helper
         private static void AddMessageHead(IContextChannel channel)
         {
             string sessionId = Guid.NewGuid().ToString();
-            using (OperationContextScope scope=new OperationContextScope(channel))
+            using (OperationContextScope scope = new OperationContextScope(channel))
             {
                 var header = MessageHeader.CreateHeader("sessionId", "HeadMessage", sessionId);
                 OperationContext.Current.OutgoingMessageHeaders.Add(header);
@@ -79,7 +84,7 @@ namespace RakeBack.Helper
                 OperationContext.Current.OutgoingMessageHeaders.Add(header);
                 return client.AddRakeBack(info, operateLoginId);
             }
-            
+
         }
 
         public static RakeBack.RakeBackService.ResponseBaseOfArrayOfOrderInfoYgFqSxnr GetRakeBack(int pageSize, int pageIndex, System.Collections.Generic.Dictionary<string, string> conditions)

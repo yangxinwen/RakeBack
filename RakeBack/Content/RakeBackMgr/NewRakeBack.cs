@@ -20,9 +20,36 @@ namespace RakeBack.Content.RakeBackMgr
         {
             InitializeComponent();
 
+            AddOperateColumn();
+
+            dataGridViewW1.DataSourceChanged += DataGridViewW1_DataSourceChanged;
             pager1.OnPageChanged += Pager1_OnPageChanged;
             this.Load += NewRakeBack_Load;
 
+        }
+
+        private void DataGridViewW1_DataSourceChanged(object sender, EventArgs e)
+        {
+            //控制审核按钮的显示
+            if (dataGridViewW1.Columns.Contains("newCol"))
+            {
+                foreach (DataGridViewRow row in dataGridViewW1.Rows)
+                {
+                    var data = (row.DataBoundItem as UserInfo);
+                    if (data != null)
+                    {
+                        var cell = row.Cells["newCol"] as DataGridViewLinkCell;
+                        if (data.RoleId == 2)
+                        {
+                            cell.UseColumnTextForLinkValue = true;
+                        }
+                        else
+                        {
+                            cell.UseColumnTextForLinkValue = false;
+                        }
+                    }
+                }
+            }
         }
 
         private void NewRakeBack_Load(object sender, EventArgs e)
@@ -37,6 +64,22 @@ namespace RakeBack.Content.RakeBackMgr
         }
 
 
+        private void AddOperateColumn()
+        {
+            //var role = Business.ApplicationParam.UserInfo.RoleId;
+
+            //if (role == 3)
+            {
+                var column = new DataGridViewLinkColumn();
+                column.HeaderText = string.Empty;
+                column.Text = "新建返佣";
+                column.UseColumnTextForLinkValue = true;
+                column.Name = "newCol";
+                column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridViewW1.Columns.Add(column);
+            }
+        }
+
         private void dataGridViewW1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if ("newCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
@@ -47,7 +90,7 @@ namespace RakeBack.Content.RakeBackMgr
                 {
                     if (ApplicationParam.MainForm != null)
                     {
-                        var f= ApplicationParam.MainForm.ShowForm("RakeBackMgr.RakeBackMgr");
+                        var f = ApplicationParam.MainForm.ShowForm("RakeBackMgr.RakeBackMgr");
                         if (f != null)
                         {
                             (f as RakeBackMgr).AutoSearch();
@@ -111,25 +154,25 @@ namespace RakeBack.Content.RakeBackMgr
             {
                 try
                 {
-               
-                        var result = CommunicationHelper.GetNewRakeBack(pager1.PageSize, pageIndex, dic);
 
-                        this.Invoke(new Action(() =>
+                    var result = CommunicationHelper.GetNewRakeBack(pager1.PageSize, pageIndex, dic);
+
+                    this.Invoke(new Action(() =>
+                    {
+                        if (result != null && result.IsSuccess)
                         {
-                            if (result != null && result.IsSuccess)
-                            {
-                                dataGridViewW1.DataSource = result.Content;
+                            dataGridViewW1.DataSource = result.Content;
                                 //重新绘制分页控件
                                 pager1.PageIndex = pageIndex;
-                                pager1.DrawControl(result.Count);
-                            }
-                            else if (result != null)
-                            {
-                                MessageBoxHelper.ShowError(this, "查询出错:"+result.ErrorMsg);
-                            }
-                        }));
-                        base.EndWait();
-                    
+                            pager1.DrawControl(result.Count);
+                        }
+                        else if (result != null)
+                        {
+                            MessageBoxHelper.ShowError(this, "查询出错:" + result.ErrorMsg);
+                        }
+                    }));
+                    base.EndWait();
+
                 }
                 catch (Exception ex)
                 {

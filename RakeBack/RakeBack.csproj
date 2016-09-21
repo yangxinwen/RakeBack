@@ -37,7 +37,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>RakeBack.ico</ApplicationIcon>
+    <ApplicationIcon>Resource\RakeBack.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aspose.Cells">
@@ -390,6 +390,7 @@
     <Content Include="Resource\RakeBack.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resource\RakeBack.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\搜狗高速下载\XiaoCai.WinformUI-master\XiaoCai.WinformUI\XiaoCai.WinformUI.csproj">

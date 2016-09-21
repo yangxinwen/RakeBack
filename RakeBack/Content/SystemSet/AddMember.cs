@@ -34,40 +34,39 @@ namespace RakeBack.Content.SystemSet
 
                 //this.Invoke(new Action(() =>
                 //{
-                    if (result != null && result.IsSuccess)
+                if (result != null && result.IsSuccess)
+                {
+                    var dic = new Dictionary<int, string>();
+
+
+
+                    foreach (var item in result.Content)
                     {
-                        var dic = new Dictionary<int, string>();
+                        if (item.RoleId == 0)
+                            continue;
 
                         if (ApplicationParam.UserInfo.RoleId == 0)
                         {
-                            dic.Add(0, "系统管理员");
-                            foreach (var item in result.Content)
-                            {
-                                dic.Add(item.RoleId, item.RoleName);
-                            }
+                            dic.Add(item.RoleId, item.RoleName);
                         }
                         else if (ApplicationParam.UserInfo.RoleId == 3)
                         {
-                            foreach (var item in result.Content)
-                            {
-                                if (item.RoleId != 3)
-                                {
-                                    dic.Add(item.RoleId, item.RoleName);
-                                }
-                            }
+                            if (item.RoleId == 2)
+                                dic.Add(item.RoleId, item.RoleName);
                         }
-
-                        BindingSource bs = new BindingSource();
-                        cbxRole.DisplayMember = "Value";
-                        cbxRole.ValueMember = "Key";
-                        bs.DataSource = dic;
-                        cbxRole.DataSource = bs;
-
                     }
-                    else if (result != null)
-                    {
-                        MessageBoxHelper.ShowError(this, "角色信息查询出错" + result.ErrorMsg);
-                    }
+
+                    BindingSource bs = new BindingSource();
+                    cbxRole.DisplayMember = "Value";
+                    cbxRole.ValueMember = "Key";
+                    bs.DataSource = dic;
+                    cbxRole.DataSource = bs;
+
+                }
+                else if (result != null)
+                {
+                    MessageBoxHelper.ShowError(this, "角色信息查询出错" + result.ErrorMsg);
+                }
                 //}));
                 //base.EndWait();
 

@@ -352,7 +352,7 @@
             this.HideOnClose = true;
             this.Name = "AddMember";
             this.TabText = "添加用户";
-            this.Text = "信息管理";
+            this.Text = "添加用户";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);

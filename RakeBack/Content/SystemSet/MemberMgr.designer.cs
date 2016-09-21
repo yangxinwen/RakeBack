@@ -250,7 +250,7 @@
             this.pager1.Location = new System.Drawing.Point(0, 0);
             this.pager1.Name = "pager1";
             this.pager1.PageIndex = 1;
-            this.pager1.PageSize = 20;
+            this.pager1.PageSize = 35;
             this.pager1.RecordCount = 0;
             this.pager1.Size = new System.Drawing.Size(1281, 41);
             this.pager1.TabIndex = 0;
@@ -356,11 +356,12 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1281, 453);
             this.Controls.Add(this.panel);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HideOnClose = true;
             this.Name = "MemberMgr";
             this.ShowIcon = false;
-            this.TabText = "系统用户";
+            this.TabText = "信息管理";
             this.Text = "信息管理";
             this.panel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
