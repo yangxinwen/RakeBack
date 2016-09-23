@@ -18,16 +18,16 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.31.66:8080" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.31.174:18080" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="d55df1dc-17ad-46e3-825a-f32660dcf38f" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd2" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="d95a842d-dd26-4568-ab57-fc656678a912" SourceId="1" SourceUrl="http://localhost:8080/?disco" />
-    <MetadataFile FileName="RakeBackService.wsdl" MetadataType="Wsdl" ID="3270d46a-5b5c-43ff-9536-ebedc5b7042f" SourceId="1" SourceUrl="http://localhost:8080/?wsdl" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="4f5fab6b-79ba-4c44-ba39-58a117c3db6c" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd4" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="bab2fcbe-d948-4095-9a8f-eb92b370e2b6" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd1" />
-    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="109b3607-d183-4139-848e-fd671734f164" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd3" />
-    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="10efb50f-a1c7-4089-891c-8f52f7fe0ef9" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd0" />
+    <MetadataFile FileName="item1.disco" MetadataType="Disco" ID="0c49c3ab-91cd-4d87-86f9-108f345e55ec" SourceId="1" SourceUrl="http://localhost:18080/?disco" />
+    <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="26ae0fc8-ce3e-4977-95b0-938e1084db88" SourceId="1" SourceUrl="http://localhost:18080/?xsd=xsd3" />
+    <MetadataFile FileName="item51.xsd" MetadataType="Schema" ID="410da9b4-b0fb-4395-9d94-d82b8c11d6af" SourceId="1" SourceUrl="http://localhost:18080/?xsd=xsd2" />
+    <MetadataFile FileName="item52.xsd" MetadataType="Schema" ID="fb65fc59-6790-4cbf-b1f4-fe803f8cb1ad" SourceId="1" SourceUrl="http://localhost:18080/?xsd=xsd4" />
+    <MetadataFile FileName="RakeBackService1.wsdl" MetadataType="Wsdl" ID="0651df57-463b-4bef-b5ed-5180fe0a0b72" SourceId="1" SourceUrl="http://localhost:18080/?wsdl" />
+    <MetadataFile FileName="item53.xsd" MetadataType="Schema" ID="19011f56-ed68-4361-a293-55e8a7bffb4f" SourceId="1" SourceUrl="http://localhost:18080/?xsd=xsd0" />
+    <MetadataFile FileName="item54.xsd" MetadataType="Schema" ID="71ea3b0e-9a05-4195-af16-303b8240c56d" SourceId="1" SourceUrl="http://localhost:18080/?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

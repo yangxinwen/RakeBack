@@ -263,9 +263,27 @@ namespace RakeBack.Helper
             }
         }
 
+        public static RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr GetUserInfoById(int userId)
+        {
+            var client = GetClient();
+            using (OperationContextScope scope = new OperationContextScope(client.InnerChannel))
+            {
+                var header = MessageHeader.CreateHeader("sessionId", "HeadMessage", SessionId);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                return client.GetUserInfoById(userId);
+            }
+        }
 
-
-
+        public static RakeBack.RakeBackService.ResponseBaseOfboolean AddOutMoneyOperateLog(int userId, string userName, string orderId)
+        {
+            var client = GetClient();
+            using (OperationContextScope scope = new OperationContextScope(client.InnerChannel))
+            {
+                var header = MessageHeader.CreateHeader("sessionId", "HeadMessage", SessionId);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                return client.AddOutMoneyOperateLog(userId, userName, orderId);
+            }
+        }
 
 
 

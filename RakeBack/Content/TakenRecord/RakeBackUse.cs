@@ -44,6 +44,8 @@ namespace RakeBack.Content.TakenRecord
                     return;
                 }
 
+                CommunicationHelper.AddOutMoneyOperateLog(ApplicationParam.UserInfo.UserId, ApplicationParam.UserInfo.UserName, _info.OrderId);
+
                 string url = ApplicationParam.OutMoneyUrl;                
                 string[] argg = new string[2];
                 argg[0] = ApplicationParam.B2CSettleKey;

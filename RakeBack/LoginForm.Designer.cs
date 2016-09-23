@@ -232,6 +232,7 @@
             this.ClientSize = new System.Drawing.Size(474, 250);
             this.Controls.Add(this.panel);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HideOnClose = true;
             this.MaximizeBox = false;

@@ -121,6 +121,7 @@ namespace RakeBack.Content.TakenRecord
                 }
                 BrowseOrder(order);
                 BllHelper.AddOrderFlowLog(OrderFlowLogType.IEOpen, order.OrderId);
+                BllHelper.AddOrderFlowLog(OrderFlowLogType.IEOpen, order.OrderId);
                 var form = new RakeBackUse();
                 form.InitOrderInfo(order);
                 if (form.ShowDialog() == DialogResult.OK)

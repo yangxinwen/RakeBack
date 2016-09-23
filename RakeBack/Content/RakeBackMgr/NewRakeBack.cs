@@ -85,6 +85,26 @@ namespace RakeBack.Content.RakeBackMgr
             if ("newCol".Equals(dataGridViewW1.Columns[e.ColumnIndex].Name))
             {
                 var mod = dataGridViewW1.Rows[e.RowIndex].DataBoundItem as UserInfo;
+                if (mod != null)
+                {
+                    try
+                    {
+                        var m = CommunicationHelper.GetUserInfoById(mod.UserId);
+                        if (m != null && m.IsSuccess)
+                        {
+                            mod = m.Content;
+                        }
+                        else if (m != null)
+                            throw new Exception(m.ErrorMsg);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBoxHelper.ShowError(this, "查询出错:" + ex.Message);
+                        return;
+                    }
+                }
+
                 var dialog = new AddRakeBackDialog() { UserInfo = mod };
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
@@ -162,8 +182,8 @@ namespace RakeBack.Content.RakeBackMgr
                         if (result != null && result.IsSuccess)
                         {
                             dataGridViewW1.DataSource = result.Content;
-                                //重新绘制分页控件
-                                pager1.PageIndex = pageIndex;
+                            //重新绘制分页控件
+                            pager1.PageIndex = pageIndex;
                             pager1.DrawControl(result.Count);
                         }
                         else if (result != null)

@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:8080/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:import schemaLocation="http://localhost:8080/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Model" />
+  <xs:import schemaLocation="http://localhost:18080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+  <xs:import schemaLocation="http://localhost:18080/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetUserInfoById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetUserInfoByIdResult" nillable="true" type="q1:ResponseBaseOfUserInfoYgFqSxnr" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetNewRakeBack">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="pageSize" type="xs:int" />
         <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
-        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q2:ArrayOfKeyValueOfstringstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetNewRakeBackResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetNewRakeBackResult" nillable="true" type="q2:ResponseBaseOfArrayOfUserInfoYgFqSxnr" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetNewRakeBackResult" nillable="true" type="q3:ResponseBaseOfArrayOfUserInfoYgFqSxnr" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddRakeBack">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q3:OrderInfo" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q4:OrderInfo" />
         <xs:element minOccurs="0" name="operateLoginId" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -29,7 +43,7 @@
   <xs:element name="AddRakeBackResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="AddRakeBackResult" nillable="true" type="q4:ResponseBaseOfboolean" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="AddRakeBackResult" nillable="true" type="q5:ResponseBaseOfboolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -38,14 +52,14 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="pageSize" type="xs:int" />
         <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
-        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q5:ArrayOfKeyValueOfstringstring" />
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q6:ArrayOfKeyValueOfstringstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetRakeBackResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetRakeBackResult" nillable="true" type="q6:ResponseBaseOfArrayOfOrderInfoYgFqSxnr" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetRakeBackResult" nillable="true" type="q7:ResponseBaseOfArrayOfOrderInfoYgFqSxnr" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -57,7 +71,7 @@
   <xs:element name="GetRoleInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetRoleInfoResult" nillable="true" type="q7:ResponseBaseOfArrayOfRoleInfoYgFqSxnr" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetRoleInfoResult" nillable="true" type="q8:ResponseBaseOfArrayOfRoleInfoYgFqSxnr" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -66,21 +80,21 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="pageSize" type="xs:int" />
         <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
-        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q8:ArrayOfKeyValueOfstringstring" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q9:ArrayOfKeyValueOfstringstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetUserInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetUserInfoResult" nillable="true" type="q9:ResponseBaseOfArrayOfUserInfoYgFqSxnr" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetUserInfoResult" nillable="true" type="q10:ResponseBaseOfArrayOfUserInfoYgFqSxnr" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddUserInfo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q10:UserInfo" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q11:UserInfo" />
         <xs:element minOccurs="0" name="operateLoginId" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -88,14 +102,14 @@
   <xs:element name="AddUserInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="AddUserInfoResult" nillable="true" type="q11:ResponseBaseOfUserInfoYgFqSxnr" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="AddUserInfoResult" nillable="true" type="q12:ResponseBaseOfUserInfoYgFqSxnr" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateUserInfo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q12:UserInfo" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q13:UserInfo" />
         <xs:element minOccurs="0" name="operateLoginId" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -103,7 +117,7 @@
   <xs:element name="UpdateUserInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="UpdateUserInfoResult" nillable="true" type="q13:ResponseBaseOfUserInfoYgFqSxnr" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="UpdateUserInfoResult" nillable="true" type="q14:ResponseBaseOfUserInfoYgFqSxnr" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -118,14 +132,14 @@
   <xs:element name="DelUserInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="DelUserInfoResult" nillable="true" type="q14:ResponseBaseOfboolean" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="DelUserInfoResult" nillable="true" type="q15:ResponseBaseOfboolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateOrderInfo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q15:OrderInfo" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q16:OrderInfo" />
         <xs:element minOccurs="0" name="operateLoginId" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -133,14 +147,14 @@
   <xs:element name="UpdateOrderInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="UpdateOrderInfoResult" nillable="true" type="q16:ResponseBaseOfboolean" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="UpdateOrderInfoResult" nillable="true" type="q17:ResponseBaseOfboolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="DelOrderInfo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q17:OrderInfo" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="info" nillable="true" type="q18:OrderInfo" />
         <xs:element minOccurs="0" name="operateLoginId" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -148,7 +162,7 @@
   <xs:element name="DelOrderInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="DelOrderInfoResult" nillable="true" type="q18:ResponseBaseOfboolean" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="DelOrderInfoResult" nillable="true" type="q19:ResponseBaseOfboolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -163,7 +177,7 @@
   <xs:element name="LoginResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="LoginResult" nillable="true" type="q19:ResponseBaseOfUserInfoYgFqSxnr" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="LoginResult" nillable="true" type="q20:ResponseBaseOfUserInfoYgFqSxnr" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -178,7 +192,7 @@
   <xs:element name="OutLoginResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="OutLoginResult" nillable="true" type="q20:ResponseBaseOfboolean" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="OutLoginResult" nillable="true" type="q21:ResponseBaseOfboolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -194,21 +208,21 @@
   <xs:element name="UpdateUserPasswordResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="UpdateUserPasswordResult" nillable="true" type="q21:ResponseBaseOfboolean" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="UpdateUserPasswordResult" nillable="true" type="q22:ResponseBaseOfboolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetAmountStatistics">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q22:ArrayOfKeyValueOfstringstring" />
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q23:ArrayOfKeyValueOfstringstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetAmountStatisticsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetAmountStatisticsResult" nillable="true" type="q23:ResponseBaseOfTupleOfstringstring5F2dSckg" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetAmountStatisticsResult" nillable="true" type="q24:ResponseBaseOfTupleOfstringstring5F2dSckg" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -217,14 +231,14 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="pageSize" type="xs:int" />
         <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
-        <xs:element xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q24:ArrayOfKeyValueOfstringstring" />
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q25:ArrayOfKeyValueOfstringstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetOperateLogResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetOperateLogResult" nillable="true" type="q25:ResponseBaseOfArrayOfOperInfoYgFqSxnr" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetOperateLogResult" nillable="true" type="q26:ResponseBaseOfArrayOfOperInfoYgFqSxnr" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -233,14 +247,14 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="pageSize" type="xs:int" />
         <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
-        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q26:ArrayOfKeyValueOfstringstring" />
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="conditions" nillable="true" type="q27:ArrayOfKeyValueOfstringstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetOrderLogResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetOrderLogResult" nillable="true" type="q27:ResponseBaseOfArrayOfFlowInfoYgFqSxnr" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetOrderLogResult" nillable="true" type="q28:ResponseBaseOfArrayOfFlowInfoYgFqSxnr" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -254,14 +268,14 @@
   <xs:element name="GetConfigResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetConfigResult" nillable="true" type="q28:ResponseBaseOfstring" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetConfigResult" nillable="true" type="q29:ResponseBaseOfstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddOrderFlowLog">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="logType" type="q29:OrderFlowLogType" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="logType" type="q30:OrderFlowLogType" />
         <xs:element minOccurs="0" name="orderId" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -269,7 +283,23 @@
   <xs:element name="AddOrderFlowLogResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="AddOrderFlowLogResult" nillable="true" type="q30:ResponseBaseOfboolean" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="AddOrderFlowLogResult" nillable="true" type="q31:ResponseBaseOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOutMoneyOperateLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOutMoneyOperateLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="AddOutMoneyOperateLogResult" nillable="true" type="q32:ResponseBaseOfboolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

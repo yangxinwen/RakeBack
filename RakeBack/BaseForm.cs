@@ -31,8 +31,8 @@ namespace RakeBack
         {
             if (this.DesignMode == false)
                 this.Icon = new System.Drawing.Icon(Application.StartupPath + "/Resource/RakeBack.ico");
-
             this.HideOnClose = true;
+            
         }
 
 
