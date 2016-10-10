@@ -25,7 +25,8 @@ namespace RakeBack.Content.TakenRecord
             InitializeComponent();
 
             _validCode = new ValidCode(4, ValidCode.CodeType.Alphas);
-            pbValid.Image = Bitmap.FromStream(_validCode.CreateCheckCodeImage());
+            //pbValid.Image = Bitmap.FromStream(_validCode.CreateCheckCodeImage());
+            MakeValidCode();
         }
 
         private void buttonW1_Click(object sender, EventArgs e)
@@ -33,8 +34,11 @@ namespace RakeBack.Content.TakenRecord
             if (false == _validCode.CheckCode.Equals(txtValid.Text, StringComparison.CurrentCultureIgnoreCase))
             {
                 MessageBoxHelper.ShowInfo(this, "验证码输入错误");
+                MakeValidCode();
                 return;
-            }           
+            }
+
+            MakeValidCode();
 
             if (MessageBoxHelper.ShowConf(this, "确认提取？") == DialogResult.OK)
             {

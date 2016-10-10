@@ -124,21 +124,21 @@ namespace RakeBack.Content.SystemSet
                         cbxOpenBank.Focus();
                         return false;
                     }
-                    if (HelpCommon._bankType.Equals("allinfinance"))
-                    {
-                        if (string.IsNullOrEmpty(this.txtBranchBank.Text.Trim()))
-                        {
-                            MessageBoxHelper.ShowInfo(this, "开户分行信息为空！");
-                            txtBranchBank.Focus();
-                            return false;
-                        }
-                        if (string.IsNullOrEmpty(this.txtBankZH.Text.Trim()))
-                        {
-                            MessageBoxHelper.ShowInfo(this, "开户支行信息为空！");
-                            txtBankZH.Focus();
-                            return false;
-                        }
-                    }
+                    //if (HelpCommon._bankType.Equals("allinfinance"))
+                    //{
+                    //    if (string.IsNullOrEmpty(this.txtBranchBank.Text.Trim()))
+                    //    {
+                    //        MessageBoxHelper.ShowInfo(this, "开户分行信息为空！");
+                    //        txtBranchBank.Focus();
+                    //        return false;
+                    //    }
+                    //    if (string.IsNullOrEmpty(this.txtBankZH.Text.Trim()))
+                    //    {
+                    //        MessageBoxHelper.ShowInfo(this, "开户支行信息为空！");
+                    //        txtBankZH.Focus();
+                    //        return false;
+                    //    }
+                    //}
                     if (string.IsNullOrEmpty(this.txtBankNo.Text.Trim()))
                     {
                         MessageBoxHelper.ShowInfo(this, "请输入银行卡号！");

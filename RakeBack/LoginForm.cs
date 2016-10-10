@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RakeBack.Business;
 
 namespace RakeBack
 {
@@ -21,7 +22,8 @@ namespace RakeBack
         {
             InitializeComponent();
             _validCode = new ValidCode(4, ValidCode.CodeType.Alphas);
-            pbValid.Image = Bitmap.FromStream(_validCode.CreateCheckCodeImage());
+            //pbValid.Image = Bitmap.FromStream(_validCode.CreateCheckCodeImage());
+            MakeValidCode();
             lbError.ForeColor = Color.Red;
             lbError.Text = string.Empty;
 
@@ -65,12 +67,12 @@ namespace RakeBack
 
             if (_validCode.CheckCode.Equals(txtValid.Text, StringComparison.OrdinalIgnoreCase) == false)
             {
+                MakeValidCode();
                 lbError.Text = "验证码错误";
                 txtValid.Focus();
                 return false;
             }
             MakeValidCode();
-
             return true;
         }
 
@@ -87,7 +89,48 @@ namespace RakeBack
                 {
                     Business.ApplicationParam.InputPwd = txtPassword.Text;
                     Business.ApplicationParam.UserInfo = result.Content;
-                    this.DialogResult = DialogResult.OK;
+
+
+
+                    var updateInfoResult = CommunicationHelper.RequestUpdateInfo(ApplicationParam.Version);
+
+                    if (updateInfoResult != null && updateInfoResult.IsSuccess)
+                    {
+                        var args = updateInfoResult.Content.UpdateUrl + " RakeBack.exe";
+
+                        if (updateInfoResult.Content.IsNeedUpdate &&
+                            updateInfoResult.Content.IsForceUpdate
+                            )
+                        {
+                            var re = MessageBoxHelper.ShowConf(this, "需要升级到[" + updateInfoResult.Content.NewVersion + "]版本才可继续使用");
+                            if (re == DialogResult.OK)
+                            {
+                                System.Diagnostics.Process.Start("Update.exe", args);
+                            }
+                            Application.Exit();
+                        }
+                        else if (updateInfoResult.Content.IsNeedUpdate)
+                        {
+                            var re = MessageBoxHelper.ShowConf(this, "有新版本[" + updateInfoResult.Content.NewVersion + "]可用，是否升级？");
+                            if (re == DialogResult.OK)
+                            {
+                                System.Diagnostics.Process.Start("Update.exe", args);
+                                Application.Exit();
+                            }
+                            else
+                            {
+                                this.DialogResult = DialogResult.OK;
+                            }
+                        }
+                        else
+                        {
+                            this.DialogResult = DialogResult.OK;
+                        }
+                    }
+                    else if (result != null)
+                    {
+                        lbError.Text = "升级信息获取失败:" + result.ErrorMsg;
+                    }
                 }
                 else if (result != null)
                 {
@@ -98,6 +141,8 @@ namespace RakeBack
             {
                 lbError.Text = "登录失败";
             }
+
+
             btnLogin.Enabled = true;
 
         }

@@ -270,4 +270,29 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="OrderFlowLogType" nillable="true" type="tns:OrderFlowLogType" />
+  <xs:complexType name="ResponseBaseOfUpdateInfoYgFqSxnr">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Model" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UpdateInfo" Namespace="http://schemas.datacontract.org/2004/07/Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="tns:UpdateInfo" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBaseOfUpdateInfoYgFqSxnr" nillable="true" type="tns:ResponseBaseOfUpdateInfoYgFqSxnr" />
+  <xs:complexType name="UpdateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsForceUpdate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNeedUpdate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NewVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateInfo" nillable="true" type="tns:UpdateInfo" />
 </xs:schema>

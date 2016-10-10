@@ -152,24 +152,24 @@ namespace RakeBack.Content.SystemSet
                         cbxOpenBank.Focus();
                         return false;
                     }
-                    if (HelpCommon._bankType.Equals("allinfinance"))
-                    {
-                        if (string.IsNullOrEmpty(this.txtBranchBank.Text.Trim()))
-                        {
-                            MessageBoxHelper.ShowInfo(this, "银行支行为空！");
-                            txtBranchBank.Focus();
-                            return false;
-                        }
-                    }
-                    if (HelpCommon._bankType.Equals("allinfinance"))
-                    {
-                        if (string.IsNullOrEmpty(this.txtBranchBank.Text.Trim()))
-                        {
-                            MessageBoxHelper.ShowInfo(this, "银行网点信息为空！");
-                            txtBranchBank.Focus();
-                            return false;
-                        }
-                    }
+                    //if (HelpCommon._bankType.Equals("allinfinance"))
+                    //{
+                    //    if (string.IsNullOrEmpty(this.txtBranchBank.Text.Trim()))
+                    //    {
+                    //        MessageBoxHelper.ShowInfo(this, "开户分行为空！");
+                    //        txtBranchBank.Focus();
+                    //        return false;
+                    //    }
+                    //}
+                    //if (HelpCommon._bankType.Equals("allinfinance"))
+                    //{
+                    //    if (string.IsNullOrEmpty(this.txtBranchBankZH.Text.Trim()))
+                    //    {
+                    //        MessageBoxHelper.ShowInfo(this, "开户支行信息为空！");
+                    //        txtBranchBankZH.Focus();
+                    //        return false;
+                    //    }
+                    //}
                     if (string.IsNullOrEmpty(this.txtBankNo.Text.Trim()))
                     {
                         MessageBoxHelper.ShowInfo(this, "请输入银行卡号！");

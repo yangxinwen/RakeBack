@@ -1979,6 +1979,192 @@ namespace RakeBack.RakeBackService {
         IEOpen = 0,
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseBaseOfUpdateInfoYgFqSxnr", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class ResponseBaseOfUpdateInfoYgFqSxnr : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private RakeBack.RakeBackService.UpdateInfo ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMsgField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public RakeBack.RakeBackService.UpdateInfo Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMsg {
+            get {
+                return this.ErrorMsgField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMsgField, value) != true)) {
+                    this.ErrorMsgField = value;
+                    this.RaisePropertyChanged("ErrorMsg");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSuccess {
+            get {
+                return this.IsSuccessField;
+            }
+            set {
+                if ((this.IsSuccessField.Equals(value) != true)) {
+                    this.IsSuccessField = value;
+                    this.RaisePropertyChanged("IsSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UpdateInfo", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class UpdateInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsForceUpdateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsNeedUpdateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NewVersionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UpdateUrlField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsForceUpdate {
+            get {
+                return this.IsForceUpdateField;
+            }
+            set {
+                if ((this.IsForceUpdateField.Equals(value) != true)) {
+                    this.IsForceUpdateField = value;
+                    this.RaisePropertyChanged("IsForceUpdate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsNeedUpdate {
+            get {
+                return this.IsNeedUpdateField;
+            }
+            set {
+                if ((this.IsNeedUpdateField.Equals(value) != true)) {
+                    this.IsNeedUpdateField = value;
+                    this.RaisePropertyChanged("IsNeedUpdate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NewVersion {
+            get {
+                return this.NewVersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NewVersionField, value) != true)) {
+                    this.NewVersionField = value;
+                    this.RaisePropertyChanged("NewVersion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UpdateUrl {
+            get {
+                return this.UpdateUrlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UpdateUrlField, value) != true)) {
+                    this.UpdateUrlField = value;
+                    this.RaisePropertyChanged("UpdateUrl");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RakeBackService.IRakeBackService")]
     public interface IRakeBackService {
@@ -2042,6 +2228,9 @@ namespace RakeBack.RakeBackService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/AddOutMoneyOperateLog", ReplyAction="http://tempuri.org/IRakeBackService/AddOutMoneyOperateLogResponse")]
         RakeBack.RakeBackService.ResponseBaseOfboolean AddOutMoneyOperateLog(int userId, string userName, string orderId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRakeBackService/RequestUpdateInfo", ReplyAction="http://tempuri.org/IRakeBackService/RequestUpdateInfoResponse")]
+        RakeBack.RakeBackService.ResponseBaseOfUpdateInfoYgFqSxnr RequestUpdateInfo(string version);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2149,6 +2338,10 @@ namespace RakeBack.RakeBackService {
         
         public RakeBack.RakeBackService.ResponseBaseOfboolean AddOutMoneyOperateLog(int userId, string userName, string orderId) {
             return base.Channel.AddOutMoneyOperateLog(userId, userName, orderId);
+        }
+        
+        public RakeBack.RakeBackService.ResponseBaseOfUpdateInfoYgFqSxnr RequestUpdateInfo(string version) {
+            return base.Channel.RequestUpdateInfo(version);
         }
     }
 }

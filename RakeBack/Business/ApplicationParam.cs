@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +13,7 @@ namespace RakeBack.Business
 
         public static string OutMoneyUrl { get; set; }
         public static string B2CSettleKey { get; set; }
-
+        public static string Version { get; set; }
 
         /// <summary>
         /// 输入密码
@@ -34,6 +35,7 @@ namespace RakeBack.Business
             UserInfo = new RakeBackService.UserInfo();
             //UserInfo.LoginId = "123";
             //UserInfo.InputPerson = "1123";
+            Version=Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
     }
 }

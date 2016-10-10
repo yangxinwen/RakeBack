@@ -285,7 +285,16 @@ namespace RakeBack.Helper
             }
         }
 
-
+        public static RakeBack.RakeBackService.ResponseBaseOfUpdateInfoYgFqSxnr RequestUpdateInfo(string version)
+        {
+            var client = GetClient();
+            using (OperationContextScope scope = new OperationContextScope(client.InnerChannel))
+            {
+                var header = MessageHeader.CreateHeader("sessionId", "HeadMessage", SessionId);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                return client.RequestUpdateInfo(version);
+            }
+        }
 
 
 

@@ -353,6 +353,9 @@
     <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfTupleOfstringstring5F2dSckg.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfUpdateInfoYgFqSxnr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\RakeBackService\RakeBack.RakeBackService.ResponseBaseOfUserInfoYgFqSxnr.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -382,11 +385,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RakeBack.ico" />
     <Content Include="Resource\RakeBack.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resource\RakeBack.jpg" />
+    <Content Include="Update.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Service References\RakeBackService\item1.disco" />
   </ItemGroup>
   <ItemGroup>
