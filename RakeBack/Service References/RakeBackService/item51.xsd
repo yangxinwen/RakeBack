@@ -31,6 +31,7 @@
       <xs:element minOccurs="0" name="IsUpdatePass" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Iseable" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LoginId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MenuId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="RoleId" type="xs:int" />

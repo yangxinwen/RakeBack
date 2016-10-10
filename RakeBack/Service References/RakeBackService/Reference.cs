@@ -152,6 +152,9 @@ namespace RakeBack.RakeBackService {
         private string LoginIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MenuIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ProvinceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -337,6 +340,19 @@ namespace RakeBack.RakeBackService {
                 if ((object.ReferenceEquals(this.LoginIdField, value) != true)) {
                     this.LoginIdField = value;
                     this.RaisePropertyChanged("LoginId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MenuId {
+            get {
+                return this.MenuIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MenuIdField, value) != true)) {
+                    this.MenuIdField = value;
+                    this.RaisePropertyChanged("MenuId");
                 }
             }
         }

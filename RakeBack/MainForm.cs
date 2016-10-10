@@ -204,8 +204,14 @@ namespace RakeBack
             if (roleId == 0 || roleId == 3)
             {  //系统管理员和会员管理员
                 menuItem = new MenuItemModel() { Name = "返佣管理", Path = null, IsEnable = true };
-                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "新建返佣", Path = "RakeBackMgr.NewRakeBack", IsEnable = true });
-                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "返佣管理", Path = "RakeBackMgr.RakeBackMgr", IsEnable = true });
+
+                if (roleId == 0 || ApplicationParam.UserInfo.MenuId.Contains("1"))
+                {
+                    //如果menuId 存在1 表示他可以访问 新建返佣    返佣管理    返佣统计   返佣提取 界面
+                    //如果menuId 存在2 表示他可以访问 添加用户    信息管理 界面 如果都存在，表示下面的界面全部都可以访问
+                    menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "新建返佣", Path = "RakeBackMgr.NewRakeBack", IsEnable = true });
+                    menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "返佣管理", Path = "RakeBackMgr.RakeBackMgr", IsEnable = true });
+                }
                 menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "返佣统计", Path = "RakeBackMgr.RakeBackTotal", IsEnable = true });
                 list.Add(menuItem);
             }
@@ -220,10 +226,15 @@ namespace RakeBack
 
             if (roleId == 0 || roleId == 3)
             {  //系统管理员和会员管理员
-                menuItem = new MenuItemModel() { Name = "系统设置", Path = null, IsEnable = true };
-                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "添加用户", Path = "SystemSet.AddMember", IsEnable = true });
-                menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "信息管理", Path = "SystemSet.MemberMgr", IsEnable = true });
-                list.Add(menuItem);
+                if (roleId == 0 || ApplicationParam.UserInfo.MenuId.Contains("2"))
+                {
+                    //如果menuId 存在1 表示他可以访问 新建返佣    返佣管理    返佣统计   返佣提取 界面
+                    //如果menuId 存在2 表示他可以访问 添加用户    信息管理 界面 如果都存在，表示下面的界面全部都可以访问
+                    menuItem = new MenuItemModel() { Name = "系统设置", Path = null, IsEnable = true };
+                    menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "添加用户", Path = "SystemSet.AddMember", IsEnable = true });
+                    menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "信息管理", Path = "SystemSet.MemberMgr", IsEnable = true });
+                    list.Add(menuItem);
+                }
             }
             var menuList = MenuItemHelper.MakeMenuItem(list);
             mainMenu.Items.Clear();

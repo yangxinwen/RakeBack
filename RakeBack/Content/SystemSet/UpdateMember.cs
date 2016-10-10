@@ -119,6 +119,16 @@ namespace RakeBack.Content.SystemSet
             txtBranchBankZH.Text = _oldInfo.BranchBankZH;
             txtBankNo.Text = _oldInfo.BankNumber;
             txtRemark.Text = _oldInfo.Remark;
+
+            if (_oldInfo.MenuId != null)
+            {
+                if (_oldInfo.MenuId.Contains("1"))
+                    ckBackRake.Checked = true;
+                if (_oldInfo.MenuId.Contains("2"))
+                    ckInfoManager.Checked = true;
+
+            }          
+
         }
 
         public bool IsValid()
@@ -183,6 +193,16 @@ namespace RakeBack.Content.SystemSet
                         MessageBoxHelper.ShowInfo(this, "银行卡号必须全部是数字！");
                         txtBankNo.Focus();
                         return false;
+                    }             
+                }
+
+                if (plPermission.Visible)
+                {
+                    if (ckBackRake.Checked == false && ckInfoManager.Checked == false)
+                    {
+                        MessageBoxHelper.ShowInfo(this, "请勾选会员管理员权限！");
+                        ckBackRake.Focus();
+                        return false;
                     }
                 }
                 return true;
@@ -230,6 +250,13 @@ namespace RakeBack.Content.SystemSet
             user.Api = cbxOpenBank.SelectedValue.ToString();
             user.IsUpdatePass = _oldInfo.IsUpdatePass;
             user.InputPerson = ApplicationParam.UserInfo.LoginId;
+
+            user.MenuId = string.Empty;
+            if (ckBackRake.Checked)
+                user.MenuId += "1";
+            if (ckInfoManager.Checked)
+                user.MenuId += "2";
+
             user.Iseable = _oldInfo.Iseable;
 
             try
@@ -254,6 +281,19 @@ namespace RakeBack.Content.SystemSet
 
             }
 
+        }
+
+        private void cbxRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ckBackRake.Checked = false;
+            ckInfoManager.Checked = false;
+
+            if (cbxRole.SelectedValue!=null&&cbxRole.SelectedValue.ToString().Equals("3"))
+            {
+                plPermission.Visible = true;
+            }
+            else
+                plPermission.Visible = false;
         }
     }
 }

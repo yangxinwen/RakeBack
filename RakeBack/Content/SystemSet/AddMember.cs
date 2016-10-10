@@ -154,6 +154,16 @@ namespace RakeBack.Content.SystemSet
                         return false;
                     }
                 }
+
+                if (plPermission.Visible)
+                {
+                    if (ckBackRake.Checked == false && ckInfoManager.Checked == false)
+                    {
+                        MessageBoxHelper.ShowInfo(this, "请勾选会员管理员权限！");
+                        ckBackRake.Focus();
+                        return false;
+                    }
+                }
                 return true;
             }
             catch (Exception)
@@ -196,6 +206,13 @@ namespace RakeBack.Content.SystemSet
             user.IsUpdatePass = "0";//新增的账户首次登陆必须改密码
             user.InputPerson = ApplicationParam.UserInfo.LoginId;
             user.Iseable = "1";//新增用户必须是启用状态
+
+            user.MenuId = string.Empty;
+            if (ckBackRake.Checked)
+                user.MenuId += "1";
+            if (ckInfoManager.Checked)
+                user.MenuId += "2";
+
 
             base.StartWait();
 
@@ -243,6 +260,19 @@ namespace RakeBack.Content.SystemSet
                 }
             });
 
+        }
+
+        private void cbxRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ckBackRake.Checked = false;
+            ckInfoManager.Checked = false;
+
+            if (cbxRole.SelectedValue != null && cbxRole.SelectedValue.ToString().Equals("3"))
+            {
+                plPermission.Visible = true;
+            }
+            else
+                plPermission.Visible = false;
         }
     }
 }

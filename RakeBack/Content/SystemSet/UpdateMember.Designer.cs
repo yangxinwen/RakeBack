@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
+            this.plPermission = new System.Windows.Forms.Panel();
+            this.ckInfoManager = new XiaoCai.WinformUI.CheckBoxW();
+            this.ckBackRake = new XiaoCai.WinformUI.CheckBoxW();
+            this.labelW4 = new XiaoCai.WinformUI.LabelW();
             this.cbxOpenBank = new System.Windows.Forms.ComboBox();
             this.cbxRole = new System.Windows.Forms.ComboBox();
             this.labelW19 = new XiaoCai.WinformUI.LabelW();
@@ -52,6 +56,7 @@
             this.labelW3 = new XiaoCai.WinformUI.LabelW();
             this.labelW1 = new XiaoCai.WinformUI.LabelW();
             this.panel.SuspendLayout();
+            this.plPermission.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
@@ -60,6 +65,7 @@
             this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.CaptionFont = new System.Drawing.Font("微软雅黑", 11.75F, System.Drawing.FontStyle.Bold);
             this.panel.CaptionHeight = 27;
+            this.panel.Controls.Add(this.plPermission);
             this.panel.Controls.Add(this.cbxOpenBank);
             this.panel.Controls.Add(this.cbxRole);
             this.panel.Controls.Add(this.labelW19);
@@ -112,6 +118,58 @@
             this.panel.ToolTipTextExpandIconPanelCollapsed = null;
             this.panel.ToolTipTextExpandIconPanelExpanded = null;
             // 
+            // plPermission
+            // 
+            this.plPermission.Controls.Add(this.ckInfoManager);
+            this.plPermission.Controls.Add(this.ckBackRake);
+            this.plPermission.Controls.Add(this.labelW4);
+            this.plPermission.Location = new System.Drawing.Point(99, 302);
+            this.plPermission.Name = "plPermission";
+            this.plPermission.Size = new System.Drawing.Size(227, 36);
+            this.plPermission.TabIndex = 80;
+            this.plPermission.Visible = false;
+            // 
+            // ckInfoManager
+            // 
+            this.ckInfoManager.AutoSize = true;
+            this.ckInfoManager.BaseColor = System.Drawing.Color.Empty;
+            this.ckInfoManager.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
+            this.ckInfoManager.Location = new System.Drawing.Point(146, 10);
+            this.ckInfoManager.Name = "ckInfoManager";
+            this.ckInfoManager.Size = new System.Drawing.Size(72, 16);
+            this.ckInfoManager.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.ckInfoManager.TabIndex = 83;
+            this.ckInfoManager.Text = "信息管理";
+            this.ckInfoManager.UseStyle = false;
+            this.ckInfoManager.UseVisualStyleBackColor = true;
+            // 
+            // ckBackRake
+            // 
+            this.ckBackRake.AutoSize = true;
+            this.ckBackRake.BaseColor = System.Drawing.Color.Empty;
+            this.ckBackRake.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
+            this.ckBackRake.Location = new System.Drawing.Point(76, 10);
+            this.ckBackRake.Name = "ckBackRake";
+            this.ckBackRake.Size = new System.Drawing.Size(72, 16);
+            this.ckBackRake.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.ckBackRake.TabIndex = 82;
+            this.ckBackRake.Text = "返佣管理";
+            this.ckBackRake.UseStyle = false;
+            this.ckBackRake.UseVisualStyleBackColor = true;
+            // 
+            // labelW4
+            // 
+            this.labelW4.AutoSize = true;
+            this.labelW4.BackColor = System.Drawing.Color.Transparent;
+            this.labelW4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW4.Location = new System.Drawing.Point(11, 13);
+            this.labelW4.Name = "labelW4";
+            this.labelW4.Size = new System.Drawing.Size(65, 12);
+            this.labelW4.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW4.TabIndex = 81;
+            this.labelW4.Text = "会员权限：";
+            this.labelW4.UseStyle = false;
+            // 
             // cbxOpenBank
             // 
             this.cbxOpenBank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -129,6 +187,7 @@
             this.cbxRole.Name = "cbxRole";
             this.cbxRole.Size = new System.Drawing.Size(100, 20);
             this.cbxRole.TabIndex = 5;
+            this.cbxRole.SelectedIndexChanged += new System.EventHandler(this.cbxRole_SelectedIndexChanged);
             // 
             // labelW19
             // 
@@ -214,7 +273,7 @@
             this.buttonW2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonW2.ForeColor = System.Drawing.Color.Black;
             this.buttonW2.IsSilver = false;
-            this.buttonW2.Location = new System.Drawing.Point(201, 327);
+            this.buttonW2.Location = new System.Drawing.Point(201, 352);
             this.buttonW2.MaxImageSize = new System.Drawing.Point(0, 0);
             this.buttonW2.MenuPos = new System.Drawing.Point(0, 0);
             this.buttonW2.Name = "buttonW2";
@@ -230,7 +289,7 @@
             this.btnOK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
             this.btnOK.ForeColor = System.Drawing.Color.Black;
             this.btnOK.IsSilver = false;
-            this.btnOK.Location = new System.Drawing.Point(90, 327);
+            this.btnOK.Location = new System.Drawing.Point(90, 352);
             this.btnOK.MaxImageSize = new System.Drawing.Point(0, 0);
             this.btnOK.MenuPos = new System.Drawing.Point(0, 0);
             this.btnOK.Name = "btnOK";
@@ -368,7 +427,9 @@
             this.CancelButton = this.buttonW2;
             this.ClientSize = new System.Drawing.Size(419, 399);
             this.Controls.Add(this.panel);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.HideOnClose = true;
             this.MaximizeBox = false;
             this.Name = "UpdateMember";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -376,6 +437,8 @@
             this.Text = "修改用户信息";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            this.plPermission.ResumeLayout(false);
+            this.plPermission.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -405,5 +468,9 @@
         private XiaoCai.WinformUI.LabelW labelW1;
         private XiaoCai.WinformUI.LabelW labelW2;
         private XiaoCai.WinformUI.TextBoxW txtBranchBankZH;
+        private System.Windows.Forms.Panel plPermission;
+        private XiaoCai.WinformUI.CheckBoxW ckInfoManager;
+        private XiaoCai.WinformUI.CheckBoxW ckBackRake;
+        private XiaoCai.WinformUI.LabelW labelW4;
     }
 }
