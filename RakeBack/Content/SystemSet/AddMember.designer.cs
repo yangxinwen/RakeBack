@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
+            this.plPermission = new System.Windows.Forms.Panel();
+            this.ckInfoManager = new XiaoCai.WinformUI.CheckBoxW();
+            this.ckBackRake = new XiaoCai.WinformUI.CheckBoxW();
+            this.labelW4 = new XiaoCai.WinformUI.LabelW();
             this.cbxOpenBank = new System.Windows.Forms.ComboBox();
             this.cbxRole = new System.Windows.Forms.ComboBox();
             this.labelW19 = new XiaoCai.WinformUI.LabelW();
@@ -50,10 +54,6 @@
             this.labelW5 = new XiaoCai.WinformUI.LabelW();
             this.labelW3 = new XiaoCai.WinformUI.LabelW();
             this.labelW1 = new XiaoCai.WinformUI.LabelW();
-            this.plPermission = new System.Windows.Forms.Panel();
-            this.ckInfoManager = new XiaoCai.WinformUI.CheckBoxW();
-            this.ckBackRake = new XiaoCai.WinformUI.CheckBoxW();
-            this.labelW4 = new XiaoCai.WinformUI.LabelW();
             this.panel.SuspendLayout();
             this.plPermission.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +116,58 @@
             this.panel.ToolTipTextCloseIcon = null;
             this.panel.ToolTipTextExpandIconPanelCollapsed = null;
             this.panel.ToolTipTextExpandIconPanelExpanded = null;
+            // 
+            // plPermission
+            // 
+            this.plPermission.Controls.Add(this.ckInfoManager);
+            this.plPermission.Controls.Add(this.ckBackRake);
+            this.plPermission.Controls.Add(this.labelW4);
+            this.plPermission.Location = new System.Drawing.Point(122, 352);
+            this.plPermission.Name = "plPermission";
+            this.plPermission.Size = new System.Drawing.Size(227, 36);
+            this.plPermission.TabIndex = 81;
+            this.plPermission.Visible = false;
+            // 
+            // ckInfoManager
+            // 
+            this.ckInfoManager.AutoSize = true;
+            this.ckInfoManager.BaseColor = System.Drawing.Color.Empty;
+            this.ckInfoManager.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
+            this.ckInfoManager.Location = new System.Drawing.Point(146, 10);
+            this.ckInfoManager.Name = "ckInfoManager";
+            this.ckInfoManager.Size = new System.Drawing.Size(72, 16);
+            this.ckInfoManager.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.ckInfoManager.TabIndex = 83;
+            this.ckInfoManager.Text = "信息管理";
+            this.ckInfoManager.UseStyle = false;
+            this.ckInfoManager.UseVisualStyleBackColor = true;
+            // 
+            // ckBackRake
+            // 
+            this.ckBackRake.AutoSize = true;
+            this.ckBackRake.BaseColor = System.Drawing.Color.Empty;
+            this.ckBackRake.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
+            this.ckBackRake.Location = new System.Drawing.Point(76, 10);
+            this.ckBackRake.Name = "ckBackRake";
+            this.ckBackRake.Size = new System.Drawing.Size(72, 16);
+            this.ckBackRake.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.ckBackRake.TabIndex = 82;
+            this.ckBackRake.Text = "返佣管理";
+            this.ckBackRake.UseStyle = false;
+            this.ckBackRake.UseVisualStyleBackColor = true;
+            // 
+            // labelW4
+            // 
+            this.labelW4.AutoSize = true;
+            this.labelW4.BackColor = System.Drawing.Color.Transparent;
+            this.labelW4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelW4.Location = new System.Drawing.Point(11, 13);
+            this.labelW4.Name = "labelW4";
+            this.labelW4.Size = new System.Drawing.Size(65, 12);
+            this.labelW4.Style = XiaoCai.WinformUI.Style.Office2007Blue;
+            this.labelW4.TabIndex = 81;
+            this.labelW4.Text = "会员权限：";
+            this.labelW4.UseStyle = false;
             // 
             // cbxOpenBank
             // 
@@ -308,7 +360,7 @@
             this.labelW7.Size = new System.Drawing.Size(65, 12);
             this.labelW7.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.labelW7.TabIndex = 14;
-            this.labelW7.Text = "用户手机：";
+            this.labelW7.Text = "公司名称：";
             this.labelW7.UseStyle = false;
             // 
             // labelW5
@@ -349,58 +401,6 @@
             this.labelW1.TabIndex = 12;
             this.labelW1.Text = "登陆账号：";
             this.labelW1.UseStyle = false;
-            // 
-            // plPermission
-            // 
-            this.plPermission.Controls.Add(this.ckInfoManager);
-            this.plPermission.Controls.Add(this.ckBackRake);
-            this.plPermission.Controls.Add(this.labelW4);
-            this.plPermission.Location = new System.Drawing.Point(122, 352);
-            this.plPermission.Name = "plPermission";
-            this.plPermission.Size = new System.Drawing.Size(227, 36);
-            this.plPermission.TabIndex = 81;
-            this.plPermission.Visible = false;
-            // 
-            // ckInfoManager
-            // 
-            this.ckInfoManager.AutoSize = true;
-            this.ckInfoManager.BaseColor = System.Drawing.Color.Empty;
-            this.ckInfoManager.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.ckInfoManager.Location = new System.Drawing.Point(146, 10);
-            this.ckInfoManager.Name = "ckInfoManager";
-            this.ckInfoManager.Size = new System.Drawing.Size(72, 16);
-            this.ckInfoManager.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.ckInfoManager.TabIndex = 83;
-            this.ckInfoManager.Text = "信息管理";
-            this.ckInfoManager.UseStyle = false;
-            this.ckInfoManager.UseVisualStyleBackColor = true;
-            // 
-            // ckBackRake
-            // 
-            this.ckBackRake.AutoSize = true;
-            this.ckBackRake.BaseColor = System.Drawing.Color.Empty;
-            this.ckBackRake.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(153)))), ((int)(((byte)(194)))));
-            this.ckBackRake.Location = new System.Drawing.Point(76, 10);
-            this.ckBackRake.Name = "ckBackRake";
-            this.ckBackRake.Size = new System.Drawing.Size(72, 16);
-            this.ckBackRake.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.ckBackRake.TabIndex = 82;
-            this.ckBackRake.Text = "返佣管理";
-            this.ckBackRake.UseStyle = false;
-            this.ckBackRake.UseVisualStyleBackColor = true;
-            // 
-            // labelW4
-            // 
-            this.labelW4.AutoSize = true;
-            this.labelW4.BackColor = System.Drawing.Color.Transparent;
-            this.labelW4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelW4.Location = new System.Drawing.Point(11, 13);
-            this.labelW4.Name = "labelW4";
-            this.labelW4.Size = new System.Drawing.Size(65, 12);
-            this.labelW4.Style = XiaoCai.WinformUI.Style.Office2007Blue;
-            this.labelW4.TabIndex = 81;
-            this.labelW4.Text = "会员权限：";
-            this.labelW4.UseStyle = false;
             // 
             // AddMember
             // 

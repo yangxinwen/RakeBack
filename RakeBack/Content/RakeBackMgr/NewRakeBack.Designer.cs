@@ -253,7 +253,7 @@
             // Column3
             // 
             this.Column3.DataPropertyName = "UserPhone";
-            this.Column3.HeaderText = "手机号码";
+            this.Column3.HeaderText = "公司名称";
             this.Column3.Name = "Column3";
             // 
             // Column4

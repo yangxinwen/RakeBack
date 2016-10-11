@@ -378,7 +378,7 @@
             this.labelW7.Size = new System.Drawing.Size(65, 12);
             this.labelW7.Style = XiaoCai.WinformUI.Style.Office2007Blue;
             this.labelW7.TabIndex = 71;
-            this.labelW7.Text = "用户手机：";
+            this.labelW7.Text = "公司名称：";
             this.labelW7.UseStyle = false;
             // 
             // labelW5

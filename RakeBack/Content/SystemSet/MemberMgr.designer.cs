@@ -31,6 +31,16 @@
             this.panel = new XiaoCai.WinformUI.Panels.PanelW();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewW1 = new XiaoCai.WinformUI.DataGridViewW();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pager1 = new RakeBack.Control.PagerControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbx_Role = new System.Windows.Forms.ComboBox();
+            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
+            this.labelW4 = new XiaoCai.WinformUI.LabelW();
+            this.txtLogin = new XiaoCai.WinformUI.TextBoxW();
+            this.txtCustomer = new XiaoCai.WinformUI.TextBoxW();
+            this.labelW2 = new XiaoCai.WinformUI.LabelW();
+            this.labelW3 = new XiaoCai.WinformUI.LabelW();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,16 +53,6 @@
             this.logCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.editCol = new System.Windows.Forms.DataGridViewLinkColumn();
             this.delCol = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pager1 = new RakeBack.Control.PagerControl();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cbx_Role = new System.Windows.Forms.ComboBox();
-            this.buttonW1 = new XiaoCai.WinformUI.ButtonW();
-            this.labelW4 = new XiaoCai.WinformUI.LabelW();
-            this.txtLogin = new XiaoCai.WinformUI.TextBoxW();
-            this.txtCustomer = new XiaoCai.WinformUI.TextBoxW();
-            this.labelW2 = new XiaoCai.WinformUI.LabelW();
-            this.labelW3 = new XiaoCai.WinformUI.LabelW();
             this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewW1)).BeginInit();
@@ -154,83 +154,6 @@
             this.dataGridViewW1.ToPrintCols = null;
             this.dataGridViewW1.ToPrintRows = null;
             this.dataGridViewW1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewW1_CellContentClick);
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "UserId";
-            this.Column10.HeaderText = "系统编号";
-            this.Column10.Name = "Column10";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "LoginId";
-            this.Column1.HeaderText = "登陆账号";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "UserName";
-            this.Column2.HeaderText = "会员姓名";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "UserPhone";
-            this.Column3.HeaderText = "手机号码";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "RoleName";
-            this.Column4.HeaderText = "用户角色";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "CreateBank";
-            this.Column5.HeaderText = "开户银行\t";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "BranchBank";
-            this.Column6.HeaderText = "开户银行分行";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "BranchBankZH";
-            this.Column7.HeaderText = "开户银行支行";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "BankNumber";
-            this.Column8.HeaderText = "银行卡号";
-            this.Column8.Name = "Column8";
-            // 
-            // logCol
-            // 
-            this.logCol.HeaderText = "查看操作流水";
-            this.logCol.Name = "logCol";
-            this.logCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.logCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.logCol.Text = "操作流水";
-            this.logCol.UseColumnTextForLinkValue = true;
-            // 
-            // editCol
-            // 
-            this.editCol.HeaderText = "";
-            this.editCol.Name = "editCol";
-            this.editCol.Text = "编辑";
-            this.editCol.UseColumnTextForLinkValue = true;
-            // 
-            // delCol
-            // 
-            this.delCol.HeaderText = "";
-            this.delCol.Name = "delCol";
-            this.delCol.Text = "删除";
-            this.delCol.UseColumnTextForLinkValue = true;
             // 
             // panel2
             // 
@@ -350,6 +273,83 @@
             this.labelW3.TabIndex = 0;
             this.labelW3.Text = "会员姓名：";
             this.labelW3.UseStyle = false;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "UserId";
+            this.Column10.HeaderText = "系统编号";
+            this.Column10.Name = "Column10";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "LoginId";
+            this.Column1.HeaderText = "登陆账号";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "UserName";
+            this.Column2.HeaderText = "会员姓名";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "UserPhone";
+            this.Column3.HeaderText = "公司名称";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "RoleName";
+            this.Column4.HeaderText = "用户角色";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "CreateBank";
+            this.Column5.HeaderText = "开户银行\t";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "BranchBank";
+            this.Column6.HeaderText = "开户银行分行";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "BranchBankZH";
+            this.Column7.HeaderText = "开户银行支行";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "BankNumber";
+            this.Column8.HeaderText = "银行卡号";
+            this.Column8.Name = "Column8";
+            // 
+            // logCol
+            // 
+            this.logCol.HeaderText = "查看操作流水";
+            this.logCol.Name = "logCol";
+            this.logCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.logCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.logCol.Text = "操作流水";
+            this.logCol.UseColumnTextForLinkValue = true;
+            // 
+            // editCol
+            // 
+            this.editCol.HeaderText = "";
+            this.editCol.Name = "editCol";
+            this.editCol.Text = "编辑";
+            this.editCol.UseColumnTextForLinkValue = true;
+            // 
+            // delCol
+            // 
+            this.delCol.HeaderText = "";
+            this.delCol.Name = "delCol";
+            this.delCol.Text = "删除";
+            this.delCol.UseColumnTextForLinkValue = true;
             // 
             // MemberMgr
             // 

@@ -201,6 +201,9 @@ namespace RakeBack
             menuItem.SubMenuItems.Add(new MenuItemModel() { Name = "退出", Path = "Common.Exit", IsEnable = true });
             list.Add(menuItem);
 
+            if (ApplicationParam.UserInfo.MenuId == null)
+                ApplicationParam.UserInfo.MenuId = string.Empty;
+
             if (roleId == 0 || roleId == 3)
             {  //系统管理员和会员管理员
                 menuItem = new MenuItemModel() { Name = "返佣管理", Path = null, IsEnable = true };

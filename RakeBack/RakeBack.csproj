@@ -395,7 +395,7 @@
     <None Include="Service References\RakeBackService\item1.disco" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\搜狗高速下载\XiaoCai.WinformUI-master\XiaoCai.WinformUI\XiaoCai.WinformUI.csproj">
+    <ProjectReference Include="..\..\..\..\..\搜狗高速下载\XiaoCai.WinformUI-master\XiaoCai.WinformUI\XiaoCai.WinformUI.csproj">
       <Project>{564e896f-03f1-493e-9bde-20a72880db43}</Project>
       <Name>XiaoCai.WinformUI</Name>
     </ProjectReference>
